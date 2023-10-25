@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102" height="102" viewBox="0 0 102 102">
+  <defs>
+    <clipPath id="clip-i-tiktok">
+      <rect width="102" height="102"/>
+    </clipPath>
+  </defs>
+  <g id="i-tiktok" clip-path="url(#clip-i-tiktok)">
+    <path id="tiktok" d="M48.384,22.617a22.633,22.633,0,0,1-13.228-4.229V37.644A17.514,17.514,0,1,1,20.047,20.29v9.685a8.04,8.04,0,1,0,5.628,7.669V0h9.482a13.057,13.057,0,0,0,.2,2.389h0a13.164,13.164,0,0,0,5.809,8.643,13.084,13.084,0,0,0,7.219,2.17Z" transform="translate(26.872 23)" fill="#fff"/>
+  </g>
+</svg>

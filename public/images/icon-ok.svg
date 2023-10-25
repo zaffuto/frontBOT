@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102" height="102" viewBox="0 0 102 102">
+  <defs>
+    <clipPath id="clip-icon-ok">
+      <rect width="102" height="102"/>
+    </clipPath>
+  </defs>
+  <g id="icon-ok" clip-path="url(#clip-icon-ok)">
+    <g id="Grupo_19768" data-name="Grupo 19768" transform="translate(-896 -532)">
+      <circle id="Elipse_390" data-name="Elipse 390" cx="50" cy="50" r="50" transform="translate(897 533)" fill="#0043ff"/>
+      <path id="check-solid_1_" data-name="check-solid (1)" d="M17.382,102.511.75,85.879a2.559,2.559,0,0,1,0-3.619l3.619-3.619a2.559,2.559,0,0,1,3.619,0l11.2,11.2,24-24a2.559,2.559,0,0,1,3.619,0l3.619,3.619a2.559,2.559,0,0,1,0,3.619L21,102.511a2.559,2.559,0,0,1-3.619,0Z" transform="translate(920.937 498.481)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-i-minus">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="i-minus" clip-path="url(#clip-i-minus)">
+    <path id="minus-solid" d="M50.288,226.638a2.635,2.635,0,0,1-2.638,2.638H18.638a2.638,2.638,0,0,1,0-5.275H47.65A2.635,2.635,0,0,1,50.288,226.638Z" transform="translate(17 -177)"/>
+  </g>
+</svg>
