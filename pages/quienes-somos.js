@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import Link from 'next/link';
-import {Montserrat} from '@next/font/google';
-import {Fragment, useState} from 'react';
+import Head from "next/head";
+import Script from "next/script";
+import Link from "next/link";
+import { Montserrat } from "@next/font/google";
+import { Fragment, useState } from "react";
 
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function QuienesSomos() {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -30,12 +30,12 @@ export default function QuienesSomos() {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -73,7 +73,7 @@ export default function QuienesSomos() {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -86,7 +86,7 @@ export default function QuienesSomos() {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -157,16 +157,16 @@ export default function QuienesSomos() {
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-6 z-index">
                 <p className="large mt-3">
-                  <strong>Mountain Pass</strong>, el sistema de cobro de ski por
-                  hora, es una de las empresas de{' '}
+                  <strong>Smarter Bot</strong>, el sistema de cobro de ski por
+                  hora, es una de las empresas de{" "}
                   <strong>Andes Mountain Corporation</strong>, holding fundado
-                  por{' '}
+                  por{" "}
                   <a
                     href="https://www.linkedin.com/in/peter-leatherbee-8b1b371/"
                     target="_blank"
                   >
                     Peter Leatherbee
-                  </a>{' '}
+                  </a>{" "}
                   para cambiar la manera en que las personas se relacionan con
                   la <strong>Cordillera de los Andes</strong>.
                 </p>
@@ -187,14 +187,13 @@ export default function QuienesSomos() {
                 <p>
                   En 2022, Leatherbee fundó Andes Mountain Corporation SpA, y
                   lanzó dos nuevas marcas: <strong>Mountain Park</strong>, la
-                  primera plaza de entretención en la nieve, y{' '}
-                  <strong>Mountain Pass</strong>, el sistema de cobro del ski
-                  por hora, que en la temporada invernal tuvieron su
-                  funcionamiento piloto en conjunto con el Centro de Ski
-                  Portillo.
+                  primera plaza de entretención en la nieve, y{" "}
+                  <strong>Smarter Bot</strong>, el sistema de cobro del ski por
+                  hora, que en la temporada invernal tuvieron su funcionamiento
+                  piloto en conjunto con el Centro de Ski Portillo.
                 </p>
                 <p>
-                  Para 2023 el objetivo de <strong>Mountain Pass</strong> es que
+                  Para 2023 el objetivo de <strong>Smarter Bot</strong> es que
                   más personas puedan tener una experiencia increíble y
                   disfrutar de la montaña a su propio ritmo.
                 </p>
@@ -213,9 +212,9 @@ export default function QuienesSomos() {
                   />
                 </a>
                 <p className="d-block mt-4">
-                  Mountain Pass 2023 –{' '}
-                  <a href="mailto:clientes@mountainpass.cl">
-                    clientes@mountainpass.cl
+                  Mountain Pass 2023 –{" "}
+                  <a href="mailto:clientes@smarterbot.cl">
+                    clientes@smarterbot.cl
                   </a>
                 </p>
 

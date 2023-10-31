@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import Link from 'next/link';
-import {Montserrat} from '@next/font/google';
-import {Fragment, useState} from 'react';
+import Head from "next/head";
+import Script from "next/script";
+import Link from "next/link";
+import { Montserrat } from "@next/font/google";
+import { Fragment, useState } from "react";
 
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Terminos() {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -30,12 +30,12 @@ export default function Terminos() {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -73,7 +73,7 @@ export default function Terminos() {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -86,7 +86,7 @@ export default function Terminos() {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -179,7 +179,7 @@ export default function Terminos() {
                   1 – DEFINICIONES
                 </h2>
                 <p>
-                  <strong>Beneficio de Acceso a Centros de Esquí:</strong>{' '}
+                  <strong>Beneficio de Acceso a Centros de Esquí:</strong>{" "}
                   corresponde al Beneficio de acceder a los Centros de Esquí por
                   medio de un cobro por hora o por uso de la Infraestructura del
                   Proveedor.
@@ -228,7 +228,7 @@ export default function Terminos() {
                 </p>
                 <p>
                   <strong>Plataforma:</strong> es el soporte online (la
-                  siguiente página web:{' '}
+                  siguiente página web:{" "}
                   <a href="https://www.mountainpass.cl/" target="_blank">
                     https://www.mountainpass.cl/
                   </a>
@@ -242,7 +242,7 @@ export default function Terminos() {
                   Proveedores con los que Mountain Pass ha celebrado dichos
                   contratos, convenios o alianzas y que actualmente ofrecen los
                   Beneficios a través de la Plataforma, el Usuario puede
-                  ingresar al siguiente link:{' '}
+                  ingresar al siguiente link:{" "}
                   <a href="https://www.mountainpass.cl/" target="_blank">
                     https://www.mountainpass.cl/
                   </a>
@@ -354,7 +354,7 @@ export default function Terminos() {
                 <p>
                   El costo de la Membresía corresponde al publicado en la
                   Plataforma. Los precios publicados incluyen IVA. El Usuario
-                  puede consultar el valor de la Membresía en el siguiente link:{' '}
+                  puede consultar el valor de la Membresía en el siguiente link:{" "}
                   <a
                     href="https://www.mountainpass.cl/"
                     target="_blank"
@@ -954,9 +954,9 @@ export default function Terminos() {
                   />
                 </a>
                 <p className="d-block mt-4">
-                  Mountain Pass 2023 –{' '}
-                  <a href="mailto:clientes@mountainpass.cl">
-                    clientes@mountainpass.cl
+                  Mountain Pass 2023 –{" "}
+                  <a href="mailto:clientes@smarterbot.cl">
+                    clientes@smarterbot.cl
                   </a>
                 </p>
 

@@ -1,37 +1,37 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../components/Sidebar';
-import ChileanRutify from 'chilean-rutify';
-import {db} from '../../../services/firebaseService';
-import moment from 'moment';
-import {RxEyeClosed, RxEyeOpen} from 'react-icons/rx';
-import bcrypt from 'bcryptjs-react';
-import DashNav from '../../../components/DashNav';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../components/Sidebar";
+import ChileanRutify from "chilean-rutify";
+import { db } from "../../../services/firebaseService";
+import moment from "moment";
+import { RxEyeClosed, RxEyeOpen } from "react-icons/rx";
+import bcrypt from "bcryptjs-react";
+import DashNav from "../../../components/DashNav";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Account(props) {
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
   const [saving, setSaving] = useState(false);
   const [subscriptionsCount, setSubscriptionsCount] = useState(0);
-  const [expirationDate, setExpirationDate] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName1, setLastName1] = useState('');
-  const [lastName2, setLastName2] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [rut, setRut] = useState('');
+  const [expirationDate, setExpirationDate] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName1, setLastName1] = useState("");
+  const [lastName2, setLastName2] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [rut, setRut] = useState("");
   const [validRut, setValidRut] = useState(true);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [paymentInfo, setPaymentInfo] = useState([]);
-  const [passwordType, setPasswordType] = useState('password');
+  const [passwordType, setPasswordType] = useState("password");
   const [eye, seteye] = useState(true);
 
   useEffect(() => {
-    if (typeof window != 'undefined') {
-      db.collection('accounts')
-        .doc(localStorage.getItem('__mtp__id'))
+    if (typeof window != "undefined") {
+      db.collection("accounts")
+        .doc(localStorage.getItem("__mtp__id"))
         .get()
         .then((docRef) => {
           setFirstName(docRef.data().firstName);
@@ -44,17 +44,17 @@ function Account(props) {
             docRef.data().expirationDate
               ? moment
                   .unix(docRef.data().expirationDate.seconds)
-                  .format('DD-MM-YYYY')
-              : ''
+                  .format("DD-MM-YYYY")
+              : ""
           );
           setSubscriptionsCount(docRef.data().subscriptionsCount);
         });
-      db.collection('paymentData')
-        .where('accountId', '==', localStorage.getItem('__mtp__id'))
+      db.collection("paymentData")
+        .where("accountId", "==", localStorage.getItem("__mtp__id"))
         .get()
         .then((querySnapshot) => {
           let paymentItems = querySnapshot.docs.map((paymentItem) => {
-            return {id: paymentItem.id, data: paymentItem.data()};
+            return { id: paymentItem.id, data: paymentItem.data() };
           });
           setPaymentInfo(paymentItems);
         });
@@ -62,11 +62,11 @@ function Account(props) {
   }, []);
 
   const toggleEye = () => {
-    if (passwordType == 'password') {
-      setPasswordType('text');
+    if (passwordType == "password") {
+      setPasswordType("text");
       seteye(false);
     } else {
-      setPasswordType('password');
+      setPasswordType("password");
       seteye(true);
     }
   };
@@ -88,28 +88,28 @@ function Account(props) {
   const updateAccount = () => {
     setSaving(true);
     if (
-      firstName == '' ||
-      lastName1 == '' ||
-      lastName2 == '' ||
-      phone == '' ||
-      email == '' ||
-      rut == ''
+      firstName == "" ||
+      lastName1 == "" ||
+      lastName2 == "" ||
+      phone == "" ||
+      email == "" ||
+      rut == ""
     ) {
       setSaving(false);
-      return alert('Debes completar todos los datos');
+      return alert("Debes completar todos los datos");
     }
     if (!validRut) {
       setSaving(false);
-      return alert('Debes ingresar un rut con formato válido');
+      return alert("Debes ingresar un rut con formato válido");
     }
     if (!validateEmail(email)) {
       setSaving(false);
-      return alert('Debes ingresar un email con formato válido');
+      return alert("Debes ingresar un email con formato válido");
     }
     if (phone.length != 12) {
       setSaving(false);
       return alert(
-        'Debes ingresar un teléfono de 8 dígitos anteponiendo el +569'
+        "Debes ingresar un teléfono de 8 dígitos anteponiendo el +569"
       );
     }
 
@@ -121,22 +121,22 @@ function Account(props) {
       email,
       rut,
       phone,
-      type: 'user',
+      type: "user",
     };
-    if (password != '') {
+    if (password != "") {
       data.password = bcrypt.hashSync(password, 10);
     }
 
-    db.collection('accounts')
-      .doc(localStorage.getItem('__mtp__id'))
+    db.collection("accounts")
+      .doc(localStorage.getItem("__mtp__id"))
       .update(data)
       .then(() => {
-        alert('Datos Actualizados');
+        alert("Datos Actualizados");
         setSaving(false);
       })
       .catch((error) => {
         console.log(error);
-        alert('Ocurrió un error al crear tu cuenta. Inténtalo nuevamente');
+        alert("Ocurrió un error al crear tu cuenta. Inténtalo nuevamente");
         setSaving(false);
       });
   };
@@ -144,7 +144,7 @@ function Account(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -164,12 +164,12 @@ function Account(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -207,7 +207,7 @@ function Account(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -220,7 +220,7 @@ function Account(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -249,7 +249,7 @@ function Account(props) {
               </button>
               <div
                 className={`dash-nav collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >
@@ -392,7 +392,7 @@ function Account(props) {
                     disabled={saving}
                     onClick={() => updateAccount()}
                   >
-                    {saving ? 'Actualizando tus datos...' : 'Actualizar Datos'}
+                    {saving ? "Actualizando tus datos..." : "Actualizar Datos"}
                   </button>
                 </div>
                 <div className="col-sm-12 col-md-4 mb-3"></div>
@@ -433,12 +433,12 @@ function Account(props) {
                                   <td>{item.data.paymentData.subject}</td>
                                   <td>
                                     {item.data.paymentData?.paymentData
-                                      ?.media || '--'}
+                                      ?.media || "--"}
                                   </td>
                                 </tr>
                               );
                             })
-                          : ''}
+                          : ""}
                       </tbody>
                     </table>
                   </div>

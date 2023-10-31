@@ -1,21 +1,21 @@
-import {Fragment} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {useRouter} from 'next/router';
-import {BounceLoader} from 'react-spinners';
-import {Montserrat} from '@next/font/google';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import { BounceLoader } from "react-spinners";
+import { Montserrat } from "@next/font/google";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 const override = {
-  display: 'block',
-  margin: '0 auto',
-  borderColor: 'red',
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
 };
 
 function Proccess(props) {
   const router = useRouter();
-  const {id} = router.query;
-  if (typeof window != 'undefined') {
+  const { id } = router.query;
+  if (typeof window != "undefined") {
     setTimeout(() => {
       window.location.href = `/api/processAddPayment?uid=${id}`;
     }, 2000);
@@ -23,7 +23,7 @@ function Proccess(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -43,12 +43,12 @@ function Proccess(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -86,7 +86,7 @@ function Proccess(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -99,7 +99,7 @@ function Proccess(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -135,9 +135,9 @@ function Proccess(props) {
             <div className="row text-center">
               <div className="col-sm-12">
                 <p className="d-block">
-                  <strong>Mountain Pass</strong> 2023 –{' '}
-                  <a href="mailto:clientes@mountainpass.cl">
-                    clientes@mountainpass.cl
+                  <strong>Smarter Bot</strong> 2023 –{" "}
+                  <a href="mailto:clientes@smarterbot.cl">
+                    clientes@smarterbot.cl
                   </a>
                 </p>
               </div>

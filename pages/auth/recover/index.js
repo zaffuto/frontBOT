@@ -1,39 +1,39 @@
-import {Fragment, useState} from 'react';
-import Head from 'next/head';
-import {v4 as uuidv4} from 'uuid';
-import Script from 'next/script';
-import {db} from '../../../services/firebaseService';
-import {Montserrat} from '@next/font/google';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
-const mailgun = require('mailgun.js');
+import { Fragment, useState } from "react";
+import Head from "next/head";
+import { v4 as uuidv4 } from "uuid";
+import Script from "next/script";
+import { db } from "../../../services/firebaseService";
+import { Montserrat } from "@next/font/google";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
+const mailgun = require("mailgun.js");
 const mg = mailgun.client({
-  username: 'api',
-  key: 'key-80d577c302f3bcad991bea13930b3fde',
+  username: "api",
+  key: "key-80d577c302f3bcad991bea13930b3fde",
 });
 
 function RecorverPassword(props) {
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const checkUser = () => {
     setLoading(true);
-    db.collection('accounts')
-      .where('email', '==', email)
+    db.collection("accounts")
+      .where("email", "==", email)
       .limit(1)
       .get()
       .then(async (querySnapshot) => {
         if (querySnapshot.size > 0) {
           let token = uuidv4();
           await db
-            .collection('accounts')
+            .collection("accounts")
             .doc(querySnapshot.docs[0].id)
-            .update({recoverToken: token});
+            .update({ recoverToken: token });
           mg.messages
-            .create('mail.mountainpass.cl', {
-              from: 'Mountain Pass<noreply@mail.mountainpass.cl>',
+            .create("mail.mountainpass.cl", {
+              from: "Mountain Pass<noreply@mail.mountainpass.cl>",
               to: [email],
-              subject: 'Solicitud de cambio de contraseña',
-              text: 'Solicitud de cambio de contraseña',
+              subject: "Solicitud de cambio de contraseña",
+              text: "Solicitud de cambio de contraseña",
               html: `<html><head>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -447,28 +447,28 @@ function RecorverPassword(props) {
             })
             .then((msg) => {
               alert(
-                'Te enviamos un correo con las instrucciones para reestablecer la contraseña'
+                "Te enviamos un correo con las instrucciones para reestablecer la contraseña"
               );
-              setEmail('');
+              setEmail("");
               setLoading(false);
             })
             .catch((err) => {
               alert(
-                'Te enviamos un correo con las instrucciones para reestablecer la contraseña'
+                "Te enviamos un correo con las instrucciones para reestablecer la contraseña"
               );
-              setEmail('');
+              setEmail("");
               setLoading(false);
             });
         } else {
-          alert('El email no está registrado en la plataforma');
-          setEmail('');
+          alert("El email no está registrado en la plataforma");
+          setEmail("");
           setLoading(false);
         }
       });
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       checkUser();
     }
   };
@@ -476,7 +476,7 @@ function RecorverPassword(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -496,12 +496,12 @@ function RecorverPassword(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -551,7 +551,7 @@ function RecorverPassword(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -601,7 +601,7 @@ function RecorverPassword(props) {
                       onClick={() => checkUser()}
                       disabled={loading}
                     >
-                      {loading ? 'Verificando...' : 'Recuperar'}
+                      {loading ? "Verificando..." : "Recuperar"}
                     </button>
                   </div>
                 </div>
@@ -614,9 +614,9 @@ function RecorverPassword(props) {
               <div className="row text-center">
                 <div className="col-sm-12">
                   <p className="d-block">
-                    <strong>Mountain Pass</strong> 2023 –{' '}
-                    <a href="mailto:clientes@mountainpass.cl">
-                      clientes@mountainpass.cl
+                    <strong>Smarter Bot</strong> 2023 –{" "}
+                    <a href="mailto:clientes@smartbot.cl">
+                      clientes@smartbot.cl
                     </a>
                   </p>
                 </div>

@@ -1,36 +1,36 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import {Fragment, useEffect, useState} from 'react';
-import {db} from '../services/firebaseService';
+import Head from "next/head";
+import Link from "next/link";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import { Fragment, useEffect, useState } from "react";
+import { db } from "../services/firebaseService";
 
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Prices() {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(0);
   const [offerPrice, setOfferPrice] = useState(0);
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
-  const [discountText, setDiscountText] = useState('');
+  const [discountText, setDiscountText] = useState("");
 
   const updateCount = (option) => {
-    if (option == 'minus' && count > 1) {
-      localStorage.setItem('__mtp_count', count - 1);
+    if (option == "minus" && count > 1) {
+      localStorage.setItem("__mtp_count", count - 1);
       setCount(count - 1);
     }
-    if (option == 'plus' && count < 10) {
-      localStorage.setItem('__mtp_count', count + 1);
+    if (option == "plus" && count < 10) {
+      localStorage.setItem("__mtp_count", count + 1);
       setCount(count + 1);
     }
   };
 
   useEffect(() => {
-    if (typeof window != 'undefined') {
-      localStorage.setItem('__mtp_count', 1);
+    if (typeof window != "undefined") {
+      localStorage.setItem("__mtp_count", 1);
     }
-    db.collection('settings')
-      .doc('--')
+    db.collection("settings")
+      .doc("--")
       .get()
       .then((docRef) => {
         setPrice(parseInt(docRef.data().price));
@@ -42,7 +42,7 @@ export default function Prices() {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -66,8 +66,8 @@ export default function Prices() {
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -105,7 +105,7 @@ export default function Prices() {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -118,7 +118,7 @@ export default function Prices() {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -147,7 +147,7 @@ export default function Prices() {
               </button>
               <div
                 className={`collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >
@@ -185,9 +185,9 @@ export default function Prices() {
                 </h1>
 
                 <p className="large text-center">
-                  Todos los suscriptores de <strong>Mountain Pass</strong>{' '}
-                  tienen acceso a pagar por hora en nuestros centros de ski
-                  asociados. Revisa los valores para los planes Basic y Pro.
+                  Todos los suscriptores de <strong>Smarter Bot</strong> tienen
+                  acceso a pagar por hora en nuestros centros de ski asociados.
+                  Revisa los valores para los planes Basic y Pro.
                 </p>
 
                 <p className="text-center">
@@ -809,9 +809,9 @@ export default function Prices() {
                   />
                 </a>
                 <p className="d-block mt-4">
-                  Mountain Pass 2023 –{' '}
-                  <a href="mailto:clientes@mountainpass.cl">
-                    clientes@mountainpass.cl
+                  Mountain Pass 2023 –{" "}
+                  <a href="mailto:clientes@smarterbot.cl">
+                    clientes@smarterbot.cl
                   </a>
                 </p>
 

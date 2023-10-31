@@ -1,26 +1,26 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../components/Sidebar';
-import ChileanRutify from 'chilean-rutify';
-import {db} from '../../../services/firebaseService';
-import DashNav from '../../../components/DashNav';
-import bcrypt from 'bcryptjs-react';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../components/Sidebar";
+import ChileanRutify from "chilean-rutify";
+import { db } from "../../../services/firebaseService";
+import DashNav from "../../../components/DashNav";
+import bcrypt from "bcryptjs-react";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Centers(props) {
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
   const [saving, setSaving] = useState(false);
   const [centers, setCenters] = useState([]);
-  const [centerName, setCenterName] = useState('');
-  const [accountFirstName, setAccountFirstName] = useState('');
-  const [accountLastName1, setAccountLastName1] = useState('');
-  const [accountLastName2, setAccountLastName2] = useState('');
-  const [accountEmail, setAccountEmail] = useState('');
-  const [accountPassword, setAccountPassword] = useState('');
-  const [accountRut, setAccountRut] = useState('');
-  const [accountPhone, setAccountPhone] = useState('');
+  const [centerName, setCenterName] = useState("");
+  const [accountFirstName, setAccountFirstName] = useState("");
+  const [accountLastName1, setAccountLastName1] = useState("");
+  const [accountLastName2, setAccountLastName2] = useState("");
+  const [accountEmail, setAccountEmail] = useState("");
+  const [accountPassword, setAccountPassword] = useState("");
+  const [accountRut, setAccountRut] = useState("");
+  const [accountPhone, setAccountPhone] = useState("");
   const [validRut, setValidRut] = useState(false);
 
   useEffect(() => {
@@ -42,79 +42,81 @@ function Centers(props) {
   };
 
   const getCenters = () => {
-    db.collection('centers')
-      .where('deleted', '==', false)
+    db.collection("centers")
+      .where("deleted", "==", false)
       .get()
       .then((querySnapshot) => {
         let centers = querySnapshot.docs.map((item) => {
-          return {id: item.id, data: item.data()};
+          return { id: item.id, data: item.data() };
         });
         setCenters(centers);
       });
   };
 
   const deleteCenter = async (centerId) => {
-    if (confirm('Se Eliminará el centro y sus usuarios')) {
+    if (confirm("Se Eliminará el centro y sus usuarios")) {
       let accounts = await db
-        .collection('accounts')
-        .where('centerId', '==', centerId)
+        .collection("accounts")
+        .where("centerId", "==", centerId)
         .get();
       accounts.forEach((accountsItem) => {
-        db.collection('accounts').doc(accountsItem.id).update({deleted: true});
+        db.collection("accounts")
+          .doc(accountsItem.id)
+          .update({ deleted: true });
       });
       let center = await db
-        .collection('centers')
+        .collection("centers")
         .doc(centerId)
-        .update({deleted: true});
-      alert('Centro Eliminado');
+        .update({ deleted: true });
+      alert("Centro Eliminado");
       getCenters();
     }
   };
 
   const saveCenter = async () => {
     setSaving(true);
-    if (centerName == '') {
+    if (centerName == "") {
       setSaving(false);
-      return alert('Debes ingresar un nombre para el centro');
+      return alert("Debes ingresar un nombre para el centro");
     }
 
     if (
-      accountFirstName == '' ||
-      accountLastName1 == '' ||
-      accountLastName2 == '' ||
-      accountPhone == '' ||
-      accountEmail == '' ||
-      accountRut == '' ||
-      accountPassword == ''
+      accountFirstName == "" ||
+      accountLastName1 == "" ||
+      accountLastName2 == "" ||
+      accountPhone == "" ||
+      accountEmail == "" ||
+      accountRut == "" ||
+      accountPassword == ""
     ) {
       setSaving(false);
-      return alert('Debes completar todos los datos');
+      return alert("Debes completar todos los datos");
     }
     if (!validRut) {
       setSaving(false);
-      return alert('Debes ingresar un rut con formato válido');
+      return alert("Debes ingresar un rut con formato válido");
     }
     if (!validateEmail(accountEmail)) {
       setSaving(false);
-      return alert('Debes ingresar un email con formato válido');
+      return alert("Debes ingresar un email con formato válido");
     }
     if (accountPhone.length != 8) {
       setSaving(false);
-      return alert('Debes ingresar un teléfono de 8 dígitos');
+      return alert("Debes ingresar un teléfono de 8 dígitos");
     }
 
-    db.collection('accounts')
-      .where('rut', '==', accountRut)
+    db.collection("accounts")
+      .where("rut", "==", accountRut)
       .limit(1)
       .get()
       .then(async (querySnapshot) => {
         if (querySnapshot.size > 0) {
-          return alert('Ya existe un usuario con este rut');
+          return alert("Ya existe un usuario con este rut");
         } else {
           let center = await db
-            .collection('centers')
-            .add({name: centerName, deleted: false, dateCreated: new Date()});
-          db.collection('accounts')
+            .collection("centers")
+            .add({ name: centerName, deleted: false, dateCreated: new Date() });
+          db.collection("accounts")
             .add({
               deleted: false,
               dateCreated: new Date(),
@@ -125,12 +127,12 @@ function Centers(props) {
               email: accountEmail,
               rut: accountRut,
               phone: `+569${accountPhone}`,
-              type: 'center',
+              type: "center",
               centerId: center.id,
             })
             .then((docRef) => {
               if (docRef.id) {
-                alert('Centro y usuario creados');
+                alert("Centro y usuario creados");
                 setSaving(false);
                 getCenters();
               }
@@ -138,7 +140,7 @@ function Centers(props) {
             .catch((error) => {
               console.log(error);
               alert(
-                'Ocurrió un error al crear tu cuenta. Inténtalo nuevamente'
+                "Ocurrió un error al crear tu cuenta. Inténtalo nuevamente"
               );
               setSaving(false);
             });
@@ -149,7 +151,7 @@ function Centers(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -169,12 +171,12 @@ function Centers(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -212,7 +214,7 @@ function Centers(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -225,7 +227,7 @@ function Centers(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -254,7 +256,7 @@ function Centers(props) {
               </button>
               <div
                 className={`dash-nav collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >
@@ -382,7 +384,7 @@ function Centers(props) {
                       disabled={saving}
                       onClick={() => saveCenter()}
                     >
-                      {saving ? 'Creando Centro...' : 'Crear centro'}
+                      {saving ? "Creando Centro..." : "Crear centro"}
                     </button>
                   </div>
                 </Fragment>

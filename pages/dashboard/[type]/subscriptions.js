@@ -1,12 +1,12 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../components/Sidebar';
-import ChileanRutify from 'chilean-rutify';
-import {db} from '../../../services/firebaseService';
-import DashNav from '../../../components/DashNav';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../components/Sidebar";
+import ChileanRutify from "chilean-rutify";
+import { db } from "../../../services/firebaseService";
+import DashNav from "../../../components/DashNav";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Dashboard(props) {
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
@@ -14,14 +14,14 @@ function Dashboard(props) {
   const [validRut, setValidRut] = useState(false);
   const [subscriptionsCount, setSubscriptionsCount] = useState(0);
   const [subscriptors, setSubscriptors] = useState([]);
-  const [name, setName] = useState('');
-  const [rut, setRut] = useState('');
-  const [userId, setUserId] = useState('');
+  const [name, setName] = useState("");
+  const [rut, setRut] = useState("");
+  const [userId, setUserId] = useState("");
 
   useEffect(() => {
-    if (typeof window != 'undefined') {
-      setUserId(localStorage.getItem('__mtp__id'));
-      let data = JSON.parse(localStorage.getItem('__mtp__ud'));
+    if (typeof window != "undefined") {
+      setUserId(localStorage.getItem("__mtp__id"));
+      let data = JSON.parse(localStorage.getItem("__mtp__ud"));
       setSubscriptionsCount(data.subscriptionsCount);
       getSubscriptors();
     }
@@ -36,13 +36,13 @@ function Dashboard(props) {
   };
 
   const getSubscriptors = () => {
-    db.collection('subscriptions')
-      .where('accountId', '==', localStorage.getItem('__mtp__id'))
-      .where('deleted', '==', false)
+    db.collection("subscriptions")
+      .where("accountId", "==", localStorage.getItem("__mtp__id"))
+      .where("deleted", "==", false)
       .get()
       .then((querySnapshot) => {
         let subscriptors = querySnapshot.docs.map((item) => {
-          return {id: item.id, data: item.data()};
+          return { id: item.id, data: item.data() };
         });
         setSubscriptors(subscriptors);
       });
@@ -50,19 +50,19 @@ function Dashboard(props) {
 
   const saveSubscription = () => {
     setLoading(true);
-    if (name == '' || rut == '') {
-      alert('Debes completar todos los campos');
+    if (name == "" || rut == "") {
+      alert("Debes completar todos los campos");
       setLoading(false);
     } else {
       if (!validRut) {
         setLoading(false);
-        return alert('Debes ingresar un rut válido');
+        return alert("Debes ingresar un rut válido");
       }
-      db.collection('subscriptions')
+      db.collection("subscriptions")
         .add({
           name,
           rut,
-          accountId: localStorage.getItem('__mtp__id'),
+          accountId: localStorage.getItem("__mtp__id"),
           deleted: false,
           dateCreated: new Date(),
         })
@@ -76,7 +76,7 @@ function Dashboard(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -96,12 +96,12 @@ function Dashboard(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -139,7 +139,7 @@ function Dashboard(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -152,7 +152,7 @@ function Dashboard(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -181,7 +181,7 @@ function Dashboard(props) {
               </button>
               <div
                 className={`dash-nav collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >
@@ -222,10 +222,10 @@ function Dashboard(props) {
                     <div className="col-12">
                       <h3>Agrega una suscripción</h3>
                       <small>
-                        Tienes {subscriptionsCount - subscriptors.length}{' '}
+                        Tienes {subscriptionsCount - subscriptors.length}{" "}
                         {subscriptionsCount - subscriptors.left == 1
-                          ? 'suscripción disponible'
-                          : 'suscripciones disponibles'}
+                          ? "suscripción disponible"
+                          : "suscripciones disponibles"}
                       </small>
                       <br />
                       <small>Las suscripciones no son transferibles</small>
@@ -255,7 +255,7 @@ function Dashboard(props) {
                         disabled={loading}
                         onClick={() => saveSubscription()}
                       >
-                        {loading ? 'Creando Suscriptor...' : 'Crear Suscriptor'}
+                        {loading ? "Creando Suscriptor..." : "Crear Suscriptor"}
                       </button>
                     </div>
                   </Fragment>

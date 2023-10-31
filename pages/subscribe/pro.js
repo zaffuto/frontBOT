@@ -1,33 +1,33 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import ChileanRutify from 'chilean-rutify';
-import {Fragment, useEffect, useState} from 'react';
-import {db} from '../../services/firebaseService';
-import bcrypt from 'bcryptjs-react';
-import intlTelInput from 'intl-tel-input';
-import 'intl-tel-input/build/css/intlTelInput.css';
-import {RxEyeClosed, RxEyeOpen} from 'react-icons/rx';
-const mailgun = require('mailgun.js');
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import ChileanRutify from "chilean-rutify";
+import { Fragment, useEffect, useState } from "react";
+import { db } from "../../services/firebaseService";
+import bcrypt from "bcryptjs-react";
+import intlTelInput from "intl-tel-input";
+import "intl-tel-input/build/css/intlTelInput.css";
+import { RxEyeClosed, RxEyeOpen } from "react-icons/rx";
+const mailgun = require("mailgun.js");
 const mg = mailgun.client({
-  username: 'api',
-  key: 'key-80d577c302f3bcad991bea13930b3fde',
+  username: "api",
+  key: "key-80d577c302f3bcad991bea13930b3fde",
 });
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Home() {
   const [saving, setSaving] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName1, setLastName1] = useState('');
-  const [lastName2, setLastName2] = useState('');
-  const [rut, setRut] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName1, setLastName1] = useState("");
+  const [lastName2, setLastName2] = useState("");
+  const [rut, setRut] = useState("");
   const [validRut, setValidRut] = useState(true);
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [check, setCheck] = useState(false);
-  const [passwordType, setPasswordType] = useState('password');
-  const [dialCode, setDialCode] = useState('+56');
+  const [passwordType, setPasswordType] = useState("password");
+  const [dialCode, setDialCode] = useState("+56");
   const [eye, seteye] = useState(true);
   const [type, settype] = useState(false);
   const [subscriptionsCount, setSubscriptionsCount] = useState(1);
@@ -35,31 +35,31 @@ export default function Home() {
   const [selections, setSelections] = useState([]);
 
   useEffect(() => {
-    const input = document.querySelector('#phone');
-    let iti = intlTelInput(input, {initialCountry: 'CL'});
-    input.addEventListener('countrychange', function () {
+    const input = document.querySelector("#phone");
+    let iti = intlTelInput(input, { initialCountry: "CL" });
+    input.addEventListener("countrychange", function () {
       setDialCode(iti.getSelectedCountryData().dialCode);
     });
   }, []);
 
   const toggleEye = () => {
-    if (passwordType == 'password') {
-      setPasswordType('text');
+    if (passwordType == "password") {
+      setPasswordType("text");
       seteye(false);
       settype(true);
     } else {
-      setPasswordType('password');
+      setPasswordType("password");
       seteye(true);
       settype(false);
     }
   };
 
   const updateCount = (option) => {
-    if (option == 'minus' && subscriptionsCount > 1) {
+    if (option == "minus" && subscriptionsCount > 1) {
       setSubscriptionsCount(subscriptionsCount - 1);
       updateValues();
     }
-    if (option == 'plus' && subscriptionsCount < 10) {
+    if (option == "plus" && subscriptionsCount < 10) {
       setSubscriptionsCount(subscriptionsCount + 1);
       updateValues();
     }
@@ -85,14 +85,14 @@ export default function Home() {
           ? {
               option:
                 parseInt(value) == 1
-                  ? '3 a 10 años - Gratis'
+                  ? "3 a 10 años - Gratis"
                   : parseInt(value) == 2
-                  ? '11 a 18 años - $24.000'
+                  ? "11 a 18 años - $24.000"
                   : parseInt(value) == 3
-                  ? '19 a 34 años - $36.000'
+                  ? "19 a 34 años - $36.000"
                   : parseInt(value) == 4
-                  ? '35 a 64 años - $48.000'
-                  : '65 años - Gratis',
+                  ? "35 a 64 años - $48.000"
+                  : "65 años - Gratis",
               value,
               realValue,
             }
@@ -101,7 +101,7 @@ export default function Home() {
           : {};
       totalAux =
         totalAux +
-        (typeof aux[j].realValue == 'undefined' ? 0 : aux[j].realValue);
+        (typeof aux[j].realValue == "undefined" ? 0 : aux[j].realValue);
     }
     setSelections(aux);
     setTotalPrice(totalAux);
@@ -116,11 +116,11 @@ export default function Home() {
   };
 
   const updateEmail = (email) => {
-    if (email != '') {
-      console.log(email.split('@'));
+    if (email != "") {
+      console.log(email.split("@"));
       setEmail(
-        email.split('@')[0].split('+')[0] +
-          (email.split('@').length > 1 ? `@${email.split('@')[1]}` : '')
+        email.split("@")[0].split("+")[0] +
+          (email.split("@").length > 1 ? `@${email.split("@")[1]}` : "")
       );
     }
   };
@@ -135,58 +135,58 @@ export default function Home() {
     if (totalPrice > 0) {
       setSaving(true);
       if (
-        firstName == '' ||
-        lastName1 == '' ||
-        lastName2 == '' ||
-        phone == '' ||
-        email == '' ||
-        rut == '' ||
-        password == ''
+        firstName == "" ||
+        lastName1 == "" ||
+        lastName2 == "" ||
+        phone == "" ||
+        email == "" ||
+        rut == "" ||
+        password == ""
       ) {
         setSaving(false);
-        return alert('Debes completar todos los datos');
+        return alert("Debes completar todos los datos");
       }
       if (!validRut) {
         setSaving(false);
-        return alert('Debes ingresar un rut con formato válido');
+        return alert("Debes ingresar un rut con formato válido");
       }
       if (!validateEmail(email)) {
         setSaving(false);
-        return alert('Debes ingresar un email con formato válido');
+        return alert("Debes ingresar un email con formato válido");
       }
       if (phone.length != 9) {
         setSaving(false);
-        return alert('Debes ingresar un teléfono de 8 dígitos');
+        return alert("Debes ingresar un teléfono de 8 dígitos");
       }
       if (!check) {
         setSaving(false);
-        return alert('Debes aceptar términos y condiciones');
+        return alert("Debes aceptar términos y condiciones");
       }
 
-      db.collection('accounts')
-        .where('rut', '==', rut)
+      db.collection("accounts")
+        .where("rut", "==", rut)
         .limit(1)
         .get()
         .then((querySnapshot) => {
           if (querySnapshot.size > 0) {
             setSaving(false);
-            return alert('Ya existe un usuario con este rut');
+            return alert("Ya existe un usuario con este rut");
           } else {
             let sameEmail = db
-              .collection('accounts')
-              .where('email', '==', email)
+              .collection("accounts")
+              .where("email", "==", email)
               .limit(1)
               .get();
             if (sameEmail.size > 0) {
               setSaving(false);
-              return alert('Ya existe un usuario con este email');
+              return alert("Ya existe un usuario con este email");
             } else {
-              db.collection('accounts')
+              db.collection("accounts")
                 .add({
                   deleted: false,
-                  planType: 'PRO',
+                  planType: "PRO",
                   dateCreated: new Date(),
-                  paymentStatus: 'PENDING',
+                  paymentStatus: "PENDING",
                   password: bcrypt.hashSync(password, 10),
                   firstName,
                   lastName1,
@@ -195,13 +195,13 @@ export default function Home() {
                   rut,
                   phone: `${dialCode}${phone}`,
                   check,
-                  type: 'user',
+                  type: "user",
                   subscriptionsCount,
                   totalPrice,
                 })
                 .then((docRef) => {
                   if (docRef.id) {
-                    db.collection('subscriptions')
+                    db.collection("subscriptions")
                       .add({
                         deleted: false,
                         name: `${firstName} ${lastName1} ${lastName2}`,
@@ -210,11 +210,11 @@ export default function Home() {
                       })
                       .then((subRef) => {
                         mg.messages
-                          .create('mail.mountainpass.cl', {
-                            from: 'Mountain Pass<noreply@mail.mountainpass.cl>',
+                          .create("mail.mountainpass.cl", {
+                            from: "Mountain Pass<noreply@mail.mountainpass.cl>",
                             to: [email],
-                            subject: 'Te damos la bienvenida a Mountain Pass',
-                            text: 'Te damos la bienvenida a Mountain Pass',
+                            subject: "Te damos la bienvenida a Mountain Pass",
+                            text: "Te damos la bienvenida a Mountain Pass",
                             html: `<html><head>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -598,7 +598,7 @@ export default function Home() {
                             window.location.href = `/pay/${docRef.id}/process`;
                           })
                           .catch((err) => {
-                            console.log('error: ', err);
+                            console.log("error: ", err);
                             window.location.href = `/pay/${docRef.id}/process`;
                           });
                       });
@@ -607,7 +607,7 @@ export default function Home() {
                 .catch((error) => {
                   console.log(error);
                   alert(
-                    'Ocurrió un error al crear tu cuenta. Inténtalo nuevamente'
+                    "Ocurrió un error al crear tu cuenta. Inténtalo nuevamente"
                   );
                   setSaving(false);
                 });
@@ -615,7 +615,7 @@ export default function Home() {
           }
         });
     } else {
-      alert('No has seleccionado opciones');
+      alert("No has seleccionado opciones");
       setSaving(false);
     }
   };
@@ -623,7 +623,7 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -643,12 +643,12 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -686,7 +686,7 @@ export default function Home() {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -699,7 +699,7 @@ export default function Home() {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -835,10 +835,10 @@ export default function Home() {
                             <strong>
                               <small>
                                 {subscriptionsCount == 1
-                                  ? '1 Membresía'
-                                  : `${subscriptionsCount} Membresías`}{' '}
-                                Pro{' '}
-                                {subscriptionsCount > 1 ? 'Anuales' : 'Anual'}
+                                  ? "1 Membresía"
+                                  : `${subscriptionsCount} Membresías`}{" "}
+                                Pro{" "}
+                                {subscriptionsCount > 1 ? "Anuales" : "Anual"}
                               </small>
                             </strong>
                           </h4>
@@ -846,14 +846,14 @@ export default function Home() {
                             $
                             {totalPrice
                               .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                           </h3>
                         </div>
                         <div className="col-md-5">
                           <div className="qty mt-2">
                             <span
                               className="minus-small"
-                              onClick={() => updateCount('minus')}
+                              onClick={() => updateCount("minus")}
                             >
                               <img
                                 className="align-middle img-fluid"
@@ -869,7 +869,7 @@ export default function Home() {
                             />
                             <span
                               className="plus-small"
-                              onClick={() => updateCount('plus')}
+                              onClick={() => updateCount("plus")}
                             >
                               <img
                                 className="align-middle img-fluid"
@@ -887,8 +887,8 @@ export default function Home() {
                             <hr />
                             <div className="form-floating">
                               <p className="mb-1 pl-3">
-                                Membresía {i + 1}{' '}
-                                {i > 0 ? '' : `(tu membresía)`}
+                                Membresía {i + 1}{" "}
+                                {i > 0 ? "" : `(tu membresía)`}
                               </p>
                               <select
                                 className="form-select form-select-lg mb-3"
@@ -905,14 +905,14 @@ export default function Home() {
                                     3 a 10 años - Gratis
                                   </option>
                                 ) : (
-                                  ''
+                                  ""
                                 )}
                                 {i > 0 ? (
                                   <option value="2">
                                     11 a 18 años - $24.000
                                   </option>
                                 ) : (
-                                  ''
+                                  ""
                                 )}
                                 <option value="3">
                                   19 a 34 años - $36.000
@@ -923,7 +923,7 @@ export default function Home() {
                                 {i > 0 ? (
                                   <option value="5">65 años - Gratis</option>
                                 ) : (
-                                  ''
+                                  ""
                                 )}
                               </select>
                             </div>
@@ -940,8 +940,8 @@ export default function Home() {
                         onChange={(e) => setCheck(e.target.checked)}
                       />
                       <label className="form-check-label">
-                        {' '}
-                        Acepto los{' '}
+                        {" "}
+                        Acepto los{" "}
                         <a
                           href="https://mountainpass.cl/terminos-y-condiciones"
                           target="_blank"
@@ -957,7 +957,7 @@ export default function Home() {
                         onClick={(e) => createAccount()}
                         disabled={saving}
                       >
-                        {saving ? 'Creando cuenta...' : 'Crear mi cuenta'}
+                        {saving ? "Creando cuenta..." : "Crear mi cuenta"}
                       </button>
                     </div>
                   </div>
@@ -970,9 +970,9 @@ export default function Home() {
               <div className="row text-center">
                 <div className="col-sm-12">
                   <p className="d-block">
-                    <strong>Mountain Pass</strong> 2023 –{' '}
-                    <a href="mailto:clientes@mountainpass.cl">
-                      clientes@mountainpass.cl
+                    <strong>Smarter Bot</strong> 2023 –{" "}
+                    <a href="mailto:clientes@smartbot.cl">
+                      clientes@smartbot.cl
                     </a>
                   </p>
                 </div>

@@ -1,20 +1,20 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {db} from '../../../../services/firebaseService';
-import bcrypt from 'bcryptjs-react';
-import {Montserrat} from '@next/font/google';
-import {RxEyeClosed, RxEyeOpen} from 'react-icons/rx';
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { db } from "../../../../services/firebaseService";
+import bcrypt from "bcryptjs-react";
+import { Montserrat } from "@next/font/google";
+import { RxEyeClosed, RxEyeOpen } from "react-icons/rx";
 
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function RecorverPassword(props) {
   const [loading, setLoading] = useState(false);
   const [isValid, setIsValid] = useState(true);
   const [updated, setUpdated] = useState(false);
-  const [password, setPassword] = useState('');
-  const [passwordType, setPasswordType] = useState('password');
-  const [userId, setUserid] = useState('');
+  const [password, setPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
+  const [userId, setUserid] = useState("");
 
   const [eye, seteye] = useState(true);
   const [type, settype] = useState(false);
@@ -24,8 +24,8 @@ function RecorverPassword(props) {
   }, []);
 
   const checkUser = (token) => {
-    db.collection('accounts')
-      .where('recoverToken', '==', token)
+    db.collection("accounts")
+      .where("recoverToken", "==", token)
       .limit(1)
       .get()
       .then((querySnapshot) => {
@@ -38,12 +38,12 @@ function RecorverPassword(props) {
   };
 
   const toggleEye = () => {
-    if (passwordType == 'password') {
-      setPasswordType('text');
+    if (passwordType == "password") {
+      setPasswordType("text");
       seteye(false);
       settype(true);
     } else {
-      setPasswordType('password');
+      setPasswordType("password");
       seteye(true);
       settype(false);
     }
@@ -51,9 +51,9 @@ function RecorverPassword(props) {
 
   const savePassword = () => {
     setLoading(true);
-    db.collection('accounts')
+    db.collection("accounts")
       .doc(userId)
-      .update({password: bcrypt.hashSync(password, 10), recoverToken: ''})
+      .update({ password: bcrypt.hashSync(password, 10), recoverToken: "" })
       .then(() => {
         setUpdated(true);
         setLoading(false);
@@ -63,7 +63,7 @@ function RecorverPassword(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -83,12 +83,12 @@ function RecorverPassword(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -138,7 +138,7 @@ function RecorverPassword(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -223,7 +223,7 @@ function RecorverPassword(props) {
                           onClick={() => savePassword()}
                           disabled={loading}
                         >
-                          {loading ? 'Guardando...' : 'Guardar'}
+                          {loading ? "Guardando..." : "Guardar"}
                         </button>
                       </div>
                     </Fragment>
@@ -242,9 +242,9 @@ function RecorverPassword(props) {
             <div className="row text-center">
               <div className="col-sm-12">
                 <p className="d-block">
-                  <strong>Mountain Pass</strong> 2023 –{' '}
+                  <strong>Smarter Bot</strong> 2023 –{" "}
                   <a href="mailto:experiencias@mountainpass.cl">
-                    clientes@mountainpass.cl
+                    clientes@smartbot.cl
                   </a>
                 </p>
               </div>

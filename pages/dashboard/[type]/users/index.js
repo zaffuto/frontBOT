@@ -1,12 +1,12 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../../components/Sidebar';
-import {db} from '../../../../services/firebaseService';
-import UserItem from '../../../../components/UserItem';
-import DashNav from '../../../../components/DashNav';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../../components/Sidebar";
+import { db } from "../../../../services/firebaseService";
+import UserItem from "../../../../components/UserItem";
+import DashNav from "../../../../components/DashNav";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Dashboard(props) {
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
@@ -19,14 +19,14 @@ function Dashboard(props) {
   }, []);
 
   const getUsers = () => {
-    db.collection('accounts')
-      .where('deleted', '==', false)
-      .where('type', 'in', ['user', 'center'])
-      .orderBy('dateCreated', 'desc')
+    db.collection("accounts")
+      .where("deleted", "==", false)
+      .where("type", "in", ["user", "center"])
+      .orderBy("dateCreated", "desc")
       .get()
       .then((querySnapshot) => {
         let users = querySnapshot.docs.map((item) => {
-          return {id: item.id, data: item.data()};
+          return { id: item.id, data: item.data() };
         });
         setUsers(users);
       });
@@ -35,7 +35,7 @@ function Dashboard(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -55,12 +55,12 @@ function Dashboard(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -98,7 +98,7 @@ function Dashboard(props) {
         />
       </Head>
       <div className={`d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -111,7 +111,7 @@ function Dashboard(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -140,7 +140,7 @@ function Dashboard(props) {
               </button>
               <div
                 className={`dash-nav collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >

@@ -1,28 +1,28 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../../components/Sidebar';
-import {db} from '../../../../services/firebaseService';
-import moment from 'moment';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../../components/Sidebar";
+import { db } from "../../../../services/firebaseService";
+import moment from "moment";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Account(props) {
   const [subscriptionsCount, setSubscriptionsCount] = useState(0);
-  const [expirationDate, setExpirationDate] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName1, setLastName1] = useState('');
-  const [lastName2, setLastName2] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [rut, setRut] = useState('');
-  const [type, setType] = useState('');
+  const [expirationDate, setExpirationDate] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName1, setLastName1] = useState("");
+  const [lastName2, setLastName2] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [rut, setRut] = useState("");
+  const [type, setType] = useState("");
   const [subscriptors, setSubscriptors] = useState([]);
   const [paymentInfo, setPaymentInfo] = useState([]);
 
   useEffect(() => {
-    if (typeof window != 'undefined') {
-      db.collection('accounts')
+    if (typeof window != "undefined") {
+      db.collection("accounts")
         .doc(props.userId)
         .get()
         .then((docRef) => {
@@ -36,7 +36,7 @@ function Account(props) {
           setExpirationDate(
             moment
               .unix(docRef.data().expirationDate.seconds)
-              .format('DD-MM-YYYY')
+              .format("DD-MM-YYYY")
           );
           setSubscriptionsCount(docRef.data().subscriptionsCount);
           getSubscriptors();
@@ -46,25 +46,25 @@ function Account(props) {
   }, []);
 
   const getSubscriptors = () => {
-    db.collection('subscriptions')
-      .where('accountId', '==', props.userId)
-      .where('deleted', '==', false)
+    db.collection("subscriptions")
+      .where("accountId", "==", props.userId)
+      .where("deleted", "==", false)
       .get()
       .then((querySnapshot) => {
         let subscriptors = querySnapshot.docs.map((item) => {
-          return {id: item.id, data: item.data()};
+          return { id: item.id, data: item.data() };
         });
         setSubscriptors(subscriptors);
       });
   };
 
   const getPaymentInfo = () => {
-    db.collection('paymentData')
-      .where('accountId', '==', props.userId)
+    db.collection("paymentData")
+      .where("accountId", "==", props.userId)
       .get()
       .then((querySnapshot) => {
         let paymentItems = querySnapshot.docs.map((paymentItem) => {
-          return {id: paymentItem.id, data: paymentItem.data()};
+          return { id: paymentItem.id, data: paymentItem.data() };
         });
         setPaymentInfo(paymentItems);
       });
@@ -73,7 +73,7 @@ function Account(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -93,12 +93,12 @@ function Account(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -136,7 +136,7 @@ function Account(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -149,7 +149,7 @@ function Account(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -176,10 +176,10 @@ function Account(props) {
             >
               <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-3 mb-5 border-bottom">
                 <h2>
-                  Usuario: {firstName} {lastName1} {lastName2}{' '}
+                  Usuario: {firstName} {lastName1} {lastName2}{" "}
                   <span>
                     <small>
-                      ({type == 'user' ? 'Cliente' : 'Usuario Centro'})
+                      ({type == "user" ? "Cliente" : "Usuario Centro"})
                     </small>
                   </span>
                 </h2>
@@ -198,7 +198,7 @@ function Account(props) {
                 <div className="col-4">
                   <p>teléfono: {phone}</p>
                 </div>
-                {type == 'user' ? (
+                {type == "user" ? (
                   <Fragment>
                     <div className="col-12">
                       <h3>Plan</h3>
@@ -212,11 +212,11 @@ function Account(props) {
                     <div className="col-4 mb-3"></div>
                   </Fragment>
                 ) : (
-                  ''
+                  ""
                 )}
               </div>
 
-              {type == 'user' ? (
+              {type == "user" ? (
                 <Fragment>
                   <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-3 mb-5 border-bottom">
                     <h2>Suscripciones</h2>
@@ -266,10 +266,10 @@ function Account(props) {
                                           .unix(
                                             item.data.paymentData.requestData
                                           )
-                                          .format('DD-MM-YYYY HH:mm:ss')
+                                          .format("DD-MM-YYYY HH:mm:ss")
                                       : moment(
                                           item.data.paymentData.requestDate
-                                        ).format('DD-MM-YYYY HH:mm:ss')}
+                                        ).format("DD-MM-YYYY HH:mm:ss")}
                                   </td>
                                   <td>
                                     ${item.data.paymentData.amount}
@@ -278,7 +278,7 @@ function Account(props) {
                                   <td>{item.data.paymentData.subject}</td>
                                   <td>
                                     {item.data.paymentData.paymentData?.media ||
-                                      ''}
+                                      ""}
                                   </td>
                                 </tr>
                               );
@@ -292,7 +292,7 @@ function Account(props) {
                   </div>
                 </Fragment>
               ) : (
-                ''
+                ""
               )}
             </main>
           </div>

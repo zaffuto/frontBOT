@@ -1,10 +1,10 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {useRouter} from 'next/router';
-import {Montserrat} from '@next/font/google';
-import {db} from '../../../services/firebaseService';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import { Montserrat } from "@next/font/google";
+import { db } from "../../../services/firebaseService";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Pay(props) {
   const router = useRouter();
@@ -18,11 +18,11 @@ function Pay(props) {
   useEffect(() => {}, []);
 
   const updateCount = (option) => {
-    if (option == 'minus' && subscriptionsCount > 1) {
+    if (option == "minus" && subscriptionsCount > 1) {
       setSubscriptionsCount(subscriptionsCount - 1);
       updateValues();
     }
-    if (option == 'plus' && subscriptionsCount < 10) {
+    if (option == "plus" && subscriptionsCount < 10) {
       setSubscriptionsCount(subscriptionsCount + 1);
       updateValues();
     }
@@ -48,14 +48,14 @@ function Pay(props) {
           ? {
               option:
                 parseInt(value) == 1
-                  ? '3 a 10 años - Gratis'
+                  ? "3 a 10 años - Gratis"
                   : parseInt(value) == 2
-                  ? '11 a 18 años - $24.000'
+                  ? "11 a 18 años - $24.000"
                   : parseInt(value) == 3
-                  ? '19 a 34 años - $36.000'
+                  ? "19 a 34 años - $36.000"
                   : parseInt(value) == 4
-                  ? '35 a 64 años - $48.000'
-                  : '65 años - Gratis',
+                  ? "35 a 64 años - $48.000"
+                  : "65 años - Gratis",
               value,
               realValue,
             }
@@ -64,7 +64,7 @@ function Pay(props) {
           : {};
       totalAux =
         totalAux +
-        (typeof aux[j].realValue == 'undefined' ? 0 : aux[j].realValue);
+        (typeof aux[j].realValue == "undefined" ? 0 : aux[j].realValue);
     }
     setSelections(aux);
     setTotalPrice(totalAux);
@@ -72,11 +72,11 @@ function Pay(props) {
 
   const processPayment = async () => {
     setLoading(true);
-    let update = await db.collection('accounts').doc(props.userId).update({
-      planType: 'PRO',
+    let update = await db.collection("accounts").doc(props.userId).update({
+      planType: "PRO",
       subscriptionsCount,
       totalPrice,
-      paymentStatus: 'PENDING',
+      paymentStatus: "PENDING",
     });
     window.location.href = `/pay/${props.userId}/process`;
   };
@@ -84,7 +84,7 @@ function Pay(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -104,12 +104,12 @@ function Pay(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -157,7 +157,7 @@ function Pay(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -193,9 +193,9 @@ function Pay(props) {
                           <strong>
                             <small>
                               {subscriptionsCount == 1
-                                ? '1 Membresía'
-                                : `${subscriptionsCount} Membresías`}{' '}
-                              Pro {subscriptionsCount > 1 ? 'Anuales' : 'Anual'}
+                                ? "1 Membresía"
+                                : `${subscriptionsCount} Membresías`}{" "}
+                              Pro {subscriptionsCount > 1 ? "Anuales" : "Anual"}
                             </small>
                           </strong>
                         </h4>
@@ -203,14 +203,14 @@ function Pay(props) {
                           $
                           {totalPrice
                             .toString()
-                            .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
                         </h3>
                       </div>
                       <div className="col-md-5">
                         <div className="qty mt-2">
                           <span
                             className="minus-small"
-                            onClick={() => updateCount('minus')}
+                            onClick={() => updateCount("minus")}
                           >
                             <img
                               className="align-middle img-fluid"
@@ -226,7 +226,7 @@ function Pay(props) {
                           />
                           <span
                             className="plus-small"
-                            onClick={() => updateCount('plus')}
+                            onClick={() => updateCount("plus")}
                           >
                             <img
                               className="align-middle img-fluid"
@@ -244,7 +244,7 @@ function Pay(props) {
                           <hr />
                           <div className="form-floating">
                             <p className="mb-1 pl-3">
-                              Membresía {i + 1} {i > 0 ? '' : `(tu membresía)`}
+                              Membresía {i + 1} {i > 0 ? "" : `(tu membresía)`}
                             </p>
                             <select
                               className="form-select form-select-lg mb-3"
@@ -255,21 +255,21 @@ function Pay(props) {
                               {i > 0 ? (
                                 <option value="1">3 a 10 años - Gratis</option>
                               ) : (
-                                ''
+                                ""
                               )}
                               {i > 0 ? (
                                 <option value="2">
                                   11 a 18 años - $24.000
                                 </option>
                               ) : (
-                                ''
+                                ""
                               )}
                               <option value="3">19 a 34 años - $36.000</option>
                               <option value="4">35 a 64 años - $48.000</option>
                               {i > 0 ? (
                                 <option value="5">65 años - Gratis</option>
                               ) : (
-                                ''
+                                ""
                               )}
                             </select>
                           </div>
@@ -283,7 +283,7 @@ function Pay(props) {
                       onClick={(e) => processPayment()}
                       disabled={saving}
                     >
-                      {saving ? 'Actualizando cuenta...' : 'Actualizar cuenta'}
+                      {saving ? "Actualizando cuenta..." : "Actualizar cuenta"}
                     </button>
                   </div>
                   <div className="text-center mt-4 mb-0">
@@ -305,9 +305,9 @@ function Pay(props) {
           <div className="row text-center">
             <div className="col-sm-12">
               <p className="d-block">
-                <strong>Mountain Pass</strong> 2023 –{' '}
-                <a href="mailto:clientes@mountainpass.cl">
-                  clientes@mountainpass.cl
+                <strong>Smarter Bot</strong> 2023 –{" "}
+                <a href="mailto:clientes@smarterbot.cl">
+                  clientes@smarterbot.cl
                 </a>
               </p>
             </div>

@@ -1,49 +1,49 @@
-import {Fragment, useEffect, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {Montserrat} from '@next/font/google';
-import Sidebar from '../../../components/Sidebar';
-import {db} from '../../../services/firebaseService';
-import moment from 'moment';
-import {isEmpty} from 'lodash';
-import DashNav from '../../../components/DashNav';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { Montserrat } from "@next/font/google";
+import Sidebar from "../../../components/Sidebar";
+import { db } from "../../../services/firebaseService";
+import moment from "moment";
+import { isEmpty } from "lodash";
+import DashNav from "../../../components/DashNav";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Dashboard(props) {
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
-  const [userId, setUserId] = useState('');
+  const [userId, setUserId] = useState("");
   const [saving, setSaving] = useState(false);
   const [userData, setUserData] = useState({});
   const [price, setPrice] = useState(0);
   const [offerPrice, setOfferPrice] = useState(0);
-  const [discountText, setDiscountText] = useState('');
+  const [discountText, setDiscountText] = useState("");
   const [totalUsers, setTotalUsers] = useState(0);
   const [paidUsers, setPaidUsers] = useState(0);
 
   useEffect(() => {
-    const userId = localStorage.getItem('__mtp__id');
+    const userId = localStorage.getItem("__mtp__id");
     setUserId(userId);
-    db.collection('accounts')
-      .where('type', '==', 'user')
+    db.collection("accounts")
+      .where("type", "==", "user")
       .get()
       .then((querySnapshot) => {
         setTotalUsers(querySnapshot.size);
       });
-    db.collection('accounts')
-      .where('type', '==', 'user')
-      .where('paymentStatus', '==', 'DONE')
+    db.collection("accounts")
+      .where("type", "==", "user")
+      .where("paymentStatus", "==", "DONE")
       .get()
       .then((querySnapshot) => {
         setPaidUsers(querySnapshot.size);
       });
-    db.collection('accounts')
+    db.collection("accounts")
       .doc(userId)
       .get()
       .then((docRef) => {
         setUserData(docRef.data());
       });
-    db.collection('settings')
-      .doc('--')
+    db.collection("settings")
+      .doc("--")
       .get()
       .then((docRef) => {
         setPrice(docRef.data().price);
@@ -54,8 +54,8 @@ function Dashboard(props) {
 
   const updateSettings = () => {
     setSaving(true);
-    db.collection('settings')
-      .doc('--')
+    db.collection("settings")
+      .doc("--")
       .update({
         price: parseInt(price),
         offerPrice: parseInt(offerPrice),
@@ -63,14 +63,14 @@ function Dashboard(props) {
       })
       .then(() => {
         setSaving(false);
-        alert('Opciones Actualizadas');
+        alert("Opciones Actualizadas");
       });
   };
 
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -90,12 +90,12 @@ function Dashboard(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -133,7 +133,7 @@ function Dashboard(props) {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {' '}
+        {" "}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
@@ -146,7 +146,7 @@ function Dashboard(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -175,7 +175,7 @@ function Dashboard(props) {
               </button>
               <div
                 className={`dash-nav collapse navbar-collapse ${
-                  displayMobileBar ? 'show' : ''
+                  displayMobileBar ? "show" : ""
                 }`}
                 id="navbarCollapse"
               >
@@ -196,26 +196,26 @@ function Dashboard(props) {
                 <div className="btn-toolbar mb-2 mb-md-0"></div>
               </div>
               <div className="row mt-5 mb-5">
-                {props.userType == 'user' ? (
+                {props.userType == "user" ? (
                   <Fragment>
                     {(!isEmpty(userData) &&
                       userData.expirationDate &&
                       moment
                         .unix(userData.expirationDate.seconds)
-                        .diff(moment(), 'days') < 30) ||
-                    userData.paymentStatus == 'PENDING' ? (
+                        .diff(moment(), "days") < 30) ||
+                    userData.paymentStatus == "PENDING" ? (
                       <div className="col-md-12 mb-5">
                         <div className="alert alert-primary" role="alert">
                           <div className="row align-items-center">
                             <div className="col-md-10">
-                              {userData.paymentStatus != 'PENDING' ? (
+                              {userData.paymentStatus != "PENDING" ? (
                                 <p className="mb-0">
-                                  Tu cuenta vence el{' '}
+                                  Tu cuenta vence el{" "}
                                   {!isEmpty(userData)
                                     ? moment
                                         .unix(userData.expirationDate.seconds)
-                                        .format('DD-MM-YYYY')
-                                    : ''}
+                                        .format("DD-MM-YYYY")
+                                    : ""}
                                   . Haz click en el siguiente botón para renovar
                                   tu suscripción.
                                 </p>
@@ -238,10 +238,10 @@ function Dashboard(props) {
                         </div>
                       </div>
                     ) : (
-                      ''
+                      ""
                     )}
                     {!isEmpty(userData) &&
-                    userData.paymentStatus != 'PENDING' ? (
+                    userData.paymentStatus != "PENDING" ? (
                       <Fragment>
                         <div className="col-md-6">
                           <div className="card">
@@ -279,13 +279,13 @@ function Dashboard(props) {
                         </div>
                       </Fragment>
                     ) : (
-                      ''
+                      ""
                     )}
                   </Fragment>
                 ) : (
-                  ''
+                  ""
                 )}
-                {props.userType == 'admin' ? (
+                {props.userType == "admin" ? (
                   <Fragment>
                     <div className="col-md-12 mb-5">
                       <div className="row justify-content-center">
@@ -337,12 +337,12 @@ function Dashboard(props) {
                         disabled={saving}
                         onClick={() => updateSettings()}
                       >
-                        {saving ? 'Guardando...' : 'Guardar Opciones'}
+                        {saving ? "Guardando..." : "Guardar Opciones"}
                       </button>
                     </div>
                   </Fragment>
                 ) : (
-                  ''
+                  ""
                 )}
               </div>
             </main>

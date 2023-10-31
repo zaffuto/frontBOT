@@ -1,46 +1,46 @@
-import {Fragment, useState} from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
-import {db} from '../../services/firebaseService';
-import {compareSync} from 'bcryptjs-react';
-import {Montserrat} from '@next/font/google';
-const montserrat = Montserrat({subsets: ['latin'], weight: 'variable'});
+import { Fragment, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
+import { db } from "../../services/firebaseService";
+import { compareSync } from "bcryptjs-react";
+import { Montserrat } from "@next/font/google";
+const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Login(props) {
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [check, setCheck] = useState(false);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const doLogin = async () => {
     setLoading(true);
     let user = await db
-      .collection('accounts')
-      .where('email', '==', email)
-      .where('deleted', '==', false)
+      .collection("accounts")
+      .where("email", "==", email)
+      .where("deleted", "==", false)
       .limit(1)
       .get();
     if (user.size > 0) {
       let passwordCheck = compareSync(password, user.docs[0].data().password);
       if (passwordCheck) {
-        localStorage.setItem('__mtp__id', user.docs[0].id);
+        localStorage.setItem("__mtp__id", user.docs[0].id);
         localStorage.setItem(
-          '__mtp__ud',
-          JSON.stringify(Object.assign(user.docs[0].data(), {password: ''}))
+          "__mtp__ud",
+          JSON.stringify(Object.assign(user.docs[0].data(), { password: "" }))
         );
         window.location.href = `/dashboard/${user.docs[0].data().type}`;
       } else {
-        alert('Usuario no existe');
+        alert("Usuario no existe");
         setLoading(false);
       }
     } else {
-      alert('email no existe');
+      alert("email no existe");
       setLoading(false);
     }
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       doLogin();
     }
   };
@@ -48,7 +48,7 @@ function Login(props) {
   return (
     <Fragment>
       <Head>
-        <title>Mountain Pass</title>
+        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -68,12 +68,12 @@ function Login(props) {
         />
         <meta
           property="og:image"
-          content="https://faisandu.com/mountainpass//images/mountainpass-cover.jpg"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://https://www.mountainpass.cl" />
-        <meta property="og:site_name" content="Mountainpass" />
+        <meta property="og:url" content="https://smarterbot.cl" />
+        <meta property="og:site_name" content="SmarterBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -123,7 +123,7 @@ function Login(props) {
 
           gtag('config', 'G-MRN2ZCR8ZP');
         `}
-        </Script>{' '}
+        </Script>{" "}
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
@@ -178,7 +178,7 @@ function Login(props) {
                       onChange={(e) => setCheck(e.target.checked)}
                     />
                     <label className="form-check-label">
-                      {' '}
+                      {" "}
                       Recordar contraseña
                     </label>
                   </div>
@@ -188,7 +188,7 @@ function Login(props) {
                       disabled={loading}
                       onClick={() => doLogin()}
                     >
-                      {loading ? 'Ingresando...' : 'Ingresar'}
+                      {loading ? "Ingresando..." : "Ingresar"}
                     </a>
                   </div>
                   <div className="text-center mt-4 mb-0">
@@ -209,9 +209,9 @@ function Login(props) {
             <div className="row text-center">
               <div className="col-sm-12">
                 <p className="d-block">
-                  <strong>Mountain Pass</strong> 2023 –{' '}
-                  <a href="mailto:clientes@mountainpass.cl">
-                    clientes@mountainpass.cl
+                  <strong>Smarter Bot</strong> 2023 –{" "}
+                  <a href="mailto:clientes@smarterbot.cl">
+                    clientes@smarterbot.cl
                   </a>
                 </p>
               </div>
