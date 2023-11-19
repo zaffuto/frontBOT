@@ -251,7 +251,7 @@ export default function Home() {
                       <td>No</td>
                     </tr>
                     <tr>
-                      <th scope="row">Centros de Ski</th>
+                      <th scope="row">Centros de Canje</th>
                       <td>Uno a elección</td>
                     </tr>
                     <tr>
@@ -259,7 +259,7 @@ export default function Home() {
                       <td>78 horas</td>
                     </tr>
                     <tr>
-                      <th scope="row">Montaña de Beneficios</th>
+                      <th scope="row">Descuentos y Beneficios</th>
                       <td>No</td>
                     </tr>
                   </tbody>
@@ -301,7 +301,7 @@ export default function Home() {
                       <td>Sí</td>
                     </tr>
                     <tr>
-                      <th scope="row">Centros de Ski</th>
+                      <th scope="row">Demostración</th>
                       <td>Todos</td>
                     </tr>
                     <tr>
