@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
 import { Montserrat } from "@next/font/google";
 import { Fragment, useEffect, useState } from "react";
 import { db } from "../services/firebaseService";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
@@ -16,18 +16,18 @@ export default function Prices() {
 
   const updateCount = (option) => {
     if (option == "minus" && count > 1) {
-      localStorage.setItem("__mtp_count", count - 1);
+      localStorage.setItem("__smtb_count", count - 1);
       setCount(count - 1);
     }
     if (option == "plus" && count < 10) {
-      localStorage.setItem("__mtp_count", count + 1);
+      localStorage.setItem("__smtb_count", count + 1);
       setCount(count + 1);
     }
   };
 
   useEffect(() => {
     if (typeof window != "undefined") {
-      localStorage.setItem("__mtp_count", 1);
+      localStorage.setItem("__smtb_count", 1);
     }
     db.collection("settings")
       .doc("--")
@@ -41,147 +41,15 @@ export default function Prices() {
 
   return (
     <Fragment>
-      <Head>
-        <title>SmarterBot</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
-        />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
-        />
-        <meta
-          property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
-        />
-        <meta
-          property="og:image"
-          content="https://mountainpass.cl/images/mountainpass-share.png"
-        />
-        <meta property="og:image:width" content="828" />
-        <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://smarterbot.cl" />
-        <meta property="og:site_name" content="SmarterBot" />
-        <meta property="fb:app_id" content="" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-16.png"
-          sizes="16x16"
-        ></link>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-32.png"
-          sizes="32x32"
-        ></link>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-96.png"
-          sizes="96x96"
-        ></link>
-        <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="images/touch-icon-ipad.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="images/touch-icon-iphone-retina.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="images/touch-icon-ipad-retina.png"
-        />
-      </Head>
+      <Header title="Precios"></Header>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {" "}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-MRN2ZCR8ZP');
-        `}
-        </Script>{" "}
-        <Script
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
-          strategy="afterInteractive"
-        />
-        <header>
-          <nav className="navbar navbar-expand-md fixed-top">
-            <div className="container-fluid">
-              <Link className="navbar-brand" href="/">
-                <img
-                  className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
-                  width={220}
-                />
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                onClick={() => setDisplayMoblieBar(!displayMobileBar)}
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div
-                className={`collapse navbar-collapse ${
-                  displayMobileBar ? "show" : ""
-                }`}
-                id="navbarCollapse"
-              >
-                <ul className="navbar-nav me-auto mb-2 mb-md-0"></ul>
-
-                <a
-                  className="btn btn-secondary mx-2 btn-header"
-                  href="/auth/login"
-                >
-                  Ingresa
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="/subscribe"
-                >
-                  Inscríbete Gratis
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="https://tienda.mountainpass.cl"
-                  target="_blank"
-                >
-                  Tienda
-                </a>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <Nav></Nav>
         <div className="section-single">
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-9 mx-auto mb-5 text-center">
                 <h1 className="text-center mb-5">
-                  Conoce los <span className="color">precios por hora</span>
+                  Conoce los <span className="color">precios </span>
                 </h1>
 
                 <p className="large text-center">
@@ -756,135 +624,11 @@ export default function Prices() {
                     </tbody>
                   </table>
                 </div>
-                <div className="bg-light rounded col-12 col-sm-12 col-lg-12 col-xl-9 mx-auto text-center p-0 mb-5">
-                  <p className="mb-0">
-                    <a
-                      href="https://skiportillo.com/"
-                      target="_blank"
-                      title="Ski Portillo"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/ski-portillo.png"
-                        width="200"
-                      />
-                    </a>
-                  </p>
-                  <hr />
-                  <h3 className="mt-5 mb-5 text-muted">
-                    Pronto más información
-                  </h3>
-                </div>
-                <div className="bg-light rounded col-12 col-sm-12 col-lg-12 col-xl-9 mx-auto text-center p-0">
-                  <p className="mb-0">
-                    <a
-                      href="https://laderas.com.ar/"
-                      target="_blank"
-                      title="Laderas"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/laderas.png"
-                        width="200"
-                      />
-                    </a>
-                  </p>
-                  <hr />
-                  <h3 className="mt-5 mb-5 text-muted">
-                    Pronto más información
-                  </h3>
-                </div>
               </div>
             </div>
           </div>
         </div>
-        <footer className="footer mt-auto py-5">
-          <div className="container-fluid">
-            <div className="row align-items-center">
-              <div className="col-sm-6">
-                <a className="footer-brand d-block" href="#">
-                  <img
-                    className="margin-top img-fluid "
-                    src="/images/MountainPass-white.svg"
-                  />
-                </a>
-                <p className="d-block mt-4">
-                  Mountain Pass 2023 –{" "}
-                  <a href="mailto:clientes@smarterbot.cl">
-                    clientes@smarterbot.cl
-                  </a>
-                </p>
-
-                <div className="follow-us mt-4">
-                  <a
-                    href="https://www.instagram.com/mountainpassgroup/"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-instagram.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/MountainPassGroup/"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-facebook.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.tiktok.com/@mountainpassgroup"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-tiktok.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@mountainpassgroup"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-youtube.svg"
-                      width="40"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <ul>
-                  <li>
-                    <a href="/quienes-somos">Quiénes Somos</a>
-                  </li>
-                  <li>
-                    <a href="/precios">Tarifas de ski por hora</a>
-                  </li>
-                  <li>
-                    <a href="/politicas-de-privacidad">
-                      Política de Privacidad
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/terminos-y-condiciones">Términos de Uso</a>
-                  </li>
-                  <li>
-                    <a href="/preguntas-frecuentes">¿Cómo Funciona?</a>
-                  </li>
-                  <li>
-                    <a href="/auth/login">Iniciar Sesión</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer></Footer>
       </div>
     </Fragment>
   );

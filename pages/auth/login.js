@@ -23,9 +23,9 @@ function Login(props) {
     if (user.size > 0) {
       let passwordCheck = compareSync(password, user.docs[0].data().password);
       if (passwordCheck) {
-        localStorage.setItem("__mtp__id", user.docs[0].id);
+        localStorage.setItem("__smtb__id", user.docs[0].id);
         localStorage.setItem(
-          "__mtp__ud",
+          "__smtb__ud",
           JSON.stringify(Object.assign(user.docs[0].data(), { password: "" }))
         );
         window.location.href = `/dashboard/${user.docs[0].data().type}`;
@@ -53,14 +53,14 @@ function Login(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter Bot" />
+        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="Smarter Bot - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"

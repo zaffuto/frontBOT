@@ -29,8 +29,8 @@ function RecorverPassword(props) {
             .doc(querySnapshot.docs[0].id)
             .update({ recoverToken: token });
           mg.messages
-            .create("mail.mountainpass.cl", {
-              from: "Mountain Pass<noreply@mail.mountainpass.cl>",
+            .create("mail.smarterbot.cl", {
+              from: "Smarter Bot<noreply@mail.smarterbot.cl>",
               to: [email],
               subject: "Solicitud de cambio de contraseña",
               text: "Solicitud de cambio de contraseña",
@@ -384,7 +384,7 @@ function RecorverPassword(props) {
                                   <table>
                                       <tbody><tr>
                                       <td>
-                                        <img src="https://mountainpass.cl/images/email-cover.png" width="100%" style="border-radius: 10px;">
+                                        <img src="https://smarterbot.cl/images/email-cover.png" width="100%" style="border-radius: 10px;">
                                       </td>
                                     </tr>
                                   </tbody></table>
@@ -404,7 +404,7 @@ function RecorverPassword(props) {
                                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td> <a href="https://mountainpass.cl/auth/recover/${token}" target="_blank">Reestablecer mi contraseña</a> </td>
+                                                      <td> <a href="https://smarterbot.cl/auth/recover/${token}" target="_blank">Reestablecer mi contraseña</a> </td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -428,7 +428,7 @@ function RecorverPassword(props) {
                               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                 <tbody><tr>
                                   <td className="content-block">
-                                    <span className="apple-link">Mountain Pass 2023</span>
+                                    <span className="apple-link">Smarter Bot 2023</span>
                                   </td>
                                 </tr>
                 
@@ -481,14 +481,14 @@ function RecorverPassword(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter Bot" />
+        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="Smarter Bot - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"
@@ -579,8 +579,7 @@ function RecorverPassword(props) {
                   <div className="row">
                     <p className="mb-4">
                       Escribe el <strong>correo electrónico</strong> asociado a
-                      tu cuenta Mountain Pass y sigue los pasos que te
-                      indiquemos.
+                      tu cuenta Smarter Bot y sigue los pasos que te indiquemos.
                     </p>
                   </div>
                   <div className="form-floating mb-3">

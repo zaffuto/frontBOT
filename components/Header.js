@@ -1,31 +1,28 @@
-import { Fragment } from "react";
 import Head from "next/head";
+import Script from "next/script";
+import { Fragment } from "react";
 
-function Index(props) {
+function Header(props) {
   return (
     <Fragment>
       <Head>
-        <title>SmarterBot</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="SmarterBOT – Suscríbete y paga sólo las horas que esquíes"
+          content={`SmarterBot - ${props.description || ""}`}
         />
-        <meta name="author" content="SmarterBOT" />
-        <title>SmarterBOT – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter Bot" />
+        <title>SmarterBot – {props.title}</title>
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="SmarterBOT - La nueva forma de vender por WhatsApp Business"
-        />
+        <meta property="og:title" content={`SmarterBot - ${props.title}`} />
         <meta
           property="og:description"
-          content="Solicitar un demo o ficha tecnica"
+          content="Suscríbete y obtén una montaña de beneficios"
         />
         <meta
           property="og:image"
-          content="https://mountainpass.cl/images/mountainpass-share.png"
+          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
         />
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
@@ -66,12 +63,27 @@ function Index(props) {
           sizes="152x152"
           href="images/touch-icon-ipad-retina.png"
         />
-      </Head>
-      <div className="splash-wrapper">
-        <img src="/images/MountainPassv2.svg" width={220} width="320" />
-      </div>
+      </Head>{" "}
+      {/* replace this with GTAG IDS 
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-MRN2ZCR8ZP');
+        `}
+      </Script>{" "}
+      <Script
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
+        strategy="afterInteractive"
+      />*/}
     </Fragment>
   );
 }
 
-export default Index;
+export default Header;

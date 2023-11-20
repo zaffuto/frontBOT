@@ -1,10 +1,10 @@
-import {useEffect} from 'react';
+import { useEffect } from "react";
 
 function Logout() {
   useEffect(() => {
-    localStorage.removeItem('__mtp__id');
-    localStorage.removeItem('__mtp__ud');
-    window.location.replace('/auth/login');
+    localStorage.removeItem("__smtb__id");
+    localStorage.removeItem("__smtb__ud");
+    window.location.replace("/auth/login");
   }, []);
 
   return <p></p>;
