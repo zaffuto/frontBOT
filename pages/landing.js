@@ -10,18 +10,18 @@ function Index(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="SmarterBOT – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="SmarterBOT" />
+        <title>SmarterBOT – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="SmarterBOT - La nueva forma de vender por WhatsApp Business"
         />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="Solicitar un demo o ficha tecnica"
         />
         <meta
           property="og:image"
