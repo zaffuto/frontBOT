@@ -73,7 +73,7 @@ function Pay(props) {
     let update = await db.collection("accounts").doc(props.userId).update({
       planType: "PRO",
       subscriptionsCount,
-      totalPrice,
+      totalPrice: 1000,
       paymentStatus: "PENDING",
     });
     window.location.href = `/pay/${props.userId}/add/process`;

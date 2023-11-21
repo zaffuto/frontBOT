@@ -201,7 +201,7 @@ export default function Home() {
                   check,
                   type: "user",
                   subscriptionsCount,
-                  totalPrice,
+                  totalPrice: 1000,
                 })
                 .then((docRef) => {
                   if (docRef.id) {
