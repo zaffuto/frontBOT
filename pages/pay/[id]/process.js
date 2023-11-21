@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import Header from "../../../components/Header";
-import Script from "next/script";
 import { useRouter } from "next/router";
 import { BounceLoader } from "react-spinners";
 import { Montserrat } from "@next/font/google";
