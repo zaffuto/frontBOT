@@ -143,7 +143,7 @@ export default function Home() {
                     className="margin-top img-fluid mt-4"
                     src="/images/centros.png"
                     width="640"
-                    title="Los mejores centros de ski del país"
+                    title="xxxxxxx"
                   />
                 </p>
               </div>
