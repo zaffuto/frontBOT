@@ -54,12 +54,12 @@ export default function Home() {
                   <span className="color">Principal</span>
                 </h1>
                 <p className="large mt-3">
-                  Descripción de los servicios de smarterbot{" "}
+                  Los códigos QR ofrecen a los usuarios acceso a más contenido, como información, ofertas y promociones{"xx "}
                   <b>importante completar</b>
                 </p>
                 <p className="large mt-3">
-                  ¡Inscríbete gratis en nuestros planes y conoce las ofertas de
-                  la tienda!
+                  Innovamos la forma de interactuar con tus clientes.
+                  ChatBOT trabaja para ti ¡las 24 horas del día.
                 </p>
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
@@ -85,7 +85,7 @@ export default function Home() {
             </h1>
             <div className="row justify-content-center">
               <PlanCard
-                title="Basic"
+                title="Chat Demo"
                 text1="Gratis"
                 text2="Sí"
                 text3="No"
@@ -97,8 +97,8 @@ export default function Home() {
                 linkText="Inscríbete Gratis"
               ></PlanCard>
               <PlanCard
-                title="Pro"
-                text1="Valores por categorías"
+                title="Chat Pro"
+                text1="Pago Mensual"
                 text2="Sí"
                 text3="Sí"
                 text4="Todos"
@@ -126,11 +126,8 @@ export default function Home() {
                   Una montaña <span className="color">de beneficios</span>
                 </h1>
                 <p className="large mt-3">
-                  Los suscriptores de Smarter Bot podrán disfrutar de tarifas de
-                  ski por hora, ofertas especiales en alojamiento, rental,
-                  clases, alimentación y mucho más.
+                  Las estrategias de Marketing con códigos QR busca la interacción entre la marca y el consumidor, ofreciendo al usuario acceso a más contenidos
                 </p>
-
                 <div>
                   <br />
                   <a
