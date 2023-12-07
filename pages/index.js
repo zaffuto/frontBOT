@@ -48,7 +48,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Smarter ChatBOT – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter ChatBOT – Suscríbete ya !
         />
         <meta name="author" content="Smarter ChatBOT" />
         <title>Smarter ChatBOT – Esquía pagando solo el tiempo que uses</title>
