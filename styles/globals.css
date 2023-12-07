@@ -484,8 +484,11 @@ border-color: transparent!important;
 border: solid 3px #00000010!important;
 padding: 1rem 0.75rem;
 -webkit-border-radius: 100px;
+}
 
-
+.iti__country-list{
+  z-index: 99 !important;
+  margin-left: 20px !important;
 }
 
 .footer{

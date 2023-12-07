@@ -1,9 +1,9 @@
-import {MdDashboard} from 'react-icons/md';
-import {FaHouseUser, FaUsers} from 'react-icons/fa';
-import {IoMdLogOut} from 'react-icons/io';
-import {IoIdCardSharp} from 'react-icons/io5';
-import {GiSkier} from 'react-icons/gi';
-import {FaAddressCard} from 'react-icons/fa';
+import { MdDashboard } from "react-icons/md";
+import { FaHouseUser, FaUsers } from "react-icons/fa";
+import { IoMdLogOut } from "react-icons/io";
+import { IoIdCardSharp } from "react-icons/io5";
+import { GiSkier } from "react-icons/gi";
+import { FaAddressCard } from "react-icons/fa";
 
 function DashNav(props) {
   return (
@@ -14,7 +14,7 @@ function DashNav(props) {
           Dashboard <span className="sr-only"></span>
         </a>
       </li>
-      {props.userType == 'user' ? (
+      {props.userType == "user" ? (
         <li className="nav-item text-left dash-nav-item">
           <a className="nav-link" href={`/dashboard/${props.userType}/account`}>
             <FaHouseUser size={30} className="mx-2"></FaHouseUser> Mi Mountain
@@ -22,61 +22,51 @@ function DashNav(props) {
           </a>
         </li>
       ) : (
-        ''
+        ""
       )}
-      {props.userType == 'user' ? (
+      {props.userType == "user" ? (
         <li className="nav-item text-left dash-nav-item">
           <a
             className="nav-link"
             href={`/dashboard/${props.userType}/subscriptions`}
           >
             <IoIdCardSharp size={30} className="mx-2"></IoIdCardSharp>
-            Suscripciones{' '}
+            Suscripciones{" "}
           </a>
         </li>
       ) : (
-        ''
+        ""
       )}
 
-      {props.userType == 'admin' ? (
+      {props.userType == "admin" ? (
         <li className="nav-item text-left dash-nav-item">
           <a className="nav-link" href={`/dashboard/${props.userType}/users`}>
-            <FaHouseUser size={30} className="mx-2"></FaHouseUser> Usuarios{' '}
+            <FaHouseUser size={30} className="mx-2"></FaHouseUser> Usuarios{" "}
           </a>
         </li>
       ) : (
-        ''
+        ""
       )}
 
-      {props.userType == 'admin' ? (
-        <li className="nav-item text-left dash-nav-item">
-          <a className="nav-link" href={`/dashboard/${props.userType}/centers`}>
-            <GiSkier size={30} className="mx-2"></GiSkier> Centros{' '}
-          </a>
-        </li>
-      ) : (
-        ''
-      )}
-
-      {props.userType == 'center' ? (
+      {props.userType == "center" ? (
         <li className="nav-item text-left dash-nav-item">
           <a
             className="nav-link"
             href={`/dashboard/${props.userType}/validate`}
           >
             <FaAddressCard size={30} className="mx-2"></FaAddressCard>
-            Validar rut{' '}
+            Validar rut{" "}
           </a>
         </li>
       ) : (
-        ''
+        ""
       )}
 
       <li className="nav-item text-left dash-nav-item">
         <a className="nav-link" href={`/auth/logout`}>
-          {' '}
+          {" "}
           <IoMdLogOut size={30} className="mx-2"></IoMdLogOut>
-          Cerrar Sesión{' '}
+          Cerrar Sesión{" "}
         </a>
       </li>
     </ul>

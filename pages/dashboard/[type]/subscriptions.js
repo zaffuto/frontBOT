@@ -20,8 +20,8 @@ function Dashboard(props) {
 
   useEffect(() => {
     if (typeof window != "undefined") {
-      setUserId(localStorage.getItem("__mtp__id"));
-      let data = JSON.parse(localStorage.getItem("__mtp__ud"));
+      setUserId(localStorage.getItem("__smtb__id"));
+      let data = JSON.parse(localStorage.getItem("__smtb__ud"));
       setSubscriptionsCount(data.subscriptionsCount);
       getSubscriptors();
     }
@@ -37,7 +37,7 @@ function Dashboard(props) {
 
   const getSubscriptors = () => {
     db.collection("subscriptions")
-      .where("accountId", "==", localStorage.getItem("__mtp__id"))
+      .where("accountId", "==", localStorage.getItem("__smtb__id"))
       .where("deleted", "==", false)
       .get()
       .then((querySnapshot) => {
@@ -62,7 +62,7 @@ function Dashboard(props) {
         .add({
           name,
           rut,
-          accountId: localStorage.getItem("__mtp__id"),
+          accountId: localStorage.getItem("__smtb__id"),
           deleted: false,
           dateCreated: new Date(),
         })
@@ -81,14 +81,14 @@ function Dashboard(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter Bot" />
+        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="Smarter Bot - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"
@@ -294,7 +294,7 @@ function Dashboard(props) {
                 </a>
               </div>
               <div className="col-sm-6">
-                <p className="d-block">Mountain Pass 2023 </p>
+                <p className="d-block">Smarter Bot 2023 </p>
               </div>
             </div>
           </div>

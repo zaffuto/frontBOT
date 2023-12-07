@@ -1,9 +1,10 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
 import { Montserrat } from "@next/font/google";
 import { Fragment, useEffect, useState } from "react";
 import { db } from "../services/firebaseService";
+import Header from "../components/Header";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import PlanCard from "../components/planCard";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
@@ -13,22 +14,21 @@ export default function Home() {
   const [offerPrice, setOfferPrice] = useState(0);
   const [displayMobileBar, setDisplayMoblieBar] = useState(false);
   const [discountText, setDiscountText] = useState("");
-  const [showModal, setShowModal] = useState(false);
 
   const updateCount = (option) => {
     if (option == "minus" && count > 1) {
-      localStorage.setItem("__mtp_count", count - 1);
+      localStorage.setItem("__smtb_count", count - 1);
       setCount(count - 1);
     }
     if (option == "plus" && count < 10) {
-      localStorage.setItem("__mtp_count", count + 1);
+      localStorage.setItem("__smtb_count", count + 1);
       setCount(count + 1);
     }
   };
 
   useEffect(() => {
     if (typeof window != "undefined") {
-      localStorage.setItem("__mtp_count", 1);
+      localStorage.setItem("__smtb_count", 1);
     }
     db.collection("settings")
       .doc("--")
@@ -106,84 +106,14 @@ export default function Home() {
         />
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {" "}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-MRN2ZCR8ZP');
-        `}
-        </Script>{" "}
-        <Script
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
-          strategy="afterInteractive"
-        />
-        <header>
-          <nav className="navbar navbar-expand-md fixed-top">
-            <div className="container-fluid">
-              <Link className="navbar-brand" href="/">
-                <img
-                  className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
-                  width={220}
-                />
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                onClick={() => setDisplayMoblieBar(!displayMobileBar)}
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div
-                className={`collapse navbar-collapse ${
-                  displayMobileBar ? "show" : ""
-                }`}
-                id="navbarCollapse"
-              >
-                <ul className="navbar-nav me-auto mb-2 mb-md-0"></ul>
-
-                <a
-                  className="btn btn-secondary mx-2 btn-header"
-                  href="/auth/login"
-                >
-                  Ingresa
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="/subscribe"
-                >
-                  Inscríbete Gratis
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="https://tienda.mountainpass.cl"
-                  target="_blank"
-                >
-                  Tienda
-                </a>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <Nav></Nav>
         <div className="section-cover">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
                 <h1 className="display-1">
-                  Lánzate a la nueva forma de{" "}
-                  <span className="color">disfrutar la montaña</span>
+                  Título
+                  <span className="color">Principal</span>
                 </h1>
                 <p className="large mt-3">
                   Bot Vendedor es una membresía anual que te permitirá acceder
@@ -191,6 +121,8 @@ export default function Home() {
                   <b>Respuestas automáticas 24x7</b>, más una serie de beneficios.
                 </p>
                 <p className="large mt-3">
+                  Innovamos la forma de interactuar con tus clientes.
+                  ChatBOT trabaja para ti ¡las 24 horas del día.
                   ¡Respuestas automatizadas desde base de datos MySQL y Firebase!
                 </p>
                 <a
@@ -218,7 +150,7 @@ export default function Home() {
               <div className="col-12 col-sm-12 col-lg-12 col-xl-5 mx-auto text-center img-home-container">
                 <img
                   className="align-middle img-fluid rounded img-home"
-                  src="/images/i-1.png"
+                  src="https://placehold.co/558x730"
                   width="460"
                 />
               </div>
@@ -331,7 +263,7 @@ export default function Home() {
               <div className="col-12 col-sm-12 col-lg-12 col-xl-6 mx-auto text-center">
                 <img
                   className="align-middle img-fluid rounded img-home-two"
-                  src="/images/i-2.jpg"
+                  src="https://placehold.co/558x730"
                   width="460"
                 />
               </div>
@@ -340,11 +272,11 @@ export default function Home() {
                   Una montaña <span className="color">de beneficios</span>
                 </h1>
                 <p className="large mt-3">
+                  Las estrategias de Marketing con códigos QR busca la interacción entre la marca y el consumidor, ofreciendo al usuario acceso a más contenidos
                   Los suscriptores de Smarter ChatBOT podrán disfrutar de tarifas
                   de ski por hora, ofertas especiales en alojamiento, rental,
                   clases, alimentación y mucho más.
                 </p>
-
                 <div>
                   <br />
                   <a
@@ -357,7 +289,7 @@ export default function Home() {
                     className="btn btn-primary btn-md mt-4 mx-3"
                     href="/precios"
                   >
-                    Tarifas de ski por hora
+                    Tarifas
                   </a>
                 </div>
               </div>
@@ -386,7 +318,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="section-white mb-5">
+        {/*<div className="section-white mb-5">
           <div className="container">
             <div className="row align-content-start align-items-center">
               <div className="col-12 col-sm-12 col-md-12 mx-auto text-center">
@@ -537,73 +469,6 @@ export default function Home() {
           </div>
         </footer>
       </div>
-      {showModal ? (
-        <div
-          id="modal-valores"
-          className="modal fade show mont"
-          aria-modal="true"
-          role="dialog"
-          style={{ display: "block" }}
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  onClick={() => setShowModal(false)}
-                ></button>
-              </div>
-              <div className="modal-body">
-                <div className="row">
-                  <h5 className="text-uppercase text-center">Plan Pro</h5>
-                  <h2 className="mb-3 text-center">
-                    <span className="large">
-                      Valores por <span className="color">categorías</span>
-                    </span>
-                  </h2>
-
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <th scope="row">03 a 10 años</th>
-                        <td>Gratis</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">11 a 18 años</th>
-                        <td>$ 24.000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">19 a 34 años</th>
-                        <td>$ 36.000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">35 a 64 años</th>
-                        <td>$ 48.000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">65 años y más</th>
-                        <td>Gratis</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div className="d-grid">
-                    <a
-                      className="btn btn-block btn-primary btn-md mt-4 mb-4"
-                      href="/subscribe/pro"
-                    >
-                      Comprar Suscripción
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
     </Fragment>
   );
 }

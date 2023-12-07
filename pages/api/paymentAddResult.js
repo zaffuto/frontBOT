@@ -43,11 +43,11 @@ export default async function handler(request, response) {
               paymentData: flowResponse,
             });
             mg.messages
-              .create("mail.mountainpass.cl", {
-                from: "Mountain Pass<noreply@mail.educomlab.com>",
+              .create("mail.smarterbot.cl", {
+                from: "SmarterBot<noreply@mail.smarterbot.cl>",
                 to: [documentSnapshot.data().email],
-                subject: "Confirmación de pago de tu cuenta Mountain Pass",
-                text: "Has agregado suscripciones a tu cuenta Mountain Pass",
+                subject: "Confirmación de pago de tu cuenta SmarterBot",
+                text: "Has agregado suscripciones a tu cuenta SmarterBot",
                 html: `<html><head>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -398,7 +398,7 @@ export default async function handler(request, response) {
                                   <table>
                                       <tbody><tr>
                                       <td>
-                                        <img src="https://mountainpass.cl/images/email-cover.png" width="100%" style="border-radius: 10px;">
+                                        <img src="https://smarterbot.cl/images/email-cover.png" width="100%" style="border-radius: 10px;">
                                       </td>
                                     </tr>
                                   </tbody></table>
@@ -417,7 +417,7 @@ export default async function handler(request, response) {
                                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                   <tbody>
                                                     <tr>
-                                                      <td> <a href="https://mountainpass.cl/auth/login" target="_blank">Inicia sesión aquí</a> </td>
+                                                      <td> <a href="https://smarterbot.cl/auth/login" target="_blank">Inicia sesión aquí</a> </td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -441,7 +441,7 @@ export default async function handler(request, response) {
                               <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                 <tbody><tr>
                                   <td className="content-block">
-                                    <span className="apple-link">Mountain Pass 2023</span>
+                                    <span className="apple-link">SmarterBot 2023</span>
                                   </td>
                                 </tr>
                 

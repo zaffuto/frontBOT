@@ -1,142 +1,17 @@
-import Head from "next/head";
-import Script from "next/script";
-import Link from "next/link";
 import { Montserrat } from "@next/font/google";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Terminos() {
   return (
     <Fragment>
-      <Head>
-        <title>SmarterBot</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
-        />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
-        />
-        <meta
-          property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
-        />
-        <meta
-          property="og:image"
-          content="https://smarterbot.cl/images/smarterbot-cover.jpg"
-        />
-        <meta property="og:image:width" content="828" />
-        <meta property="og:image:height" content="450" />
-        <meta property="og:url" content="https://smarterbot.cl" />
-        <meta property="og:site_name" content="SmarterBot" />
-        <meta property="fb:app_id" content="" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-16.png"
-          sizes="16x16"
-        ></link>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-32.png"
-          sizes="32x32"
-        ></link>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/images/mountainpass-favicon-96.png"
-          sizes="96x96"
-        ></link>
-        <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="images/touch-icon-ipad.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="images/touch-icon-iphone-retina.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="images/touch-icon-ipad-retina.png"
-        />
-      </Head>
+      <Header title="Términos y condiciones de uso"></Header>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        {" "}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-MRN2ZCR8ZP');
-        `}
-        </Script>{" "}
-        <Script
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
-          strategy="afterInteractive"
-        />
-        <header>
-          <nav className="navbar navbar-expand-md fixed-top">
-            <div className="container-fluid">
-              <Link className="navbar-brand" href="/">
-                <img
-                  className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
-                  width={220}
-                />
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarCollapse">
-                <ul className="navbar-nav me-auto mb-2 mb-md-0"></ul>
-                <a
-                  className="btn btn-secondary mx-2 btn-header"
-                  href="/auth/login"
-                >
-                  Ingresa
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="/subscribe"
-                >
-                  Inscríbete gratis
-                </a>
-                <a
-                  className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="https://tienda.mountainpass.cl"
-                  target="_blank"
-                >
-                  Tienda
-                </a>
-              </div>
-            </div>
-          </nav>
-        </header>
+        <Nav />
         <div className="section-single">
           <div className="container">
             <div className="row align-content-start align-items-center">
@@ -144,7 +19,7 @@ export default function Terminos() {
                 <h1 className="text-center">
                   <span className="color">Términos de uso</span>
                 </h1>
-                <h1 className="text-center">Mountain Pass</h1>
+                <h1 className="text-center">SmarterBot</h1>
                 <hr />
                 <a href="#1">
                   <p>
@@ -158,7 +33,7 @@ export default function Terminos() {
                 </a>
                 <a href="#3">
                   <p>
-                    <strong>3. El Servicio de Mountain Pass</strong>
+                    <strong>3. El Servicio de SmarterBot</strong>
                   </p>
                 </a>
                 <a href="#4">
@@ -187,16 +62,16 @@ export default function Terminos() {
                 <p>
                   Beneficios: corresponde a los productos y servicios ofrecidos
                   por los Centros de Esquí y demás Proveedores que hayan
-                  suscrito un contrato, convenio o alianza con Mountain Pass a
+                  suscrito un contrato, convenio o alianza con SmarterBot a
                   costos reducidos y alternativos al cobro tradicional para
                   acceder a ellos.
                 </p>
                 <p>
                   Centros de Esquí: corresponde a los centros de montaña
                   preparados para ofrecer actividades para el disfrute de la
-                  nieve por los Usuarios con los cuales Mountain Pass ha
-                  suscrito un acuerdo, convenio o alianza para permitir a los
-                  Usuarios el Beneficio de Acceso a Centros de Esquí.
+                  nieve por los Usuarios con los cuales SmarterBot ha suscrito
+                  un acuerdo, convenio o alianza para permitir a los Usuarios el
+                  Beneficio de Acceso a Centros de Esquí.
                 </p>
                 <p>
                   <strong>Infraestructura del Proveedor:</strong> corresponde a
@@ -211,12 +86,12 @@ export default function Terminos() {
                   natural del Usuario.
                 </p>
                 <p>
-                  <strong>Mountain Pass SpA o Mountain Pass:</strong> es una
-                  sociedad por acciones chilena constituida por escritura
-                  pública de fecha 5 de mayo de 2022 en la Notaría de Santiago
-                  de don Roberto Antonio Cifuentes Allel, con domicilio social
-                  en Santiago, y que tiene como objetivo el promover la cultura
-                  de montaña. En ese sentido, la sociedad, en su carácter de
+                  <strong>SmarterBot SpA o SmarterBot:</strong> es una sociedad
+                  por acciones chilena constituida por escritura pública de
+                  fecha 5 de mayo de 2022 en la Notaría de Santiago de don
+                  Roberto Antonio Cifuentes Allel, con domicilio social en
+                  Santiago, y que tiene como objetivo el promover la cultura de
+                  montaña. En ese sentido, la sociedad, en su carácter de
                   operador de plataforma de comercio electrónico, busca
                   facilitar y promover vías de acceso a la montaña para fines
                   turísticos y deportivos, mediante la suscripción de convenios
@@ -229,22 +104,22 @@ export default function Terminos() {
                 <p>
                   <strong>Plataforma:</strong> es el soporte online (la
                   siguiente página web:{" "}
-                  <a href="https://www.mountainpass.cl/" target="_blank">
-                    https://www.mountainpass.cl/
+                  <a href="https://smarterbot.cl/" target="_blank">
+                    https://smarterbot.cl/
                   </a>
                   ) mediante el cual se ofrecen los Beneficios.
                 </p>
                 <p>
                   <strong>Proveedores:</strong> la persona natural o jurídica no
-                  relacionada a Mountain Pass que realiza una oferta de sus
+                  relacionada a SmarterBot que realiza una oferta de sus
                   productos y/o servicios relacionados con el esquí a través de
                   la Plataforma. Para poder consultar el listado de los
-                  Proveedores con los que Mountain Pass ha celebrado dichos
+                  Proveedores con los que SmarterBot ha celebrado dichos
                   contratos, convenios o alianzas y que actualmente ofrecen los
                   Beneficios a través de la Plataforma, el Usuario puede
                   ingresar al siguiente link:{" "}
-                  <a href="https://www.mountainpass.cl/" target="_blank">
-                    https://www.mountainpass.cl/
+                  <a href="https://smarterbot.cl/" target="_blank">
+                    https://smarterbot.cl/
                   </a>
                 </p>
                 <p>
@@ -270,9 +145,9 @@ export default function Terminos() {
                   Lea atentamente los Términos de Uso, antes de su aceptación y
                   registro en la Plataforma, ya que rigen el uso de los
                   Servicios y representan un contrato vinculante entre el
-                  Usuario y Mountain Pass. Si no está de acuerdo con los
-                  Términos de Uso, no debe registrarse en la Plataforma ni
-                  comprar la Membresía.
+                  Usuario y SmarterBot. Si no está de acuerdo con los Términos
+                  de Uso, no debe registrarse en la Plataforma ni comprar la
+                  Membresía.
                 </p>
                 <p>
                   Estos Términos de Uso incluyen las disposiciones del presente
@@ -282,14 +157,14 @@ export default function Terminos() {
                   Plataforma.
                 </p>
                 <h2 className="mb-4 mt-5" id="3">
-                  3 – EL SERVICIO DE MOUNTAIN PASS – CONDICIONES GENERALES
+                  3 – EL SERVICIO DE SmarterBot – CONDICIONES GENERALES
                 </h2>
                 <p>
-                  Mountain Pass ofrece a través de la Plataforma, en calidad de
+                  SmarterBot ofrece a través de la Plataforma, en calidad de
                   intermediario, a los Usuarios que hubieren adquirido la
                   Membresía, distintos Beneficios, los que podrán ir variando
-                  con el tiempo en virtud de las alianzas de Mountain Pass con
-                  los distintos Proveedores.
+                  con el tiempo en virtud de las alianzas de SmarterBot con los
+                  distintos Proveedores.
                 </p>
                 <h4>
                   <strong>Registro en la Plataforma</strong>
@@ -313,9 +188,9 @@ export default function Terminos() {
                 </p>
                 <p>
                   El Usuario (i) se obliga a que toda la información que le
-                  entregue a Mountain Pass al momento de su registro en la
+                  entregue a SmarterBot al momento de su registro en la
                   Plataforma es verdadera, precisa y completa, y que notificará
-                  a Mountain Pass en caso de que todo o parte de la información
+                  a SmarterBot en caso de que todo o parte de la información
                   provista se modifique en miras de mantener la veracidad,
                   precisión y completitud de la misma; y (ii) se obliga a usar
                   la Plataforma y los Servicios que ésta ofrece de manera que no
@@ -329,14 +204,14 @@ export default function Terminos() {
                   Plataforma con nadie y deberá proteger la seguridad de estos.
                 </p>
                 <p>
-                  Mountain Pass ha establecido mecanismos de identificación para
-                  el Usuario mediante una contraseña secreta, la que deberá ser
-                  conocida sólo por el titular de la cuenta. Mountain Pass asume
+                  SmarterBot ha establecido mecanismos de identificación para el
+                  Usuario mediante una contraseña secreta, la que deberá ser
+                  conocida sólo por el titular de la cuenta. SmarterBot asume
                   que es el titular el único facultado para ingresar a la cuenta
                   mediante esta validación de identidad.
                 </p>
                 <p>
-                  Mountain Pass utiliza estándares de seguridad reconocidos
+                  SmarterBot utiliza estándares de seguridad reconocidos
                   internacionalmente para la seguridad y protección de su
                   información y de la Plataforma. Sin perjuicio de lo anterior,
                   cada Usuario es responsable de la actividad asociada a su
@@ -356,15 +231,15 @@ export default function Terminos() {
                   Plataforma. Los precios publicados incluyen IVA. El Usuario
                   puede consultar el valor de la Membresía en el siguiente link:{" "}
                   <a
-                    href="https://www.mountainpass.cl/"
+                    href="https://smarterbot.cl/"
                     target="_blank"
-                    https="www.mountainpass.cl="
+                    https="smarterbot.cl="
                   >
-                    https://www.mountainpass.cl/
+                    https://smarterbot.cl/
                   </a>
                 </p>
                 <p>
-                  Mountain Pass funciona como intermediario de los Beneficios
+                  SmarterBot funciona como intermediario de los Beneficios
                   ofrecidos, los que son prestados directamente por los
                   Proveedores quienes además fijan los precios de los mismos.
                 </p>
@@ -372,7 +247,7 @@ export default function Terminos() {
                   <strong>Beneficio de Acceso a Centros de Esquí</strong>
                 </h4>
                 <p>
-                  Uno de los Beneficios que Mountain Pass ofrece a través de la
+                  Uno de los Beneficios que SmarterBot ofrece a través de la
                   Plataforma, es acceder a los Centros de Esquí por medio de un
                   cobro por hora o por uso de la Infraestructura del Proveedor,
                   independiente de cuántas horas efectivamente se esquíen o la
@@ -392,36 +267,36 @@ export default function Terminos() {
                   Centros de Esquí respectivos.
                 </p>
                 <p>
-                  Mediante la realización de la Reserva, Mountain Pass garantiza
-                  al Usuario que el día para el cual haya realizado la Reserva
+                  Mediante la realización de la Reserva, SmarterBot garantiza al
+                  Usuario que el día para el cual haya realizado la Reserva
                   podrá hacer uso del Beneficio de Acceso a Centros de Esquí,
                   salvo que ocurra un evento de fuerza mayor conforme a la
                   legislación aplicable en cuyo caso el pago hecho por la
                   Reserva será reembolsado.
                 </p>
                 <p>
-                  Realizada la Reserva, Mountain Pass enviará al Usuario un
-                  código de reserva asociado al RUT de dicho Usuario. En caso de
-                  que un Usuario quiera pagar en ese acto una Reserva para otras
+                  Realizada la Reserva, SmarterBot enviará al Usuario un código
+                  de reserva asociado al RUT de dicho Usuario. En caso de que un
+                  Usuario quiera pagar en ese acto una Reserva para otras
                   personas, éstas deberán tener la calidad de Usuario y
                   encontrarse por tanto registradas en la Plataforma.
                 </p>
                 <p>
                   Los Usuarios deberán presentarse el día de la Reserva en el
                   Centro de Esquí respectivo, donde se realizará su ingreso
-                  (“Check-In”) directamente con el staff de Mountain Pass.
+                  (“Check-In”) directamente con el staff de SmarterBot.
                 </p>
                 <p>
                   De no presentarse en el día para el cual se realizó la
                   Reserva, ésta perderá su validez y quedará sin efecto, en cuyo
                   caso el Usuario no podrá efectuar reclamo ni solicitar
-                  devolución del pago de la Reserva a Mountain Pass.
+                  devolución del pago de la Reserva a SmarterBot.
                 </p>
                 <p>
                   Al momento del Check-In, los Usuarios deberán validar su
-                  identidad mediante la presentación al staff de Mountain Pass
-                  de su cédula de identidad o pasaporte. El staff de Mountain
-                  Pass procederá a registrar la hora de ingreso, le entregará un
+                  identidad mediante la presentación al staff de SmarterBot de
+                  su cédula de identidad o pasaporte. El staff de Smarter Bot
+                  procederá a registrar la hora de ingreso, le entregará un
                   ticket al Usuario, y se realizará un cargo por autorización en
                   la tarjeta de crédito o equivalente que presente el Usuario
                   por un monto de $60.000 (sesenta mil pesos) o seis horas de
@@ -434,14 +309,14 @@ export default function Terminos() {
                 <p>
                   Cuando el Usuario quiera dejar de hacer uso del Beneficio de
                   Acceso a Centros de Esquí, se deberá acercar al staff de
-                  Mountain Pass para entregar el ticket. En ese acto, se
-                  registrará la hora de salida (“Check-Out”) y se procederá a
-                  facturar y realizar el cobro por el uso efectivo del Beneficio
-                  de Acceso a Centros de Esquí en el medio de pago que hubiere
-                  presentado el Usuario. El pago realizado al momento de la
-                  Reserva se imputará al monto total a pagar en el Check-Out.
-                  Una vez que el Usuario devuelve su ticket, éste se cancelará
-                  de manera que no podrá ser entregado nuevamente al Usuario.
+                  SmarterBot para entregar el ticket. En ese acto, se registrará
+                  la hora de salida (“Check-Out”) y se procederá a facturar y
+                  realizar el cobro por el uso efectivo del Beneficio de Acceso
+                  a Centros de Esquí en el medio de pago que hubiere presentado
+                  el Usuario. El pago realizado al momento de la Reserva se
+                  imputará al monto total a pagar en el Check-Out. Una vez que
+                  el Usuario devuelve su ticket, éste se cancelará de manera que
+                  no podrá ser entregado nuevamente al Usuario.
                 </p>
                 <p>
                   En caso de que el Usuario no realizara el Check-Out al
@@ -452,8 +327,8 @@ export default function Terminos() {
                   más el Cargo Adelantado.
                 </p>
                 <p>
-                  Mountain Pass no procederá a realizar devolución alguna del
-                  pago de la Reserva ni descuento alguno por el tiempo u
+                  SmarterBot no procederá a realizar devolución alguna del pago
+                  de la Reserva ni descuento alguno por el tiempo u
                   oportunidades en las que efectivamente se hubiere utilizado el
                   Beneficio de Acceso a Centros de Esquí a causa de condiciones
                   climáticas adversas en los Centros de Esquí. Lo anterior,
@@ -468,32 +343,31 @@ export default function Terminos() {
                 </h4>
                 <p>
                   ¿Qué es un cargo por autorización? Un cargo por autorización
-                  significa que Mountain Pass se comunicará con el banco emisor
-                  del medio de pago presentado por el Usuario, para asegurar de
-                  que la forma de pago que se utilizó es válida y de que el
-                  Usuario tiene suficientes fondos para realizar la compra. El
-                  banco retendrá los fondos hasta que se procese de forma
-                  definitiva la transacción o venza la autorización. Una
-                  retención por autorización pendiente no es un cobro, así que
-                  no se realizará ningún pago por las autorizaciones. Mountain
-                  Pass solo cobrará por hora o por uso efectivo de los
-                  productos, servicios e Infraestructura del Proveedor, pagando
-                  un precio reducido en relación al que el Usuario pagaría por
-                  dicho producto, servicio y/o Infraestructura del Proveedor de
-                  no contar con los Beneficios que otorga la Membresía. LOS
-                  USUARIOS DE MOUNTAIN PASS NUNCA PAGARÁN MÁS DE LO QUE HUBIERAN
-                  PAGADO DE HABER CONTRATADO LOS SERVICIOS Y PRODUCTOS
-                  DIRECTAMENTE AL PROVEEDOR.
+                  significa que SmarterBot se comunicará con el banco emisor del
+                  medio de pago presentado por el Usuario, para asegurar de que
+                  la forma de pago que se utilizó es válida y de que el Usuario
+                  tiene suficientes fondos para realizar la compra. El banco
+                  retendrá los fondos hasta que se procese de forma definitiva
+                  la transacción o venza la autorización. Una retención por
+                  autorización pendiente no es un cobro, así que no se realizará
+                  ningún pago por las autorizaciones. Smarter Bot solo cobrará
+                  por hora o por uso efectivo de los productos, servicios e
+                  Infraestructura del Proveedor, pagando un precio reducido en
+                  relación al que el Usuario pagaría por dicho producto,
+                  servicio y/o Infraestructura del Proveedor de no contar con
+                  los Beneficios que otorga la Membresía. LOS USUARIOS DE
+                  SmarterBot NUNCA PAGARÁN MÁS DE LO QUE HUBIERAN PAGADO DE
+                  HABER CONTRATADO LOS SERVICIOS Y PRODUCTOS DIRECTAMENTE AL
+                  PROVEEDOR.
                 </p>
                 <p>
                   El Usuario debe garantizar los respectivos pagos a través de
                   una tarjeta de crédito bancaria, tarjeta de débito o cualquier
-                  otra forma que, a criterio exclusivo de Mountain Pass, ofrezca
-                  garantía suficiente de pago. Mountain Pass utiliza
-                  procesadores de pagos de terceros para cobrar. Este
-                  procesamiento de los pagos estará sujeto también a los
-                  términos, condiciones y políticas de privacidad del respectivo
-                  procesador de pagos.
+                  otra forma que, a criterio exclusivo de SmarterBot, ofrezca
+                  garantía suficiente de pago. SmarterBot utiliza procesadores
+                  de pagos de terceros para cobrar. Este procesamiento de los
+                  pagos estará sujeto también a los términos, condiciones y
+                  políticas de privacidad del respectivo procesador de pagos.
                 </p>
                 <p>
                   La distintas ofertas y alternativas de Beneficios ofrecidos
@@ -512,11 +386,11 @@ export default function Terminos() {
                 </p>
                 <h4>
                   <strong>
-                    ¿Cambiará alguna vez Mountain Pass los Servicios?
+                    ¿Cambiará alguna vez SmarterBot los Servicios?
                   </strong>
                 </h4>
                 <p>
-                  Es probable. Mountain Pass siempre está buscando evolucionar y
+                  Es probable. SmarterBot siempre está buscando evolucionar y
                   mejorar la experiencia de sus Usuarios, encontrar eficiencias
                   y/o introducir nuevas funcionalidades y Beneficios. En
                   ocasiones podrá ser necesario cancelar, interrumpir o ajustar
@@ -570,12 +444,12 @@ export default function Terminos() {
                   válidamente adquiridos.
                 </p>
                 <h4>
-                  <strong>¿Cómo se comunicará Mountain Pass conmigo?</strong>
+                  <strong>¿Cómo se comunicará SmarterBot conmigo?</strong>
                 </h4>
                 <p>
                   Como parte de los Servicios, el Usuario podrá recibir
                   comunicaciones a través de la Plataforma o, a través de
-                  mensajes que Mountain Pass le envíe por otros medios de
+                  mensajes que SmarterBot le envíe por otros medios de
                   comunicación (por correo electrónico, llamada o SMS). Al
                   registrarse en la Plataforma el Usuario acepta que Mountain
                   Pass le envíe información relativa a su cuenta o a las
@@ -606,7 +480,7 @@ export default function Terminos() {
                 <p>
                   – Infrinja o viole los derechos de propiedad intelectual o
                   cualquier otro derecho de cualquier otra persona (incluida
-                  Mountain Pass);
+                  SmarterBot);
                 </p>
                 <p>– Infrinja cualquier ley o normativa aplicable;</p>
                 <p>
@@ -644,28 +518,28 @@ export default function Terminos() {
                 <p>
                   Los materiales mostrados o disponibles en la Plataforma o a
                   través de ella, incluidos, entre otros, el nombre y el
-                  logotipo de Mountain Pass y todos los textos, imágenes,
-                  archivos de audio, archivos de video, gráficos, información,
-                  dibujos, diseños, esquemas, anuncios, noticias, datos,
-                  guiones, software, mapas y características interactivas
-                  presentados en la Plataforma (y cualquier software y códigos
-                  de programación subyacentes), los programas o algoritmos
-                  computacionales (en cualquier formato), los módulos de
-                  programación, las directrices operativas o cualquier contenido
-                  creado, proporcionado o generado de alguna manera por Mountain
-                  Pass están protegidos por los derechos de autor y/u otras
-                  leyes de propiedad intelectual. El Usuario se compromete a
-                  respetar todos los avisos de derechos de autor, las normas de
-                  marcas comerciales, la información y las restricciones
-                  contenidas en cualquier contenido al que acceda a través de la
-                  Plataforma o Servicios, y no utilizará, copiará, reproducirá,
-                  modificará, traducirá, publicará, emitirá, transmitirá,
-                  distribuirá, ejecutará, cargará, mostrará, licenciará,
-                  venderá, comercializará o explotará de cualquier otro modo
-                  para cualquier fin cualquier contenido que no sea de su
-                  propiedad, (i) sin el consentimiento previo del propietario de
-                  dicho contenido o (ii) de una forma que infrinja los derechos
-                  de otra persona (incluidos los de Mountain Pass).
+                  logotipo de SmarterBot y todos los textos, imágenes, archivos
+                  de audio, archivos de video, gráficos, información, dibujos,
+                  diseños, esquemas, anuncios, noticias, datos, guiones,
+                  software, mapas y características interactivas presentados en
+                  la Plataforma (y cualquier software y códigos de programación
+                  subyacentes), los programas o algoritmos computacionales (en
+                  cualquier formato), los módulos de programación, las
+                  directrices operativas o cualquier contenido creado,
+                  proporcionado o generado de alguna manera por Smarter Bot
+                  están protegidos por los derechos de autor y/u otras leyes de
+                  propiedad intelectual. El Usuario se compromete a respetar
+                  todos los avisos de derechos de autor, las normas de marcas
+                  comerciales, la información y las restricciones contenidas en
+                  cualquier contenido al que acceda a través de la Plataforma o
+                  Servicios, y no utilizará, copiará, reproducirá, modificará,
+                  traducirá, publicará, emitirá, transmitirá, distribuirá,
+                  ejecutará, cargará, mostrará, licenciará, venderá,
+                  comercializará o explotará de cualquier otro modo para
+                  cualquier fin cualquier contenido que no sea de su propiedad,
+                  (i) sin el consentimiento previo del propietario de dicho
+                  contenido o (ii) de una forma que infrinja los derechos de
+                  otra persona (incluidos los de SmarterBot).
                 </p>
                 <p>
                   Sujeto a estos Términos de Uso, concedemos a cada Usuario de
@@ -676,9 +550,9 @@ export default function Terminos() {
                   modiﬁcación, la distribución o el almacenamiento de cualquier
                   contenido para cualquier fin que no sea el uso de los
                   Servicios está expresamente prohibido sin nuestro permiso
-                  previo por escrito. El Usuario reconoce que Mountain Pass es
-                  el propietario de la Plataforma y de los Servicios. El Usuario
-                  no podrá modificar, publicar, transmitir, participar en la
+                  previo por escrito. El Usuario reconoce que SmarterBot es el
+                  propietario de la Plataforma y de los Servicios. El Usuario no
+                  podrá modificar, publicar, transmitir, participar en la
                   transferencia o venta, reproducir (salvo lo dispuesto
                   expresamente en esta Sección), crear trabajos derivados
                   basados en ellos o explotar de cualquier otra forma cualquiera
@@ -690,7 +564,7 @@ export default function Terminos() {
                   <strong>¿Qué pasa con mi privacidad?</strong>
                 </h4>
                 <p>
-                  Para conocer la política de privacidad de Mountain Pass, haga
+                  Para conocer la política de privacidad de SmarterBot, haga
                   clic aquí. Dicha política cumple los con los estándares y
                   normativa nacional sobre privacidad de datos, su tratamiento y
                   eliminación.
@@ -702,7 +576,7 @@ export default function Terminos() {
                 </h2>
                 <p>
                   Ante cualquier pregunta, comentarios o inquietud sobre estos
-                  Términos de Uso, el Usuario podrá contactar a Mountain Pass
+                  Términos de Uso, el Usuario podrá contactar a SmarterBot
                   ingresando a la sección “[nombre de sección ej. ayuda]”
                   disponible en la Plataforma o escribiendo directamente al
                   siguiente correo electrónico: [incluir correo de servicio al
@@ -717,16 +591,16 @@ export default function Terminos() {
                 </h4>
                 <p>
                   Mediante la aceptación de los presentes Términos de Uso, el
-                  Usuario reconoce y acepta que Mountain Pass pondrá a
-                  disposición de los Usuarios los Beneficios asociados a los
-                  Centros de Esquí, sólo una vez que un mínimo de cinco mil
-                  (5.000) Usuarios hubiere adquirido la Membresía. De no
-                  cumplirse con dicha meta para lanzar los Beneficios, Mountain
-                  Pass efectuará el reembolso completo del monto pagado por la
-                  Membresía a los Usuarios que ya la hubieren adquirido. Los
-                  reembolsos efectuados directamente a una tarjeta de pago
-                  pueden tardar entre cinco (5) y diez (10) días hábiles
-                  bancarios en verse reflejados en la cuenta del Usuario.
+                  Usuario reconoce y acepta que SmarterBot pondrá a disposición
+                  de los Usuarios los Beneficios asociados a los Centros de
+                  Esquí, sólo una vez que un mínimo de cinco mil (5.000)
+                  Usuarios hubiere adquirido la Membresía. De no cumplirse con
+                  dicha meta para lanzar los Beneficios, Smarter Bot efectuará
+                  el reembolso completo del monto pagado por la Membresía a los
+                  Usuarios que ya la hubieren adquirido. Los reembolsos
+                  efectuados directamente a una tarjeta de pago pueden tardar
+                  entre cinco (5) y diez (10) días hábiles bancarios en verse
+                  reflejados en la cuenta del Usuario.
                 </p>
                 <p></p>
                 <h4>
@@ -736,12 +610,12 @@ export default function Terminos() {
                   El Usuario no podrá ceder o transferir sus derechos y
                   obligaciones bajo los Términos de Uso, ni su cuenta en la
                   Plataforma, de ninguna manera sin el consentimiento previo por
-                  escrito de Mountain Pass. Mountain Pass podrá transferir o
-                  ceder sus derechos y obligaciones bajo los Términos de Uso sin
+                  escrito de SmarterBot. SmarterBot podrá transferir o ceder sus
+                  derechos y obligaciones bajo los Términos de Uso sin
                   consentimiento del Usuario, a empresas relacionadas, filiales
-                  o coligadas de Mountain Pass, según se definen en los
-                  artículos 86 y 87 de la Ley 18.046 sobre Sociedades Anónimas,
-                  en la medida que el cesionario cumpla con las condiciones
+                  o coligadas de SmarterBot, según se definen en los artículos
+                  86 y 87 de la Ley 18.046 sobre Sociedades Anónimas, en la
+                  medida que el cesionario cumpla con las condiciones
                   patrimoniales, técnicas, operativas e idoneidad para asumir
                   las obligaciones de los presentes Términos de Uso.
                 </p>
@@ -753,15 +627,14 @@ export default function Terminos() {
                 <p>
                   La Plataforma puede incluir enlaces o conexiones a otros
                   sitios web o servicios de terceros que no son de propiedad ni
-                  son operados por Mountain Pass (“Sitios Enlazados”),
-                  únicamente para comodidad de los Usuarios. Mountain Pass no es
-                  responsable del contenido de dichos Sitios Enlazados ni de la
-                  información, material, productos o servicios contenidos en
-                  otros sitios enlazados o accesibles a través de los Sitios
-                  Enlazados. Al ser sitos web de terceros, Mountain Pass no
-                  tiene control sobre los estándares de seguridad utilizados en
-                  ellos ni del contenido o las políticas de privacidad de los
-                  mismos.
+                  son operados por SmarterBot (“Sitios Enlazados”), únicamente
+                  para comodidad de los Usuarios. SmarterBot no es responsable
+                  del contenido de dichos Sitios Enlazados ni de la información,
+                  material, productos o servicios contenidos en otros sitios
+                  enlazados o accesibles a través de los Sitios Enlazados. Al
+                  ser sitos web de terceros, SmarterBot no tiene control sobre
+                  los estándares de seguridad utilizados en ellos ni del
+                  contenido o las políticas de privacidad de los mismos.
                 </p>
                 <p>
                   EL ACCESO Y USO DE SITIOS ENLAZADOS, INCLUIDO EL ACCESO Y USO
@@ -770,23 +643,23 @@ export default function Terminos() {
                   EXCLUSIVA RESPONSABILIDAD DE LOS USUARIOS.
                 </p>
                 <h4>
-                  <strong>Responsabilidad de Mountain Pass</strong>
+                  <strong>Responsabilidad de SmarterBot</strong>
                 </h4>
                 <p>
                   Los Beneficios disponibles a través de la Plataforma y las
                   descripciones de los mismos son proporcionados por los
-                  Proveedores y no por Mountain Pass. Mediante la aceptación de
-                  los presentes Términos de Uso, el Usuario acepta que el uso de
-                  la Plataforma, la asistencia y participación a los
+                  Proveedores y no por SmarterBot. Mediante la aceptación de los
+                  presentes Términos de Uso, el Usuario acepta que el uso de la
+                  Plataforma, la asistencia y participación a los
                   establecimientos de los Proveedores, así como la compra y/o
                   uso de cualquier Beneficio es de su exclusiva responsabilidad.
-                  Mountain Pass no asume ninguna responsabilidad ni otorga
-                  garantía de ningún tipo, expresa o implícita, derivada de ni
-                  en relación con los productos y servicios ofrecidos por los
+                  SmarterBot no asume ninguna responsabilidad ni otorga garantía
+                  de ningún tipo, expresa o implícita, derivada de ni en
+                  relación con los productos y servicios ofrecidos por los
                   Proveedores.
                 </p>
                 <p>
-                  Mountain Pass solo garantiza a sus Usuarios que, mediante la
+                  SmarterBot solo garantiza a sus Usuarios que, mediante la
                   realización de la Reserva, el día para el cual hayan realizado
                   la Reserva podrán hacer uso del producto y/o servicio pagando
                   por hora o por uso efectivo y, que los Usuarios de Mountain
@@ -795,16 +668,16 @@ export default function Terminos() {
                   Proveedor.
                 </p>
                 <p>
-                  En ningún caso Mountain Pass será responsable por lesión,
+                  En ningún caso SmarterBot será responsable por lesión,
                   pérdida, reclamación, daño o daños especiales, ejemplares,
                   punitivos, incidentales o consecuentes de ningún tipo, ya sea
                   fundamentándose en un contrato, en presunto agravio u otros
                   motivos, que surjan de o estén relacionados de alguna manera
                   con la asistencia al establecimiento del Proveedor o con el
-                  uso de los Beneficios. Mountain Pass proporciona Beneficios y
+                  uso de los Beneficios. SmarterBot proporciona Beneficios y
                   promociones para el uso de productos y servicios relacionados
                   al esquí ofrecidos por terceros independientes a Mountain
-                  Pass. Mountain Pass no está conectado de otro modo, ni es un
+                  Pass. SmarterBot no está conectado de otro modo, ni es un
                   agente de ningún Proveedor. El Proveedor es el único
                   responsable de las interacciones con el Usuario. Todas y cada
                   una de las reclamaciones, lesiones, enfermedades, daños,
@@ -816,7 +689,7 @@ export default function Terminos() {
                 <p>
                   Es responsabilidad del Usuario revisar y determinar que la
                   Plataforma y los Servicios ofrecidos son adecuados para los
-                  fines previstos por este. Mountain Pass no acepta ninguna
+                  fines previstos por este. SmarterBot no acepta ninguna
                   responsabilidad en cuanto a la idoneidad o adecuación de la
                   Plataforma o de los Servicios para satisfacer las necesidades
                   que se hubieren representado los Usuarios.
@@ -836,14 +709,14 @@ export default function Terminos() {
                 </h4>
                 <p>
                   Mediante la aceptación de los presentes Términos de Uso, el
-                  Usuario entiende que Mountain Pass no es un centro de esquí,
+                  Usuario entiende que SmarterBot no es un centro de esquí,
                   gimnasio, centro de ocio o recreativo, club de salud,
                   instalación, centro de fitness o establecimiento similar, y
                   que los Beneficios que proporciona a través de la Plataforma
                   son operados e impartidos por un Proveedor independiente de
-                  Mountain Pass y no por Mountain Pass. Mountain Pass, en su
-                  calidad de operador de plataforma de comercio electrónico, no
-                  será responsable de la calidad de ningún producto o servicio
+                  SmarterBot y no por SmarterBot. SmarterBot, en su calidad de
+                  operador de plataforma de comercio electrónico, no será
+                  responsable de la calidad de ningún producto o servicio
                   proporcionado por los Proveedores (incluidos, entre otros, la
                   calidad o medidas de seguridad de las instalaciones, aptitud o
                   idoneidad del personal del Proveedor, calidad de la
@@ -857,7 +730,7 @@ export default function Terminos() {
                   enfermedad, lesiones físicas o muerte. El Usuario, mediante la
                   aceptación de los presentes Términos de Uso asume a su propia
                   cuenta el riesgo de lesiones o daños que se puedan sufrir en
-                  el uso de los Beneficios, eximiendo a Mountain Pass de toda
+                  el uso de los Beneficios, eximiendo a SmarterBot de toda
                   responsabilidad a ese respecto. El Usuario es el único
                   responsable de determinar si los Beneficios disponibles en la
                   Plataforma son adecuados y compatibles con su estado de salud
@@ -889,8 +762,8 @@ export default function Terminos() {
                 <p>
                   Los Usuarios declaran conocer y aceptar que el Proveedor puede
                   solicitar o requerir que se le proporcione información
-                  personal adicional a la que solicita Mountain Pass, y que
-                  Mountain Pass no es responsable de ningún uso de dicha
+                  personal adicional a la que solicita SmarterBot, y que
+                  SmarterBot no es responsable de ningún uso de dicha
                   información por parte del Proveedor.
                 </p>
                 <h4>
@@ -905,131 +778,45 @@ export default function Terminos() {
                 </h4>
                 <p>
                   Cualquier duda, dificultad o controversia que surja entre el
-                  Usuario y Mountain Pass con motivo, causa u omisión de estos
+                  Usuario y SmarterBot con motivo, causa u omisión de estos
                   Términos de Uso, ya sea respecto de su interpretación,
                   cumplimiento, validez, terminación o por cualquier otro motivo
                   relacionado directa o indirectamente con éstos, se resolverá
                   ante el juzgado de policía local correspondiente al domicilio
-                  de Mountain Pass o del Usuario, a elección de este último
-                  según lo dispuesto por el Artículo 50 letra A) de la Ley
-                  19.496 o cualquier otro Tribunal de Justicia que resulte
-                  competente de acuerdo con lo establecido por las leyes de la
-                  República de Chile.
+                  de SmarterBot o del Usuario, a elección de este último según
+                  lo dispuesto por el Artículo 50 letra A) de la Ley 19.496 o
+                  cualquier otro Tribunal de Justicia que resulte competente de
+                  acuerdo con lo establecido por las leyes de la República de
+                  Chile.
                 </p>
                 <h4>
                   <strong>Varios</strong>
                 </h4>
                 <p>
-                  El hecho de que el Usuario o Mountain Pass no ejerza, de
-                  alguna manera, algún derecho de los presentes Términos y
-                  Condiciones no se considerará una renuncia a otros derechos en
-                  virtud de los mismos. Si alguna de las disposiciones de estos
-                  Términos de Uso se considera inaplicable o inválida, éstos
-                  subsistirán con las restantes cláusulas, de modo que las
-                  disposiciones válidas y aplicables de estos Términos de Uso
-                  sigan siendo plenamente vigentes y aplicables, con sujeción a
-                  lo dispuesto por la Ley 19.496. El Usuario y Mountain Pass
-                  aceptan que estos Términos de Uso son la declaración completa
-                  y exclusiva del entendimiento mutuo entre el Usuario y
-                  Mountain Pass, y que estos Términos de Uso sustituyen y dejan
-                  sin efecto todos los acuerdos, comunicaciones y otros
-                  entendimientos anteriores, tanto escritos como orales,
-                  relacionados con el objeto de estos Términos de Uso. El
-                  Usuario reconoce y acepta que no es un empleado, agente, socio
-                  o empresa conjunta de Mountain Pass, y que no tiene autoridad
-                  de ningún tipo para obligar a Mountain Pass en ningún aspecto.
+                  El hecho de que el Usuario o SmarterBot no ejerza, de alguna
+                  manera, algún derecho de los presentes Términos y Condiciones
+                  no se considerará una renuncia a otros derechos en virtud de
+                  los mismos. Si alguna de las disposiciones de estos Términos
+                  de Uso se considera inaplicable o inválida, éstos subsistirán
+                  con las restantes cláusulas, de modo que las disposiciones
+                  válidas y aplicables de estos Términos de Uso sigan siendo
+                  plenamente vigentes y aplicables, con sujeción a lo dispuesto
+                  por la Ley 19.496. El Usuario y SmarterBot aceptan que estos
+                  Términos de Uso son la declaración completa y exclusiva del
+                  entendimiento mutuo entre el Usuario y SmarterBot, y que estos
+                  Términos de Uso sustituyen y dejan sin efecto todos los
+                  acuerdos, comunicaciones y otros entendimientos anteriores,
+                  tanto escritos como orales, relacionados con el objeto de
+                  estos Términos de Uso. El Usuario reconoce y acepta que no es
+                  un empleado, agente, socio o empresa conjunta de SmarterBot, y
+                  que no tiene autoridad de ningún tipo para obligar a
+                  SmarterBot en ningún aspecto.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <footer className="footer mt-auto py-5">
-          <div className="container-fluid">
-            <div className="row align-items-center">
-              <div className="col-sm-6">
-                <a className="footer-brand d-block" href="#">
-                  <img
-                    className="margin-top img-fluid "
-                    src="/images/MountainPass-white.svg"
-                  />
-                </a>
-                <p className="d-block mt-4">
-                  Mountain Pass 2023 –{" "}
-                  <a href="mailto:clientes@smarterbot.cl">
-                    clientes@smarterbot.cl
-                  </a>
-                </p>
-
-                <div className="follow-us mt-4">
-                  <a
-                    href="https://www.instagram.com/mountainpassgroup/"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-instagram.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/MountainPassGroup/"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-facebook.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.tiktok.com/@mountainpassgroup"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-tiktok.svg"
-                      width="40"
-                    />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@mountainpassgroup"
-                    target="_blank"
-                  >
-                    <img
-                      className="icon-follow-us align-middle img-fluid"
-                      src="/images/i-youtube.svg"
-                      width="40"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="col-sm-6">
-                <ul>
-                  <li>
-                    <a href="/quienes-somos">Quiénes Somos</a>
-                  </li>
-                  <li>
-                    <a href="/precios">Tarifas de ski por hora</a>
-                  </li>
-                  <li>
-                    <a href="/politicas-de-privacidad">
-                      Política de Privacidad
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/terminos-y-condiciones">Términos de Uso</a>
-                  </li>
-                  <li>
-                    <a href="/preguntas-frecuentes">¿Cómo Funciona?</a>
-                  </li>
-                  <li>
-                    <a href="/auth/login">Iniciar Sesión</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer></Footer>
       </div>
     </Fragment>
   );
