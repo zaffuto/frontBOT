@@ -117,7 +117,7 @@ export default function Home() {
                 </h1>
                 <p className="large mt-3">
                   Bot Vendedor es una membresía anual que te permitirá acceder
-                  a sincronizar tus productos o servicios con WhatsApp Business{" "}
+                  a sincronizar tus productos y servicios con WhatsApp Business{" "}
                   <b>Respuestas automáticas 24x7</b>, más una serie de beneficios.
                 </p>
                 <p className="large mt-3">
