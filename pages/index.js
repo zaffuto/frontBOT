@@ -48,14 +48,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter ChatBOT – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter ChatBOT" />
+        <title>Smarter ChatBOT – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="Smarter ChatBOT - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"
@@ -186,13 +186,12 @@ export default function Home() {
                   <span className="color">disfrutar la montaña</span>
                 </h1>
                 <p className="large mt-3">
-                  Mountain Pass es una membresía anual que te permitirá acceder
-                  a nuestros centros de ski asociados y a la montaña durante{" "}
-                  <b>invierno y verano</b>, con una serie de beneficios.
+                  Bot Vendedor es una membresía anual que te permitirá acceder
+                  a sincronizar tus productos o servicios con WhatsApp Business{" "}
+                  <b>Respuestas automáticas 24x7</b>, más una serie de beneficios.
                 </p>
                 <p className="large mt-3">
-                  ¡Inscríbete gratis en nuestros planes y conoce las ofertas de
-                  la tienda!
+                  ¡Respuestas automatizadas desde base de datos MySQL y Firebase!
                 </p>
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
@@ -202,7 +201,7 @@ export default function Home() {
                 </a>
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4 home-store"
-                  href="https://tienda.mountainpass.cl"
+                  href="https://tienda.smarterbot.cl"
                   target="_blank"
                 >
                   Ir a la Tienda
@@ -239,7 +238,7 @@ export default function Home() {
                 <table className="table">
                   <tbody>
                     <tr>
-                      <th scope="row">Inscripción</th>
+                      <th scope="row">Inscripción y Beneficios</th>
                       <td>Gratis</td>
                     </tr>
                     <tr>
@@ -247,19 +246,19 @@ export default function Home() {
                       <td>Sí</td>
                     </tr>
                     <tr>
-                      <th scope="row">Precios Dinámicos</th>
+                      <th scope="row">Sinconizar Catálogo</th>
                       <td>No</td>
                     </tr>
                     <tr>
-                      <th scope="row">Centros de Canje</th>
+                      <th scope="row">CRM Integrado</th>
                       <td>Uno a elección</td>
                     </tr>
                     <tr>
-                      <th scope="row">Anticipación Reserva</th>
+                      <th scope="row">Módulo de Reserva</th>
                       <td>78 horas</td>
                     </tr>
                     <tr>
-                      <th scope="row">Descuentos y Beneficios</th>
+                      <th scope="row">Módulo de Descuentos</th>
                       <td>No</td>
                     </tr>
                   </tbody>
@@ -341,7 +340,7 @@ export default function Home() {
                   Una montaña <span className="color">de beneficios</span>
                 </h1>
                 <p className="large mt-3">
-                  Los suscriptores de Mountain Pass podrán disfrutar de tarifas
+                  Los suscriptores de Smarter ChatBOT podrán disfrutar de tarifas
                   de ski por hora, ofertas especiales en alojamiento, rental,
                   clases, alimentación y mucho más.
                 </p>
@@ -370,7 +369,7 @@ export default function Home() {
             <div className="row align-content-start align-items-center">
               <div className="col-12 col-sm-12 col-md-8 mx-auto text-center">
                 <h1 className="mb-5">
-                  Conoce <span className="color">Mountain Pass</span>
+                  Conoce <span className="color">Smarter ChatBOT</span>
                 </h1>
                 <div className="justify-content-center">
                   <div className="video-home rounded">
@@ -461,7 +460,7 @@ export default function Home() {
                   />
                 </a>
                 <p className="d-block mt-4">
-                  Mountain Pass 2023 –{" "}
+                  Smarter ChatBOT 2023 –{" "}
                   <a href="mailto:clientes@smarterbot.cl">
                     clientes@smarterbot.cl
                   </a>

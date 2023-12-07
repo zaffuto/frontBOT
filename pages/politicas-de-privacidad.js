@@ -15,18 +15,18 @@ export default function Politicas() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Mountain Pass – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter ChatBOT – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Mountain Pass" />
-        <title>Mountain Pass – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter ChatBOT" />
+        <title>Smarter ChatBOT – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mountain Pass - La nueva forma de disfrutar la montaña"
+          content="Smarter ChatBOT - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="Solicita una DEMO de forma presencial"
         />
         <meta
           property="og:image"
@@ -75,7 +75,7 @@ export default function Politicas() {
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         {" "}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
+          src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxx"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -88,7 +88,7 @@ export default function Politicas() {
         `}
         </Script>{" "}
         <Script
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-Xxxxxxxxx"
           strategy="afterInteractive"
         />
         <header>
@@ -128,7 +128,7 @@ export default function Politicas() {
                 </a>
                 <a
                   className="btn btn-primary btn-header mx-2 btn-sub"
-                  href="https://tienda.mountainpass.cl"
+                  href="https://tienda.smarterbot.cl"
                   target="_blank"
                 >
                   Tienda
@@ -145,7 +145,7 @@ export default function Politicas() {
                   Política de <span className="color">privacidad</span>
                 </h1>
                 <h2 className="text-center">
-                  Y protección de datos personales Mountain Pass
+                  Y protección de datos personales Smarter ChatBOT
                 </h2>
                 <hr />
                 <a href="#1">
@@ -217,17 +217,17 @@ export default function Politicas() {
                   identificables.
                 </p>
                 <p>
-                  <strong>Mountain Pass SpA o Mountain Pass:</strong> es una
+                  <strong>Smarter ChatBOT spa o Smarter ChatBOT:</strong> es una
                   empresa y sociedad por acciones chilena constituida por
-                  escritura pública de fecha 5 de mayo de 2022 en la Notaría de
-                  Santiago de don Roberto Antonio Cifuentes Allel, con domicilio
+                  escritura pública de fecha 5 de mayo de 2024 en la Notaría de
+                  Santiago de don xxxx, con domicilio
                   social en Santiago, y que tiene como objetivo el promover la
-                  cultura de montaña. En ese sentido, la sociedad, en su
+                  xxxxx. En ese sentido, la sociedad, en su
                   carácter de operador de plataforma de comercio electrónico,
                   busca facilitar y promover vías de acceso a la montaña para
                   fines turísticos y deportivos, mediante la suscripción de
                   convenios con distintos Proveedores a lo largo de todo el
-                  país. Mountain Pass no es un centro de esquí, un centro de
+                  país. Smarter ChatBOT no es un centro de esquí, un centro de
                   ocio o recreativo, un club de salud, instalación, o
                   establecimiento similar; ni tiene, opera ni controla ninguna
                   de las ofertas de servicios y productos que se ofrecen a
@@ -236,34 +236,34 @@ export default function Politicas() {
                 <p>
                   <strong>Plataforma:</strong> es el soporte online (la
                   siguiente página web:{" "}
-                  <a href="https://www.mountainpass.cl/" target="_blank">
-                    https://www.mountainpass.cl/
+                  <a href="https://www.smarterbot.cl/" target="_blank">
+                    https://www.smarterbot.cl/
                   </a>
                   ) mediante el cual se ofrecen los Servicios.
                 </p>
                 <p>
                   <strong>Política de Privacidad:</strong> el presente documento
                   que tiene por objetivo informar a los Usuarios sobre la forma
-                  en que Mountain Pass recopila, usa, comparte y protege la
+                  en que Smarter ChatBOT recopila, usa, comparte y protege la
                   información que es proporcionada por sus Usuarios al momento
                   de utilizar sus Servicios y Plataforma.
                 </p>
                 <p>
                   <strong>Proveedores:</strong> la persona natural o jurídica no
-                  relacionada a Mountain Pass que realiza una oferta de sus
+                  relacionada a Smarter ChatBOT que realiza una oferta de sus
                   productos y/o servicios relacionados con el esquí a través de
                   la Plataforma. Para poder consultar el listado de los
-                  Proveedores con los que Mountain Pass ha celebrado dichos
+                  Proveedores con los que Smarter ChatBOT ha celebrado dichos
                   contratos, convenios o alianzas y que actualmente ofrecen los
                   Beneficios a través de la Plataforma, el Usuario puede
                   ingresar al siguiente link:{" "}
-                  <a href="https://www.mountainpass.cl/" target="_blank">
-                    https://www.mountainpass.cl/
+                  <a href="https://www.smarterbot.cl/" target="_blank">
+                    https://www.smarterbot.cl/
                   </a>
                 </p>
                 <p>
                   <strong>Responsable de los Datos o Responsable:</strong>{" "}
-                  Mountain Pass en cuanto le compete las decisiones relacionadas
+                  Smarter ChatBOT en cuanto le compete las decisiones relacionadas
                   con el Tratamiento de Datos.
                 </p>
                 <p>
@@ -293,11 +293,11 @@ export default function Politicas() {
                 </h2>
                 La Política de Privacidad tiene por objetivo establecer e
                 informar a los Usuarios del Tratamiento de Datos Personales que
-                se recolectan a través de la Plataforma de Mountain Pass. Los
+                se recolectan a través de la Plataforma de Smarter ChatBOT. Los
                 términos no definidos en la presente Política de Privacidad
                 tendrán el significado que se les ha asignado en los Términos de
                 Uso. La Política de Privacidad es aplicable a todos los Usuarios
-                personas naturales de los Servicios otorgados por Mountain Pass,
+                personas naturales de los Servicios otorgados por Smarter ChatBOT,
                 así como a los Usuarios de Plataforma, sin importar el país en
                 el que se encuentren.
                 <hr />
@@ -305,8 +305,8 @@ export default function Politicas() {
                   3 – ¿QUÉ DATOS PERSONALES RECOPILAMOS?
                 </h2>
                 <p>
-                  Los siguientes Datos Personales son recolectados por Mountain
-                  Pass o en su nombre:
+                  Los siguientes Datos Personales son recolectados por Smarter
+                  ChatBot o en su nombre:
                 </p>
                 <p>
                   Datos que los Usuarios proporcionan cuando, por ejemplo, crean
@@ -325,15 +325,15 @@ export default function Politicas() {
                   modificación de los mismos.
                 </p>
                 <p>
-                  No será imputable a Mountain Pass, siempre que éste haya
+                  No será imputable a Smarter ChatBOT, siempre que éste haya
                   adoptado todas las medidas razonables para que se supriman o
                   rectifiquen sin dilación, la inexactitud de los datos
                   personales, con respecto a los fines que se tratan, cuando los
-                  datos inexactos: (a) hubiesen sido obtenidos por Mountain Pass
+                  datos inexactos: (a) hubiesen sido obtenidos por Smarter ChatBOT
                   directamente del Usuario, (b) hubieren sido obtenidos por
-                  Mountain Pass de un intermediario, que recoja a nombre de
-                  Mountain Pass los datos del Usuario, o (c) hubieren sido
-                  obtenidos de un registro público por Mountain Pass.
+                  Smarter ChatBOT de un intermediario, que recoja a nombre de
+                  Smarter ChatBOT los datos del Usuario, o (c) hubieren sido
+                  obtenidos de un registro público por Smarter ChatBOT.
                 </p>
                 <h4>
                   <strong>
@@ -341,7 +341,7 @@ export default function Politicas() {
                   </strong>
                 </h4>
                 <p>
-                  Perfil del Usuario: Mountain Pass recopila los datos que
+                  Perfil del Usuario: Smarter ChatBOT recopila los datos que
                   brindan los Usuarios cuando crean o actualizan sus cuentas en
                   la Plataforma, lo que puede incluir, nombre, correo
                   electrónico, número de teléfono, número de cédula de
@@ -352,31 +352,31 @@ export default function Politicas() {
                   y número de documento.
                 </p>
                 <p>
-                  Mountain Pass puede utilizar las fotografías enviadas por los
+                  Smarter ChatBOT puede utilizar las fotografías enviadas por los
                   Usuarios para comprobar su identidad mediante tecnologías de
                   verificación facial.
                 </p>
                 <p>
-                  Datos demográficos: Mountain Pass recopila información
+                  Datos demográficos: Smarter ChatBOT recopila información
                   demográfica sobre los Usuarios, incluso a través de encuestas
                   destinadas a ellos.
                 </p>
                 <p>
-                  Otros datos: Mountain Pass recopila los datos que los Usuarios
+                  Otros datos: Smarter ChatBOT recopila los datos que los Usuarios
                   envían cuando se contactan con el soporte al cliente de la
                   Plataforma, brindan calificaciones o reconocimientos a los
                   Servicios prestados a través de la Plataforma, o se comunican
-                  con Mountain Pass de cualquier manera. Esto puede incluir
+                  con Smarter ChatBOT de cualquier manera. Esto puede incluir
                   comentarios, fotografías u otras grabaciones de audio o video
                   que recopilan los Usuarios al momento de hacer uso de los
                   Servicios.
                 </p>
                 <p>
-                  Información de menores de edad: Mountain Pass recopila la
+                  Información de menores de edad: Smarter ChatBOT recopila la
                   información que sea entregada por los Usuario menores de edad,
                   cuyo registro en la Plataforma ha sido realizado por su padre,
                   madre o tutor legal según corresponda. La información que
-                  Mountain Pass recopila relativa a los menores de edad
+                  Smarter ChatBOT recopila relativa a los menores de edad
                   incluirá, nombre, fecha de nacimiento, número de cédula de
                   identidad y número de teléfono. Al realizar el registro de los
                   Usuarios menores de edad, su padre, madre o tutor legal según
@@ -390,13 +390,13 @@ export default function Politicas() {
                   </strong>
                 </h4>
                 <p>
-                  Datos de ubicación: Mountain Pass recopila datos de ubicación
+                  Datos de ubicación: Smarter ChatBOT recopila datos de ubicación
                   precisos o aproximados de los Usuarios para permitir y mejorar
                   el uso de la Plataforma, así como para optimizar la oferta de
                   los Servicios que se pueden brindar a través de la Plataforma.
                 </p>
                 <p>
-                  Mountain Pass recopila esta información desde el momento en
+                  Smarter ChatBOT recopila esta información desde el momento en
                   que se crea el Usuario en la Plataforma y cada vez que la
                   Plataforma se ejecuta en primer plano (ej. la Plataforma se
                   encuentra abierta y en pantalla) en el dispositivo electrónico
@@ -411,21 +411,21 @@ export default function Politicas() {
                   funciones de la Plataforma.
                 </p>
                 <p>
-                  Información de transacciones: Mountain Pass recopila datos de
+                  Información de transacciones: Smarter ChatBOT recopila datos de
                   las transacciones relacionadas durante el uso de la
                   Plataforma, lo que incluye el tipo de Servicio solicitado o
                   prestado, fecha y hora de la prestación, detalles del pedido,
                   método e información de pago, e importe cobrado.
                 </p>
                 <p>
-                  Datos de uso: Mountain Pass recopila información sobre cómo
+                  Datos de uso: Smarter ChatBOT recopila información sobre cómo
                   los Usuarios interactúan con los Servicios y Plataforma. Esto
                   incluye datos como la fecha y la hora de acceso a la
                   Plataforma, funciones de la Plataforma, fallas de la
                   Plataforma y otras actividades del sistema, y tipo de
-                  navegador. Adicionalmente, Mountain Pass puede recopilar datos
+                  navegador. Adicionalmente, Smarter ChatBOT puede recopilar datos
                   sobre los servicios o los sitios de terceros que se usan antes
-                  de interactuar con la Plataforma y Servicios de Mountain Pass,
+                  de interactuar con la Plataforma y Servicios de Smarter ChatBOT,
                   los que se utilizan con fines de marketing.
                 </p>
                 <p>
@@ -439,7 +439,7 @@ export default function Politicas() {
                   analizar el tránsito y las tendencias del sitio web para
                   comprender los comportamientos en línea y los intereses de las
                   personas que interactúan con los Servicios y Plataforma de
-                  Mountain Pass.
+                  Smarter ChatBOT.
                 </p>
                 <p>
                   El Usuario tiene derecho a oponerse al procesamiento de
@@ -450,7 +450,7 @@ export default function Politicas() {
                   disponible en nuestra Plataforma.
                 </p>
                 <p>
-                  Datos del dispositivo: Mountain Pass puede recopilar datos
+                  Datos del dispositivo: Smarter ChatBOT puede recopilar datos
                   sobre los dispositivos usados para acceder a la Plataforma y
                   Servicios, lo que incluye modelos de hardware, dirección IP u
                   otros identificadores únicos del dispositivo, sistemas
@@ -459,11 +459,11 @@ export default function Politicas() {
                   móviles o de movimiento del dispositivo.
                 </p>
                 <p>
-                  Datos de comunicación: Mountain Pass permitirá que los
-                  Usuarios se comuniquen con Mountain Pass a través de la
-                  Plataforma. Para brindar este servicio, Mountain Pass recibe
+                  Datos de comunicación: Smarter ChatBOT permitirá que los
+                  Usuarios se comuniquen con Smarter ChatBOT a través de la
+                  Plataforma. Para brindar este servicio, Smarter ChatBOT recibe
                   ciertos datos relacionados con las llamadas, mensajes u otras
-                  comunicaciones, como su fecha, hora y contenido. Mountain Pass
+                  comunicaciones, como su fecha, hora y contenido. Smarter ChatBOT
                   también puede usar esta información para brindar servicios de
                   soporte a los Usuarios, incluso para resolver disputas; por
                   cuestiones de seguridad; a fin de mejorar los Servicios y
@@ -481,13 +481,13 @@ export default function Politicas() {
                 </p>
                 <p></p>
                 <p>
-                  Socios comerciales de Mountain Pass relacionados con tarjetas
+                  Socios comerciales de Smarter ChatBOT relacionados con tarjetas
                   de débito o de crédito emitidas por una institución financiera
-                  asociada con Mountain Pass, en la medida en que se indique en
+                  asociada con Smarter ChatBOT, en la medida en que se indique en
                   los Términos y Condiciones de la tarjeta.
                 </p>
                 <p>
-                  Proveedores que ayudan a Mountain Pass a verificar la
+                  Proveedores que ayudan a Smarter ChatBOT a verificar la
                   identidad de los Usuarios, información de antecedentes, o que
                   revisan las cuentas de los Usuarios en relación con sanciones,
                   lavado de dinero o exigencias relativas a la identificación
@@ -496,7 +496,7 @@ export default function Politicas() {
                 <p>Fuentes disponibles públicamente.</p>
                 <p>
                   Proveedores de servicios de marketing o distribuidores de
-                  datos, cuya información Mountain Pass usa con fines
+                  datos, cuya información Smarter ChatBOT usa con fines
                   publicitarios o de investigación.
                 </p>
                 <p>
@@ -504,7 +504,7 @@ export default function Politicas() {
                   y otras autoridades gubernamentales.
                 </p>
                 <p>
-                  Mountain Pass puede combinar la información recopilada de
+                  Smarter ChatBOT puede combinar la información recopilada de
                   estas fuentes con otros datos que posea.
                 </p>
                 <hr />
@@ -523,12 +523,12 @@ export default function Politicas() {
                   La solicitud de acceso, modificación, rectificación, bloqueo
                   y/o supresión de datos personales deberá efectuarse mediante
                   correo electrónico enviado a{" "}
-                  <a href="mailto:clientes@smartbot.cl" target="_blank">
-                    clientes@smartbot.cl
+                  <a href="mailto:clientes@smarterbot.cl" target="_blank">
+                    clientes@smarterbot.cl
                   </a>
                   , indicando su nombre completo, cédula nacional de identidad,
                   correo electrónico y número de teléfono celular. Sin perjuicio
-                  de la solicitud que se realice, Mountain Pass podrá conservar
+                  de la solicitud que se realice, Smarter ChatBOT podrá conservar
                   la información personal indicada precedentemente por motivos
                   de seguridad y control de fraude, en caso de existir dudas
                   razonables.
@@ -545,10 +545,10 @@ export default function Politicas() {
                 </p>
                 <p>
                   Para satisfacer o cumplir con la finalidad para la que se
-                  proporcionó la información a Mountain Pass.
+                  proporcionó la información a Smarter ChatBOT.
                 </p>
                 <p>
-                  Para que Mountain Pass pueda comunicarse con los Usuarios
+                  Para que Smarter ChatBOT pueda comunicarse con los Usuarios
                   acerca de los Servicios, incluyendo actualizaciones u ofertas
                   (comunicaciones comerciales y no comerciales).
                 </p>
@@ -565,7 +565,7 @@ export default function Politicas() {
                 </p>
                 <p>
                   Para procesar solicitudes en relación a los Servicios vigentes
-                  y a otros que Mountain Pass pudiera ofrecer a futuro,
+                  y a otros que Smarter ChatBOT pudiera ofrecer a futuro,
                   incluidas las transacciones de pago.
                 </p>
                 <p>
@@ -584,7 +584,7 @@ export default function Politicas() {
                 </p>
                 <p>
                   Para cumplir con la obligaciones legales o contractuales de
-                  Mountain Pass, resolver disputas y ejecutar los Términos de
+                  Smarter ChatBOT, resolver disputas y ejecutar los Términos de
                   Uso.
                 </p>
                 <p>
@@ -603,16 +603,16 @@ export default function Politicas() {
                   6 – ¿CÓMO COMPARTIMOS TUS DATOS?
                 </h2>
                 <p>
-                  Mountain Pass podrá compartir los Datos Personales que nos
+                  Smarter ChatBOT podrá compartir los Datos Personales que nos
                   proporciona el Usuario para las finalidades mencionadas en el
                   punto 5 anterior con cualquier sociedad de su mismo Grupo
                   Empresarial, según dicho término se define en el artículo 96
                   de la Ley Nº18.045 de Mercado de Valores.
                 </p>
                 <p>
-                  Mountain Pass podrá comunicar los Datos Personales de los
+                  Smarter ChatBOT podrá comunicar los Datos Personales de los
                   Usuarios a terceros, exclusivamente en las siguientes
-                  circunstancias y previa suscripción entre Mountain Pass y el
+                  circunstancias y previa suscripción entre Smarter ChatBOT y el
                   tercero de un acuerdo de confidencialidad, de manera que bajo
                   ninguna circunstancia la empresa o entidad pueda
                   comercializar, utilizar ni entregar Datos Personales de los
@@ -621,51 +621,50 @@ export default function Politicas() {
                 <p>
                   Para los casos en que en virtud de un contrato de prestación
                   de servicios, sea una entidad externa o empresa distinta a
-                  Mountain Pass quien administre las bases de datos que se
+                  Smarter ChatBOT quien administre las bases de datos que se
                   recogen a través de la Plataforma.
                 </p>
                 <p>
                   Para gestionar la experiencia de uso de los Servicios que
-                  ofrece Mountain Pass con los Proveedores que ofrecen, a través
+                  ofrece Smarter ChatBOT con los Proveedores que ofrecen, a través
                   de la Plataforma, actividades para el disfrute de la nieve por
                   los Usuarios.
                 </p>
                 <p>
-                  Para servicios de soporte y asistencia: Mountain Pass puede
+                  Para servicios de soporte y asistencia: Smarter ChatBOT puede
                   utilizar prestadores de servicios, agentes o contratistas para
                   tareas de soporte de nuestra Plataforma y para prestar a
-                  Mountain Pass asistencia en la administración de dichas
+                  Smarter ChatBOT asistencia en la administración de dichas
                   Plataformas o de algunas de las funciones, programas o
                   promociones disponibles en los mismos. Estos terceros
                   aplicarán los mismos niveles de seguridad para los Datos
-                  Personales de los Usuarios que los propios de Mountain Pass y,
+                  Personales de los Usuarios que los propios de Smarter ChatBOT y,
                   cuando sea necesario, estarán sujetos a un contrato para
                   preservar los Datos Personales de los Usuarios y para
                   tratarlos únicamente de acuerdo con las instrucciones que les
-                  entregue Mountain Pass;
+                  entregue Smarter ChatBOT;
                 </p>
                 <p>
                   Para programas conjuntos o copatrocinados y finalidades
-                  promocionales: Cuando Mountain Pass desarrolle un programa o
+                  promocionales: Cuando Smarter ChatBOT desarrolle un programa o
                   promoción conjunta o copatrocinada en la Plataforma con otra
                   entidad; y, como parte del evento, se recabe y traten Datos
                   Personales, podrá comunicarlos a su co-organizador o
                   co-patrocinador, sujeto al consentimiento del Usuario, cuando
                   sea necesario. Si los Datos Personales del Usuario están
                   siendo recabados por (o comunicados a) una entidad tercera
-                  como parte la promoción, Mountain Pass informará de ello al
+                  como parte la promoción, Smarter ChatBOT informará de ello al
                   Usuario al tiempo de la recolección de los Datos Personales;
                 </p>
                 <p>
-                  Por motivos de seguridad y frente a reclamaciones: Mountain
-                  Pass podrá facilitar los Datos Personales del Usuario cuando
+                  Por motivos de seguridad y frente a reclamaciones: SmarterBot podrá facilitar los Datos Personales del Usuario cuando
                   se le exija por Ley o cuando, de acuerdo a su criterio de
                   buena fe, lo considere necesario para cumplir procedimientos
                   normativos, para responder reclamaciones o para proteger la
                   seguridad y derechos del Grupo Empresarial del que forma parte
-                  Mountain Pass, sus clientes y el público; En caso de que se
+                  Smarter ChatBOT, sus clientes y el público; En caso de que se
                   produzca una fusión o adquisición de todo o parte del Grupo
-                  Empresarial del que forma parte Mountain Pass por un tercero,
+                  Empresarial del que forma parte Smarter ChatBOT por un tercero,
                   o en caso de venta de o disposición de todo o parte de sus
                   negocios o activos, el comprador podría tener acceso a
                   información que podría incluir Datos Personales, con sujeción
@@ -687,12 +686,12 @@ export default function Politicas() {
                   uso de la Plataforma o, de ser aplicable, cuando expresamente
                   solicite revocar dicha autorización para el Tratamiento. La
                   revocación de la autorización implicará que el Usuario no
-                  podrá utilizar los Servicios prestados por Mountain Pass a
+                  podrá utilizar los Servicios prestados por Smarter ChatBOT a
                   través de la Plataforma.
                 </p>
                 <p>
                   Sin perjuicio de haberse revocado la autorización para el
-                  Tratamiento, Mountain Pass podrá conservar los Datos
+                  Tratamiento, Smarter ChatBOT podrá conservar los Datos
                   Personales y la información proporcionada por los Usuarios
                   debidamente bloqueados por aquel periodo permitido por la
                   legislación vigente, a fin de poder cumplir con la normativa
@@ -714,19 +713,19 @@ export default function Politicas() {
                   8 – ¿CÓMO MANTENEMOS SEGUROS TUS DATOS PERSONALES?
                 </h2>
                 <p>
-                  Mountain Pass considera que los Datos Personales y otra
+                  Smarter ChatBOT considera que los Datos Personales y otra
                   información entregada por los Usuarios son un activo que debe
                   ser protegido de cualquier pérdida o acceso no autorizado, por
                   lo que tomará todas las precauciones para resguardar dicha
                   información mediante la implementación de mecanismos de
-                  seguridad informática eficaces. Mountain Pass se obliga a
+                  seguridad informática eficaces. Smarter ChatBOT se obliga a
                   cumplir con toda la normativa aplicable en materia de medidas
                   de seguridad de Datos Personales, utilizando los estándares de
                   la industria en materia protección de datos y confidencialidad
                   de la información.
                 </p>
                 <p>
-                  Asimismo, Mountain Pass adoptará todas las medidas de
+                  Asimismo, Smarter ChatBOT adoptará todas las medidas de
                   seguridad necesarias para garantizar la confidencialidad de
                   los datos recopilados por medios de formularios, encuestas o
                   mecanismos de registro de navegación web.
@@ -738,8 +737,7 @@ export default function Politicas() {
                 </h2>
                 <p>
                   Ante cualquier pregunta, comentario o inquietud sobre la
-                  Política de Privacidad, el Usuario podrá contactar a Mountain
-                  Pass usando la sección “[nombre de sección ej. ayuda]”
+                  Política de Privacidad, el Usuario podrá contactar a Smarter ChatBot usando la sección “[nombre de sección ej. ayuda]”
                   disponible en la Plataforma o escribiendo directamente al
                   siguiente correo:{" "}
                   <a href="mailto:clientes@smartbot.cl" target="_blank">
@@ -753,7 +751,7 @@ export default function Politicas() {
                 </h2>
                 <h4>
                   <strong>
-                    ¿Cambiará alguna vez Mountain Pass esta Política de
+                    ¿Cambiará alguna vez Smarter ChatBOT esta Política de
                     Privacidad?
                   </strong>
                 </h4>
@@ -765,9 +763,9 @@ export default function Politicas() {
                   vía correo electrónico y/o a través de la Plataforma, a los
                   Usuarios, quienes son libres para aceptarlos o rechazarlos. En
                   el caso que el Usuario no acepte las modificaciones de la
-                  Política de Privacidad el vínculo entre este último y Mountain
-                  Pass quedará disuelto, y respecto de los Datos Personales que
-                  haya proporcionado dicho Usuario a Mountain Pass, tendrá
+                  Política de Privacidad el vínculo entre este último y Smarter
+                  ChatBot quedará disuelto, y respecto de los Datos Personales que
+                  haya proporcionado dicho Usuario a Smarter ChatBOT, tendrá
                   aplicación lo dispuesto en la Sección “Retención de Datos” de
                   esta Política de Privacidad.
                 </p>
@@ -783,7 +781,7 @@ export default function Politicas() {
                 </h4>
                 <p>
                   Cualquier duda, dificultad o controversia que surja entre el
-                  Usuario y Mountain Pass con motivo, causa u omisión de esta
+                  Usuario y Smarter ChatBOT con motivo, causa u omisión de esta
                   Política de Privacidad, ya sea respecto de su interpretación,
                   cumplimiento, validez, terminación o por cualquier otro motivo
                   relacionado directa o indirectamente con éstos, se resolverá
@@ -795,10 +793,10 @@ export default function Politicas() {
                 </h4>
                 <p>
                   Con la finalidad de resguardar la seguridad de los sistemas y
-                  de la Plataforma, Mountain Pass se reserva el derecho de
+                  de la Plataforma, Smarter ChatBOT se reserva el derecho de
                   bloquear todo acceso de carácter sospechoso y/o malicioso que
                   pueda afectar la seguridad y continuidad de su Plataforma y
-                  Servicios. Para ello, Mountain Pass efectuará un constante
+                  Servicios. Para ello, Smarter ChatBOT efectuará un constante
                   monitoreo de las direcciones IP que ingresen a sus sistemas,
                   bloqueando el acceso a aquellas que presenten potenciales
                   riesgos.{" "}
@@ -818,7 +816,7 @@ export default function Politicas() {
                   />
                 </a>
                 <p className="d-block mt-4">
-                  Mountain Pass 2023 –{" "}
+                  Smarter ChatBOT 2023 –{" "}
                   <a href="mailto:clientes@smarterbot.cl">
                     clientes@smarterbot.cl
                   </a>
@@ -826,7 +824,7 @@ export default function Politicas() {
 
                 <div className="follow-us mt-4">
                   <a
-                    href="https://www.instagram.com/mountainpassgroup/"
+                    href="https://www.instagram.com/smarterbot.cl/"
                     target="_blank"
                   >
                     <img
@@ -873,7 +871,7 @@ export default function Politicas() {
                     <a href="/quienes-somos">Quiénes Somos</a>
                   </li>
                   <li>
-                    <a href="/precios">Tarifas de ski por hora</a>
+                    <a href="/precios">Tarifas</a>
                   </li>
                   <li>
                     <a href="/politicas-de-privacidad">
