@@ -12,10 +12,10 @@ function Header(props) {
           name="description"
           content={`SmarterBot - ${props.description || ""}`}
         />
-        <meta name="author" content="Smarter Bot" />
+        <meta name="author" content="Smarter ChatBOT" />
         <title>SmarterBot – {props.title}</title>
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`SmarterBot - ${props.title}`} />
+        <meta property="og:title" content={`SmarterChatBOT - ${props.title}`} />
         <meta
           property="og:description"
           content="Suscríbete y obtén una montaña de beneficios"
@@ -32,19 +32,19 @@ function Header(props) {
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-16.png"
+          href="/images/smarterbot-favicon-16.png"
           sizes="16x16"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-32.png"
+          href="/images/smarterbot-favicon-32.png"
           sizes="32x32"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-96.png"
+          href="/images/smarterbot-favicon-96.png"
           sizes="96x96"
         ></link>
         <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />

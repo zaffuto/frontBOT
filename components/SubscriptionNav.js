@@ -5,7 +5,7 @@ function SubscriptionNav(props) {
         <a className="d-block text-center" href="/">
           <img
             className="margin-top img-fluid"
-            src="/images/MountainPassv2.svg"
+            src="/images/smarterbotv2.svg"
             width={220}
           />
         </a>

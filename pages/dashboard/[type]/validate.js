@@ -52,10 +52,10 @@ function Dashboard(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter ChatBOT – Puedes probarlo GRATIS"
         />
         <meta name="author" content="Smarter Bot" />
-        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
+        <title>Smarter ChatBOT – Ahora puedes organizar tus clientes de WhatsApp Business</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -63,7 +63,7 @@ function Dashboard(props) {
         />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="  Ahora puedes envíar notificaciones push para organizar tus clientes de WhatsApp Business y el ChatBOT vende las 24 HS!"
         />
         <meta
           property="og:image"
@@ -77,19 +77,19 @@ function Dashboard(props) {
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-16.png"
+          href="/images/smarterbot-favicon-16.png"
           sizes="16x16"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-32.png"
+          href="/images/smarterbot-favicon-32.png"
           sizes="32x32"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-96.png"
+          href="/images/smarterbot-favicon-96.png"
           sizes="96x96"
         ></link>
         <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
@@ -111,7 +111,7 @@ function Dashboard(props) {
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         {" "}
-        <Script
+       {/*  <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
         />
@@ -127,14 +127,14 @@ function Dashboard(props) {
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
-        />
+        /> */}
         <header>
           <nav className="navbar navbar-expand-md fixed-top">
             <div className="container-fluid">
               <a className="navbar-brand" href={`/dashboard/${props.userType}`}>
                 <img
                   className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
+                  src="/images/smarterbotv2.svg"
                   width={220}
                 />
               </a>
@@ -219,12 +219,12 @@ function Dashboard(props) {
                 <a className="footer-brand d-block" href="#">
                   <img
                     className="margin-top img-fluid "
-                    src="/images/MountainPass-white.svg"
+                    src="/images/smarterbot-white.svg"
                   />
                 </a>
               </div>
               <div className="col-sm-6">
-                <p className="d-block">Smarter Bot 2023 </p>
+                <p className="d-block">Smarter ChatBOT Chile 2023/2024 </p>
               </div>
             </div>
           </div>

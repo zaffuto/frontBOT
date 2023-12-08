@@ -7,7 +7,7 @@ function Footer(props) {
             <a className="footer-brand d-block" href="#">
               <img
                 className="margin-top img-fluid "
-                src="/images/MountainPass-white.svg"
+                src="/images/smarterbot-white.svg"
               />
             </a>
             <p className="d-block mt-4">
@@ -17,7 +17,7 @@ function Footer(props) {
 
             <div className="follow-us mt-4">
               <a
-                href="https://www.instagram.com/mountainpassgroup/"
+                href="https://www.instagram.com/smarterbot.cl/"
                 target="_blank"
               >
                 <img
@@ -27,7 +27,7 @@ function Footer(props) {
                 />
               </a>
               <a
-                href="https://www.facebook.com/MountainPassGroup/"
+                href="https://www.facebook.com/Smarterbot.Chile"
                 target="_blank"
               >
                 <img
@@ -37,7 +37,7 @@ function Footer(props) {
                 />
               </a>
               <a
-                href="https://www.tiktok.com/@mountainpassgroup"
+                href="https://www.instagram.com/smarterbot.cl/"
                 target="_blank"
               >
                 <img
@@ -47,7 +47,7 @@ function Footer(props) {
                 />
               </a>
               <a
-                href="https://www.youtube.com/@mountainpassgroup"
+                href="https://www.youtube.com/@smarterbotcl"
                 target="_blank"
               >
                 <img
@@ -64,7 +64,7 @@ function Footer(props) {
                 <a href="/quienes-somos">Quiénes Somos</a>
               </li>
               <li>
-                <a href="/precios">Tarifas de ski por hora</a>
+                <a href="/precios">Tarifas por hora</a>
               </li>
               <li>
                 <a href="/politicas-de-privacidad">Política de Privacidad</a>

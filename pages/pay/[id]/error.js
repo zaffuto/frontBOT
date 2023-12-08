@@ -11,19 +11,19 @@ function Success(props) {
   return (
     <Fragment>
       <Head>
-        <title>SmarterBot</title>
+        <title>SmarterChatBOT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
+          content="Smarter ChatBOT – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Smarter Bot" />
-        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter ChatBOT" />
+        <title>Smarter ChatBOT – Esquía pagando solo el tiempo que uses</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Smarter Bot - La nueva forma de disfrutar la montaña"
+          content="Smarter ChatBOT - La nueva forma de disfrutar la montaña"
         />
         <meta
           property="og:description"
@@ -36,7 +36,7 @@ function Success(props) {
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
         <meta property="og:url" content="https://smarterbot.cl" />
-        <meta property="og:site_name" content="SmarterBot" />
+        <meta property="og:site_name" content="SmarterChatBOT" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
@@ -141,7 +141,7 @@ function Success(props) {
             <div className="row text-center">
               <div className="col-sm-12">
                 <p className="d-block">
-                  <strong>Smarter Bot</strong> 2023 –{" "}
+                  <strong>Smarter ChatBOT</strong> 2023 –{" "}
                   <a href="mailto:clientes@smarterbot.cl">
                     clientes@smarterbot.cl
                   </a>

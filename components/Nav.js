@@ -7,7 +7,7 @@ function Nav(props) {
           <Link className="navbar-brand" href="/">
             <img
               className="margin-top img-fluid"
-              src="/images/MountainPassv2.svg"
+              src="/images/smarterbot2.svg"
               width={220}
             />
           </Link>

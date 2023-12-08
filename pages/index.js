@@ -50,16 +50,16 @@ export default function Home() {
             <div className="row align-items-center">
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
                 <h1 className="display-1">
-                  Fullday
-                  <span className="color">GO</span>
+                  Smarter
+                  <span className="color">CHAT BOT</span>
                 </h1>
                 <p className="large mt-3">
-                  Descripción de los servicios de FulldayGO{" "}
-                  <b>importante completar</b>
+                Ya podes automatizar las respuestas de WhatsApp Business!
+                  {" "}
+                  <b>Tu empresa atiende 24x7 con un ChatBOT</b>
                 </p>
                 <p className="large mt-3">
-                  ¡Inscríbete gratis en nuestros planes y conoce los cupones de descuento de
-                  la tienda!
+                  ¡Inscríbete gratis en nuestro plan diario y utiliza los cupones de descuentos!
                 </p>
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
@@ -90,7 +90,7 @@ export default function Home() {
                 text2="Sí"
                 text3="No"
                 text4="Uno a elección"
-                text5="78 horas"
+                text5="24 horas"
                 text6="No"
                 modal={false}
                 link="/subscribe"
@@ -102,7 +102,7 @@ export default function Home() {
                 text2="Sí"
                 text3="Sí"
                 text4="Todos"
-                text5="24 horas"
+                text5="30 días"
                 text6="Sí"
                 modal={true}
                 link="/subscribe/pro"
@@ -123,11 +123,10 @@ export default function Home() {
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-6 z-index">
                 <h1>
-                  Una montaña <span className="color">de beneficios</span>
+                  Cupones <span className="color">de descuentos y beneficios</span>
                 </h1>
                 <p className="large mt-3">
-                  Los suscriptores de FulldayGO podrán disfrutar de tarifas de
-                  ski por hora, ofertas especiales en alojamiento, rental,
+                  Tus suscriptores podrán disfrutar de descuentos en alojamiento, renta temporal,
                   clases, alimentación y mucho más.
                 </p>
 

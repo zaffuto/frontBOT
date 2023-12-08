@@ -86,7 +86,7 @@ function Dashboard(props) {
         />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="Suscríbete para probar los beneficios"
         />
         <meta
           property="og:image"
@@ -100,19 +100,19 @@ function Dashboard(props) {
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-16.png"
+          href="/images/smarterbot-favicon-16.png"
           sizes="16x16"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-32.png"
+          href="/images/smarterbot-favicon-32.png"
           sizes="32x32"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-96.png"
+          href="/images/smarterbot-favicon-96.png"
           sizes="96x96"
         ></link>
         <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
@@ -134,7 +134,7 @@ function Dashboard(props) {
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         {" "}
-        <Script
+       {/*  <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
         />
@@ -150,14 +150,14 @@ function Dashboard(props) {
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
-        />
+        /> */}
         <header>
           <nav className="navbar navbar-expand-md fixed-top">
             <div className="container-fluid">
               <a className="navbar-brand" href={`/dashboard/${props.userType}`}>
                 <img
                   className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
+                  src="/images/smarterbot2.svg"
                   width={220}
                 />
               </a>
@@ -246,7 +246,7 @@ function Dashboard(props) {
                         <div className="col-md-6">
                           <div className="card">
                             <h5 className="card-header">
-                              Mis suscripciones Smarter Bot.
+                              Mis suscripciones Smarter ChatBOT
                             </h5>
                             <div className="card-body">
                               <p className="card-text">
@@ -272,7 +272,7 @@ function Dashboard(props) {
                                 href="/dashboard/user/account"
                                 className="btn btn-primary"
                               >
-                                Mi Smarter Bot
+                                Mi Smarter ChatBOT
                               </a>
                             </div>
                           </div>
@@ -321,7 +321,7 @@ function Dashboard(props) {
                       />
                     </div>
                     <div className="col-md-12 mt-4">
-                      <label>Texto Oferta</label>
+                      <label>Descuentos %</label>
                       <input
                         type="text"
                         className="form-control"
@@ -355,7 +355,7 @@ function Dashboard(props) {
                 <a className="footer-brand d-block" href="#">
                   <img
                     className="margin-top img-fluid "
-                    src="/images/MountainPass-white.svg"
+                    src="/images/smarterbot-white.svg"
                   />
                 </a>
               </div>

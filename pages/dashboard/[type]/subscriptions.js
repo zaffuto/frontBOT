@@ -106,19 +106,19 @@ function Dashboard(props) {
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-16.png"
+          href="/images/smarterbot-favicon-16.png"
           sizes="16x16"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-32.png"
+          href="/images/smarterbot-favicon-32.png"
           sizes="32x32"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-96.png"
+          href="/images/smarterbot-favicon-96.png"
           sizes="96x96"
         ></link>
         <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
@@ -163,7 +163,7 @@ function Dashboard(props) {
               <a className="navbar-brand" href={`/dashboard/${props.userType}`}>
                 <img
                   className="margin-top img-fluid"
-                  src="/images/MountainPassv2.svg"
+                  src="/images/smarterbotv2.svg"
                   width={220}
                 />
               </a>
@@ -289,7 +289,7 @@ function Dashboard(props) {
                 <a className="footer-brand d-block" href="#">
                   <img
                     className="margin-top img-fluid "
-                    src="/images/MountainPass-white.svg"
+                    src="/images/smarterbot-white.svg"
                   />
                 </a>
               </div>

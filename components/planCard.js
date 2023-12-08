@@ -27,7 +27,7 @@ function PlanCard(props) {
               </td>
             </tr>
             <tr>
-              <th scope="row">Pagar por hora</th>
+              <th scope="row">Pagar por Día</th>
               <td>{props.text2}</td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@ function PlanCard(props) {
               <td>{props.text5}</td>
             </tr>
             <tr>
-              <th scope="row">Descuentos y Beneficios</th>
+              <th scope="row">Descuentos y Descargas</th>
               <td>{props.text6}</td>
             </tr>
           </tbody>
@@ -87,24 +87,24 @@ function PlanCard(props) {
                   <table className="table">
                     <tbody>
                       <tr>
-                        <th scope="row">03 a 10 años</th>
+                        <th scope="row">hasta 10 contactos</th>
                         <td>Gratis</td>
                       </tr>
                       <tr>
-                        <th scope="row">11 a 18 años</th>
+                        <th scope="row">de 11 a 50 contactos</th>
                         <td>$ 24.000</td>
                       </tr>
                       <tr>
-                        <th scope="row">19 a 34 años</th>
+                        <th scope="row">51 a 500 contactos</th>
                         <td>$ 36.000</td>
                       </tr>
                       <tr>
-                        <th scope="row">35 a 64 años</th>
+                        <th scope="row">501 a 3.000 contactos</th>
                         <td>$ 48.000</td>
                       </tr>
                       <tr>
-                        <th scope="row">65 años y más</th>
-                        <td>Gratis</td>
+                        <th scope="row">Personilzado con APIs</th>
+                        <td>Consultar</td>
                       </tr>
                     </tbody>
                   </table>
