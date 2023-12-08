@@ -51,10 +51,10 @@ export default function Home() {
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
                 <h1 className="display-1">
                   Smarter
-                  <span className="color">CHAT BOT</span>
+                  <span className="color">  CHAT BOT</span>
                 </h1>
                 <p className="large mt-3">
-                Ya podes automatizar las respuestas de WhatsApp Business!
+                Automatiza las respuestas de WhatsApp Business!
                   {" "}
                   <b>Tu empresa atiende 24x7 con un ChatBOT</b>
                 </p>

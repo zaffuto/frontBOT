@@ -30,7 +30,7 @@ function Success(props) {
   return (
     <Fragment>
       <Head>
-        <title>SmarterBot</title>
+        <title>Smarter ChatBOT</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
