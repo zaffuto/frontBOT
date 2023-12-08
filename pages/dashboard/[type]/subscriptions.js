@@ -83,16 +83,16 @@ function Dashboard(props) {
           name="description"
           content="Smarter Bot – Suscríbete y paga sólo las horas que esquíes"
         />
-        <meta name="author" content="Smarter Bot" />
-        <title>Smarter Bot – Esquía pagando solo el tiempo que uses</title>
+        <meta name="author" content="Smarter ChatBOT" />
+        <title>Smarter ChatBOT – Tu empresa atiende 24x7 con un ChatBOT</title>
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Smarter Bot - La nueva forma de disfrutar la montaña"
+          content="Smarter ChatBOT - Ya podes automatizar las respuestas de WhatsApp Business!"
         />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="¡Inscríbete gratis en nuestro plan diario y utiliza los cupones de descuentos!"
         />
         <meta
           property="og:image"
@@ -140,7 +140,7 @@ function Dashboard(props) {
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         {" "}
-        <Script
+       {/*  <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
         />
@@ -156,7 +156,7 @@ function Dashboard(props) {
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
-        />
+        /> */}
         <header>
           <nav className="navbar navbar-expand-md fixed-top">
             <div className="container-fluid">
@@ -294,7 +294,7 @@ function Dashboard(props) {
                 </a>
               </div>
               <div className="col-sm-6">
-                <p className="d-block">Smarter Bot 2023 </p>
+                <p className="d-block">Smarter ChatBOT 2023/2024</p>
               </div>
             </div>
           </div>

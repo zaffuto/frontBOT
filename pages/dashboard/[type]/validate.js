@@ -54,7 +54,7 @@ function Dashboard(props) {
           name="description"
           content="Smarter ChatBOT – Puedes probarlo GRATIS"
         />
-        <meta name="author" content="Smarter Bot" />
+        <meta name="author" content="Smarter CahtBOT" />
         <title>Smarter ChatBOT – Ahora puedes organizar tus clientes de WhatsApp Business</title>
         <meta property="og:type" content="website" />
         <meta

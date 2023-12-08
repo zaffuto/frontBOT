@@ -58,9 +58,7 @@ export default function Home() {
                   {" "}
                   <b>Tu empresa atiende 24x7 con un ChatBOT</b>
                 </p>
-                <p className="large mt-3">
-                  ¡Inscríbete gratis en nuestro plan diario y utiliza los cupones de descuentos!
-                </p>
+                ¡Inscríbete gratis en nuestro plan diario y utiliza los cupones de descuentos!
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
                   href="/subscribe"
@@ -154,7 +152,7 @@ export default function Home() {
             <div className="row align-content-start align-items-center">
               <div className="col-12 col-sm-12 col-md-8 mx-auto text-center">
                 <h1 className="mb-5">
-                  Conoce <span className="color">FulldayGO</span>
+                  Conoce <span className="color">Smarter ChatBOT</span>
                 </h1>
                 <div className="justify-content-center">
                   <div className="video-home rounded">

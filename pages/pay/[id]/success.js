@@ -38,7 +38,7 @@ function Success(props) {
       <div className="section-shop pt-5 pb-0">
         <div className="container">
           <div className="z-index">
-            <h1 className="text-center mb-4">¡Todo listo para esquiar!</h1>
+            <h1 className="text-center mb-4">¡Todo listo para Chatear SMARTER</h1>
             <div className="bg-light rounded col-md-12 col-xl-6 py-5 mx-auto">
               <div className="row order-container">
                 <div className="col-md-12">
@@ -51,7 +51,7 @@ function Success(props) {
                   </div>
 
                   <h4 className="mb-4">
-                    ¡Te damos la bienvenida,{" "}
+                    ¡Te damos la bienvenida SMARTER CHATBOT CHILE,{" "}
                     <span className="color">{userName}</span>!
                   </h4>
                   <p>

@@ -157,7 +157,7 @@ function Dashboard(props) {
               <a className="navbar-brand" href={`/dashboard/${props.userType}`}>
                 <img
                   className="margin-top img-fluid"
-                  src="/images/smarterbot2.svg"
+                  src="/images/smarterbotv2.svg"
                   width={220}
                 />
               </a>
@@ -231,7 +231,7 @@ function Dashboard(props) {
                                 href={`/pay/${userId}`}
                                 className="btn btn-primary w-100 dashboard-payment-button"
                               >
-                                Actualízate a PRO
+                                Actualízate a SMARTER
                               </a>
                             </div>
                           </div>

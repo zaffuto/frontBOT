@@ -54,23 +54,22 @@ export default function Prices() {
 
                 <p className="large text-center">
                   Todos los suscriptores de <strong>Smarter Bot</strong> tienen
-                  acceso a pagar por hora en nuestros centros de ski asociados.
-                  Revisa los valores para los planes Basic y Pro.
+                  acceso a pagar por hora en nuestros centros de canje asociados.
+                  Revisa los valores para los planes Basico y Pro.
                 </p>
 
                 <p className="text-center">
                   <strong>Plan Pro</strong>, tiene acceso a los “Precios
-                  Dinámicos”, que fluctúan según diferentes condiciones, como la
-                  temporada del año, el horario, y otras variables. En la tabla
-                  podrás revisar los rangos mínimos y máximos entre los que se
+                  Dinámicos”. 
+                  En la tabla podrás revisar los rangos mínimos y máximos entre los que se
                   moverán nuestros valores.
                 </p>
 
                 <p className="mb-0">
-                  <strong>Plan Basic</strong> tiene un valor fijo por hora,
+                  <strong>Plan Basico</strong> tiene un valor fijo por hora,
                   publicado en la tabla a continuación.
                 </p>
-                <h3 className="mt-5">¡Lánzate a la nueva forma de esquiar!</h3>
+                <h3 className="mt-5">¡Todo listo para Chatear SMARTER!</h3>
               </div>
             </div>
             <div className="container">

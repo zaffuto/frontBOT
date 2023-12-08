@@ -55,24 +55,24 @@ function Success(props) {
         <meta property="og:image:width" content="828" />
         <meta property="og:image:height" content="450" />
         <meta property="og:url" content="https://smarterbot.cl" />
-        <meta property="og:site_name" content="SmarterBot" />
+        <meta property="og:site_name" content="Smarter ChatBot" />
         <meta property="fb:app_id" content="" />
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-16.png"
+          href="/images/smarterbot-favicon-16.png"
           sizes="16x16"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-32.png"
+          href="/images/smarterbot-favicon-32.png"
           sizes="32x32"
         ></link>
         <link
           rel="icon"
           type="image/png"
-          href="/images/mountainpass-favicon-96.png"
+          href="/images/smarterbot-favicon-96.png"
           sizes="96x96"
         ></link>
         <link rel="apple-touch-icon" href="images/touch-icon-iphone.png" />
@@ -94,7 +94,7 @@ function Success(props) {
       </Head>
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         {" "}
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRN2ZCR8ZP"
           strategy="afterInteractive"
         />
@@ -110,14 +110,14 @@ function Success(props) {
         <Script
           src="https://www.googletagmanager.com/gtm.js?id=GTM-WS4L7S5"
           strategy="afterInteractive"
-        />
+        /> */}
       </div>
       <header>
         <nav className="navbar-transparent d-flex justify-content-center">
           <a className="d-block text-center" href="/">
             <img
               className="margin-top img-fluid"
-              src="/images/MountainPassv2.svg"
+              src="/images/smarterbot2.svg"
               width={220}
             />
           </a>
@@ -126,7 +126,7 @@ function Success(props) {
       <div className="section-shop pt-5 pb-0">
         <div className="container">
           <div className="z-index">
-            <h1 className="text-center mb-4">¡Todo listo para esquiar!</h1>
+            <h1 className="text-center mb-4">¡Todo listo para Chatear SMARTER!</h1>
             <div className="bg-light rounded col-md-12 col-xl-6 py-5 mx-auto">
               <div className="row order-container">
                 <div className="col-md-12">
