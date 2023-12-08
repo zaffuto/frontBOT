@@ -117,7 +117,7 @@ function Success(props) {
           <a className="d-block text-center" href="/">
             <img
               className="margin-top img-fluid"
-              src="/images/smarterbot2.svg"
+              src="/images/smarterbotv2.svg"
               width={220}
             />
           </a>
