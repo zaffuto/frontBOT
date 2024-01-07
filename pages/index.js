@@ -58,7 +58,7 @@ export default function Home() {
                   {" "}
                   <b>Tu empresa atiende 24x7 con un ChatBOT</b>
                 </p>
-                ¡Inscríbete gratis en nuestro plan diario y utiliza los cupones de descuentos!
+                ¡DEMO 15 días gratis diario y utiliza los cupones de descuentos!
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
                   href="/subscribe"
