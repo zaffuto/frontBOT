@@ -55,7 +55,7 @@ export default function Home() {
                 </h1>
                 <p className="large mt-3">
                   Automatiza tus procesos con nuestras soluciones avanzadas.
-                  <b> Optimiza tu empresa con Make y 8N8</b> para automatizar tareas y personaliza chatbots entrenados con la información de tu empresa para mejorar la atención al cliente y aumentar las ventas.
+                  <b> Optimiza tu empresa con Make</b> para automatizar tareas y personaliza chatbots entrenados con la información de tu empresa para mejorar la atención al cliente y aumentar las ventas.
                 </p>
                 ¡Prueba gratuita de 15 días y usa los cupones de descuento disponibles!
                 <a
