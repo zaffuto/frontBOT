@@ -12,22 +12,22 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(0);
   const [offerPrice, setOfferPrice] = useState(0);
-  const [displayMobileBar, setDisplayMoblieBar] = useState(false);
+  const [displayMobileBar, setDisplayMobileBar] = useState(false);
   const [discountText, setDiscountText] = useState("");
 
   const updateCount = (option) => {
-    if (option == "minus" && count > 1) {
+    if (option === "minus" && count > 1) {
       localStorage.setItem("__smtb_count", count - 1);
       setCount(count - 1);
     }
-    if (option == "plus" && count < 10) {
+    if (option === "plus" && count < 10) {
       localStorage.setItem("__smtb_count", count + 1);
       setCount(count + 1);
     }
   };
 
   useEffect(() => {
-    if (typeof window != "undefined") {
+    if (typeof window !== "undefined") {
       localStorage.setItem("__smtb_count", 1);
     }
     db.collection("settings")
@@ -42,28 +42,27 @@ export default function Home() {
 
   return (
     <Fragment>
-      <Header title="Inicio"></Header>
+      <Header title="Inicio" />
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
-        <Nav></Nav>
+        <Nav />
         <div className="section-cover">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
                 <h1 className="display-1">
-                  Smarter
-                  <span className="color">  CHAT BOT</span>
+                  Smarterbot
+                  <span className="color"> CHATBOT</span>
                 </h1>
                 <p className="large mt-3">
-                Automatiza las respuestas de WhatsApp Business!
-                  {" "}
-                  <b>Tu empresa atiende 24x7 con un ChatBOT</b>
+                  Automatiza tus procesos con nuestras soluciones avanzadas.
+                  <b> Optimiza tu empresa con Make y 8N8</b> para automatizar tareas y personaliza chatbots entrenados con la información de tu empresa para mejorar la atención al cliente y aumentar las ventas.
                 </p>
-                ¡DEMO 15 días gratis diario y utiliza los cupones de descuentos!
+                ¡Prueba gratuita de 15 días y usa los cupones de descuento disponibles!
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
                   href="/subscribe"
                 >
-                  Inscríbete gratis
+                  Regístrate gratis
                 </a>
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-5 mx-auto text-center img-home-container">
@@ -71,6 +70,7 @@ export default function Home() {
                   className="align-middle img-fluid rounded img-home"
                   src="https://placehold.co/558x730"
                   width="460"
+                  alt="Smarterbot"
                 />
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
             </h1>
             <div className="row justify-content-center">
               <PlanCard
-                title="Basic"
+                title="Básico"
                 text1="Gratis"
                 text2="Sí"
                 text3="No"
@@ -92,11 +92,11 @@ export default function Home() {
                 text6="No"
                 modal={false}
                 link="/subscribe"
-                linkText="Inscríbete Gratis"
-              ></PlanCard>
+                linkText="Regístrate Gratis"
+              />
               <PlanCard
                 title="Pro"
-                text1="Valores por categorías"
+                text1="Precios por categorías"
                 text2="Sí"
                 text3="Sí"
                 text4="Todos"
@@ -105,7 +105,7 @@ export default function Home() {
                 modal={true}
                 link="/subscribe/pro"
                 linkText="Comprar Suscripción"
-              ></PlanCard>
+              />
             </div>
           </div>
         </div>
@@ -117,15 +117,15 @@ export default function Home() {
                   className="align-middle img-fluid rounded img-home-two"
                   src="https://placehold.co/558x730"
                   width="460"
+                  alt="Beneficios"
                 />
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-6 z-index">
                 <h1>
-                  Cupones <span className="color">de descuentos y beneficios</span>
+                  Cupones <span className="color">de Descuento y Beneficios</span>
                 </h1>
                 <p className="large mt-3">
-                  Tus suscriptores podrán disfrutar de descuentos en alojamiento, renta temporal,
-                  clases, alimentación y mucho más.
+                  Tus suscriptores disfrutarán de descuentos en servicios adicionales como alojamiento, renta temporal, clases y mucho más.
                 </p>
 
                 <div>
@@ -152,15 +152,16 @@ export default function Home() {
             <div className="row align-content-start align-items-center">
               <div className="col-12 col-sm-12 col-md-8 mx-auto text-center">
                 <h1 className="mb-5">
-                  Conoce <span className="color">Smarter ChatBOT</span>
+                  Conoce <span className="color">Smarterbot</span>
                 </h1>
                 <div className="justify-content-center">
                   <div className="video-home rounded">
                     <div className="embed-container">
                       <iframe
-                        src="https://www.youtube.com/embed//njrhms-83qc"
+                        src="https://www.youtube.com/embed/njrhms-83qc"
                         frameBorder="0"
-                        allowFullScreen=""
+                        allowFullScreen
+                        title="Video de Smarterbot"
                       ></iframe>
                     </div>
                   </div>
@@ -169,70 +170,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/*<div className="section-white mb-5">
-          <div className="container">
-            <div className="row align-content-start align-items-center">
-              <div className="col-12 col-sm-12 col-md-12 mx-auto text-center">
-                <h1 className="mb-5">Centros de ski asociados</h1>
-                <div className="partner-container d-flex justify-content-center">
-                  <div className="partner-brand">
-                    <a
-                      href="https://laparva.cl/"
-                      target="_blank"
-                      title="La Parva"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/la-parva.png"
-                        width="180"
-                      />
-                    </a>
-                  </div>
-                  <div className="partner-brand">
-                    <a
-                      href="https://skiportillo.com/"
-                      target="_blank"
-                      title="Ski Portillo"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/ski-portillo.png"
-                        width="180"
-                      />
-                    </a>
-                  </div>
-                  <div className="partner-brand">
-                    <a
-                      href="https://antillanca.cl/"
-                      target="_blank"
-                      title="Antillanca - Vive la Montaña"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/antillanca.png"
-                        width="180"
-                      />
-                    </a>
-                  </div>
-                  <div className="partner-brand">
-                    <a
-                      href="https://laderas.com.ar/"
-                      target="_blank"
-                      title="Laderas – Cerro Perito Moreno"
-                    >
-                      <img
-                        className="img-fluid"
-                        src="/images/laderas.png"
-                        width="180"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>*/}
-        <Footer></Footer>
+        <Footer />
       </div>
     </Fragment>
   );
