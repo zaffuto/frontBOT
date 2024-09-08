@@ -158,11 +158,12 @@ export default function Home() {
                   <div className="video-home rounded">
                     <div className="embed-container">
                       <iframe
-                        src="https://www.youtube.com/embed/njrhms-83qc"
+                        src="https://www.youtube.com/embed/Mnfzklo2CVw?start=0"
                         frameBorder="0"
                         allowFullScreen
                         title="Video de Smarterbot"
                       ></iframe>
+
                     </div>
                   </div>
                 </div>
