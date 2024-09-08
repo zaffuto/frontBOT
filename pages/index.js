@@ -68,7 +68,7 @@ export default function Home() {
               <div className="col-12 col-sm-12 col-lg-12 col-xl-5 mx-auto text-center img-home-container">
                 <img
                   className="align-middle img-fluid rounded img-home"
-                  src="https://placehold.co/558x730"
+                  src="public/images/Meet_Pedro_Zaffuto.jpeg"
                   width="460"
                   alt="Smarterbot"
                 />
@@ -115,7 +115,7 @@ export default function Home() {
               <div className="col-12 col-sm-12 col-lg-12 col-xl-6 mx-auto text-center">
                 <img
                   className="align-middle img-fluid rounded img-home-two"
-                  src="https://placehold.co/558x730"
+                  src="public/images/Meet_Pedro_Zaffuto.jpeg"
                   width="460"
                   alt="Beneficios"
                 />
