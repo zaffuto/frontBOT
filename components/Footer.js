@@ -6,13 +6,14 @@ function Footer(props) {
           <div className="col-sm-6">
             <a className="footer-brand d-block" href="#">
               <img
-                className="margin-top img-fluid "
+                className="margin-top img-fluid"
                 src="/images/smarterbot-white.svg"
+                alt="Smarterbot logo"
               />
             </a>
             <p className="d-block mt-4">
               SmartBot 2023 –{" "}
-              <a href="mailto:clientes@smarterbot.cl">clientes@smarterbot.cl</a>
+              <a href="mailto:hola@smarterbot.cl">hola@smarterbot.cl</a>
             </p>
 
             <div className="follow-us mt-4">
@@ -24,6 +25,7 @@ function Footer(props) {
                   className="icon-follow-us align-middle img-fluid"
                   src="/images/i-instagram.svg"
                   width="40"
+                  alt="Instagram"
                 />
               </a>
               <a
@@ -34,6 +36,7 @@ function Footer(props) {
                   className="icon-follow-us align-middle img-fluid"
                   src="/images/i-facebook.svg"
                   width="40"
+                  alt="Facebook"
                 />
               </a>
               <a
@@ -44,6 +47,7 @@ function Footer(props) {
                   className="icon-follow-us align-middle img-fluid"
                   src="/images/i-tiktok.svg"
                   width="40"
+                  alt="TikTok"
                 />
               </a>
               <a
@@ -54,6 +58,20 @@ function Footer(props) {
                   className="icon-follow-us align-middle img-fluid"
                   src="/images/i-youtube.svg"
                   width="40"
+                  alt="YouTube"
+                />
+              </a>
+              {/* Enlace a WhatsApp con icono personalizado */}
+              <a
+                href="https://wa.me/5492615571367?text=Hola,%20quiero%20saber%20más%20sobre%20Smarterbot..."
+                className="whatsapp-icon"
+                target="_blank"
+              >
+                <img
+                  className="icon-follow-us align-middle img-fluid"
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+                  width="40"
+                  alt="WhatsApp"
                 />
               </a>
             </div>
@@ -64,7 +82,7 @@ function Footer(props) {
                 <a href="/quienes-somos">Quiénes Somos</a>
               </li>
               <li>
-                <a href="/precios">Tarifas por hora</a>
+                <a href="/precios">Tabla de precios</a>
               </li>
               <li>
                 <a href="/politicas-de-privacidad">Política de Privacidad</a>
@@ -85,4 +103,5 @@ function Footer(props) {
     </footer>
   );
 }
+
 export default Footer;
