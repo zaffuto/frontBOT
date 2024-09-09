@@ -63,7 +63,7 @@ function Footer(props) {
               </a>
               {/* Enlace a WhatsApp con icono personalizado */}
               <a
-                href="https://wa.me/5492615571367?text=Hola,%20quiero%20saber%20más%20sobre%20Smarterbot..."
+                href="https://wa.me/56979540471?text=Hola,%20quiero%20saber%20más%20sobre%20Smarterbot..."
                 className="whatsapp-icon"
                 target="_blank"
               >
