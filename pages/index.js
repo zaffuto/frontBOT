@@ -9,27 +9,11 @@ import PlanCard from "../components/planCard";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Home() {
-  const [count, setCount] = useState(1);
   const [price, setPrice] = useState(0);
   const [offerPrice, setOfferPrice] = useState(0);
-  const [displayMobileBar, setDisplayMobileBar] = useState(false);
   const [discountText, setDiscountText] = useState("");
 
-  const updateCount = (option) => {
-    if (option === "minus" && count > 1) {
-      localStorage.setItem("__smtb_count", count - 1);
-      setCount(count - 1);
-    }
-    if (option === "plus" && count < 10) {
-      localStorage.setItem("__smtb_count", count + 1);
-      setCount(count + 1);
-    }
-  };
-
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("__smtb_count", 1);
-    }
     db.collection("settings")
       .doc("--")
       .get()
@@ -84,24 +68,24 @@ export default function Home() {
             </h1>
             <div className="row justify-content-center">
               <PlanCard
-                title="Prueba o Freemium"
+                title="Freemium"
                 text1="Gratis (30 días)"
-                text2="Shopify + WhatsApp + Make"
+                text2="Acceso a todas las categorías"
                 text3="Automatización limitada"
-                text4="1 Integración (Make)"
+                text4="10 Integraciones"
                 text5="Optimización básica"
                 text6="Sí"
                 modal={false}
                 link="/subscribe"
-                linkText="Regístrate Gratis"
+                linkText="ChatBOT Regístro gratis"
               />
               <PlanCard
                 title="Premium"
-                text1="Desde $XX/mes"
-                text2="Integraciones múltiples"
-                text3="Licencia ChatGPT, Claude, y Make"
-                text4="META API para chatbot"
-                text5="Automatización al 50% con AI"
+                text1="Desde $65/mes Licencia REQUERIDA"
+                text2="Automatización avanzada"
+                text3="Integraciones múltiples"
+                text4="Licencias ChatGPT, Claude, Make"
+                text5="Soporte técnico dedicado"
                 text6="40 horas de soporte mensual"
                 modal={true}
                 link="/subscribe/pro"
@@ -109,12 +93,12 @@ export default function Home() {
               />
               <PlanCard
                 title="Custom"
-                text1="A consultar"
-                text2="Solo para Shopify ($2300+)"
-                text3="Licencias Gemini y Make"
-                text4="Integración con BSALE, DEFONTANA, ENVIAME.IO"
-                text5="40 horas semanales de soporte"
-                text6="Setup en Google Workspace"
+                text1="$2.300/mes Licencia REQUERIDA"
+                text2="Integración a medida"
+                text3="Automatización completa"
+                text4="Licencias exclusivas (Gemini, Make, Claude)"
+                text5="Soporte semanal dedicado"
+                text6="Setup completo en Google Workspace"
                 modal={true}
                 link="/subscribe/custom"
                 linkText="Consultar"
