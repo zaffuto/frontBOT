@@ -1,6 +1,5 @@
 import { Montserrat } from "@next/font/google";
 import { Fragment, useEffect, useState } from "react";
-import { db } from "../services/firebaseService";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -9,21 +8,6 @@ import PlanCard from "../components/planCard";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function Home() {
-  const [price, setPrice] = useState(0);
-  const [offerPrice, setOfferPrice] = useState(0);
-  const [discountText, setDiscountText] = useState("");
-
-  useEffect(() => {
-    db.collection("settings")
-      .doc("--")
-      .get()
-      .then((docRef) => {
-        setPrice(parseInt(docRef.data().price));
-        setOfferPrice(parseInt(docRef.data().offerPrice));
-        setDiscountText(docRef.data().discountText);
-      });
-  }, []);
-
   return (
     <Fragment>
       <Header title="Inicio" />
@@ -68,40 +52,25 @@ export default function Home() {
             </h1>
             <div className="row justify-content-center">
               <PlanCard
-                title="Freemium"
-                text1="Gratis (30 días)"
-                text2="Acceso a todas las categorías"
-                text3="Automatización limitada"
-                text4="10 Integraciones"
-                text5="Optimización básica"
-                text6="Sí"
+                title="Subscribe"
+                text1="Shopify Smarter"
+                text2="Para licencias de Shopify Starter ($5/mes) o Shopify Basic ($39/mes)"
+                text3="Incluye ChatGPT, Claude, Make, META API"
                 modal={false}
                 link="/subscribe"
-                linkText="ChatBOT Regístro gratis"
+                linkText="Suscribirse"
               />
               <PlanCard
-                title="Premium"
-                text1="Desde $65/mes Licencia REQUERIDA"
-                text2="Automatización avanzada"
-                text3="Integraciones múltiples"
-                text4="Licencias ChatGPT, Claude, Make"
-                text5="Soporte técnico dedicado"
-                text6="40 horas de soporte mensual"
+                title="Subscribe Pro"
+                text1="Shopify Advanced"
+                text2="Orquestación para Gemini en Google Workspace"
+                text3="Opcionales: BSALE, DEFONTANA, Enviame.io, REVERSO"
+                text4="Automatización avanzada, Colaboración Humana 50%"
+                text5="Integraciones múltiples con licencias de ChatGPT, Antropihic, Make y más"
+                text6="Soporte técnico dedicado - 40 horas mensuales"
                 modal={true}
                 link="/subscribe/pro"
                 linkText="Comprar Suscripción"
-              />
-              <PlanCard
-                title="Custom"
-                text1="$2.300/mes Licencia REQUERIDA"
-                text2="Integración a medida"
-                text3="Automatización completa"
-                text4="Licencias exclusivas (Gemini, Make, Claude)"
-                text5="Soporte semanal dedicado"
-                text6="Setup completo en Google Workspace"
-                modal={true}
-                link="/subscribe/custom"
-                linkText="Consultar"
               />
             </div>
           </div>
