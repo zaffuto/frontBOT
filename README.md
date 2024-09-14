@@ -1,2 +1,2 @@
 # frontBOT
-Vercel
+Smarterbot.cl
