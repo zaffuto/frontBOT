@@ -20,7 +20,6 @@ export default function Home() {
                 <h1 className="display-1">SMARTER <span className="color"> CHATBOT</span>
                 </h1>
                 <p className="large mt-3">
-                Automatización de tareas con Inteligencia Artificial
                   <b>Adopción de Inteligencia Artificial en sistemas SCM (Supply Chain Management) 🚀</b>
                 
                 </p>
@@ -29,7 +28,7 @@ export default function Home() {
                   className="btn btn-primary btn-lg mt-4 mb-4"
                   href="/subscribe"
                 >
-                  Regístrate gratis
+                  Agendamos un MEET ?
                 </a>
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-5 mx-auto text-center img-home-container">
