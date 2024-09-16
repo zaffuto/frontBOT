@@ -1,4 +1,6 @@
-import { Montserrat } from '@next/font/google';
+// preguntas-frecuentes.js
+import { Montserrat } from 'next/font/google';
+import { Fragment } from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -7,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function PreguntasFrecuentes() {
   return (
-    <>
+    <Fragment>
       <Header title="Preguntas Frecuentes" />
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         <Nav />
@@ -49,65 +51,15 @@ export default function PreguntasFrecuentes() {
                         </div>
                       </div>
                     </div>
-                    {/* Pregunta 2 */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingTwo">
-                        <button
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          ¿Cómo puede un chatbot beneficiar a mi empresa?
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingTwo"
-                        data-bs-parent="#faqAccordion"
-                      >
-                        <div className="accordion-body">
-                          Un chatbot personalizado puede automatizar tareas repetitivas, mejorar la atención al cliente 24/7, optimizar procesos internos y proporcionar información rápida y precisa. Esto libera tiempo para que tu equipo se enfoque en tareas estratégicas y mejora la satisfacción del cliente.
-                        </div>
-                      </div>
-                    </div>
-                    {/* Pregunta 3 */}
-                    <div className="accordion-item">
-                      <h2 className="accordion-header" id="headingThree">
-                        <button
-                          className="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          ¿Cuál es el proceso de implementación?
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseThree"
-                        className="accordion-collapse collapse"
-                        aria-labelledby="headingThree"
-                        data-bs-parent="#faqAccordion"
-                      >
-                        <div className="accordion-body">
-                          Nuestro proceso incluye un diagnóstico personalizado en terreno, desarrollo a medida, implementación con al menos 40 horas dentro de tu empresa y capacitación al personal. Nos aseguramos de entender a fondo tus necesidades y adaptamos nuestras soluciones para integrarse perfectamente con tus sistemas.
-                        </div>
-                      </div>
-                    </div>
-                    {/* Resto de las preguntas */}
+                    {/* Más preguntas siguen aquí */}
                   </div>
                 </div>
               </div>
             </div>
-            <Footer />
           </div>
         </div>
       </div>
-    </>
+      <Footer />
+    </Fragment>
   );
 }
