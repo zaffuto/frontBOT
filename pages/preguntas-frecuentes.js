@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 export default function PreguntasFrecuentes() {
@@ -100,7 +99,7 @@ export default function PreguntasFrecuentes() {
                         data-bs-parent="#faqAccordion"
                       >
                         <div className="accordion-body">
-                          Nuestro proceso incluye un diagnóstico personalizado, desarrollo a medida, implementación en terreno con al menos 40 horas en tu empresa y capacitación al personal. Nos aseguramos de entender a fondo tus necesidades y adaptamos nuestras soluciones para integrarse perfectamente con tus sistemas.
+                          Nuestro proceso incluye un diagnóstico personalizado en terreno, desarrollo a medida, implementación con al menos 40 horas dentro de tu empresa y capacitación al personal. Nos aseguramos de entender a fondo tus necesidades y adaptamos nuestras soluciones para integrarse perfectamente con tus sistemas.
                         </div>
                       </div>
                     </div>
@@ -125,7 +124,7 @@ export default function PreguntasFrecuentes() {
                         data-bs-parent="#faqAccordion"
                       >
                         <div className="accordion-body">
-                          Ofrecemos soporte continuo y mantenimiento para asegurar que el chatbot funcione de manera óptima. Nuestro equipo está disponible para resolver cualquier duda o inconveniente, y proporcionamos actualizaciones y mejoras según sea necesario.
+                          Ofrecemos soporte continuo ajustado al plan de mantenimiento para asegurar que el chatbot funcione de manera óptima. Nuestro equipo está disponible para resolver cualquier duda o inconveniente que pueda surgir.
                         </div>
                       </div>
                     </div>
@@ -150,7 +149,7 @@ export default function PreguntasFrecuentes() {
                         data-bs-parent="#faqAccordion"
                       >
                         <div className="accordion-body">
-                          Implementamos protocolos de seguridad de alto nivel para proteger tus datos y garantizar la confidencialidad de la información. Cumplimos con todas las regulaciones en materia de protección de datos y trabajamos con transparencia para brindar tranquilidad a nuestros clientes.
+                          Firmamos un contrato de confidencialidad que garantiza que la información proporcionada no será compartida ni revelada a terceros. Implementamos medidas de seguridad estrictas para proteger tus datos y cumplir con las regulaciones vigentes en materia de protección de datos.
                         </div>
                       </div>
                     </div>
@@ -240,7 +239,7 @@ export default function PreguntasFrecuentes() {
                           aria-expanded="false"
                           aria-controls="collapseNine"
                         >
-                          ¿Cómo puedo obtener una cotización?
+                          ¿Cómo puedo obtener una cuenta DEMO?
                         </button>
                       </h2>
                       <div
@@ -250,7 +249,7 @@ export default function PreguntasFrecuentes() {
                         data-bs-parent="#faqAccordion"
                       >
                         <div className="accordion-body">
-                          Puedes contactarnos a través de nuestro formulario en la página de contacto, enviarnos un correo electrónico a <a href="mailto:contacto@smarterbot.cl">contacto@smarterbot.cl</a> o llamarnos al +56 9 8765 4321. Estaremos encantados de analizar tus necesidades y proporcionarte una cotización personalizada.
+                          Puedes contactarnos a través de nuestro formulario en la página de <a href="/contacto">contacto</a>, enviarnos un correo electrónico a <a href="mailto:hola@smarterbot.cl">hola@smarterbot.cl</a> o llamarnos al <a href="tel:+56979540471">+56 9 7954 0471</a>. También puedes agendar una reunión directamente vía WhatsApp haciendo clic <a href="https://api.whatsapp.com/send/?phone=56979540471&text=Hola%2C+quiero+obtener+una+cuenta+demo+de+SmarterBot...&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">aquí</a>. Estaremos encantados de analizar tus necesidades y proporcionarte una cuenta DEMO personalizada.
                         </div>
                       </div>
                     </div>
@@ -261,9 +260,9 @@ export default function PreguntasFrecuentes() {
                           className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseTen"
                           aria-expanded="false"
                           aria-controls="collapseTen"
+                          data-bs-target="#collapseTen"
                         >
                           ¿Qué experiencia tienen en mi industria?
                         </button>
@@ -275,7 +274,7 @@ export default function PreguntasFrecuentes() {
                         data-bs-parent="#faqAccordion"
                       >
                         <div className="accordion-body">
-                          Hemos trabajado con empresas de diversos sectores, incluyendo logística, retail, servicios financieros y más. Nuestro enfoque se adapta a las necesidades específicas de cada industria, y contamos con el expertise de Pedro José Zaffuto en adopción de inteligencia artificial en sistemas SCM.
+                          Hemos trabajado con empresas de diversos sectores, incluyendo logística, retail, servicios financieros y más. Nuestro enfoque se adapta a las necesidades específicas de cada industria, y contamos con la experiencia de Pedro José Zaffuto en adopción de inteligencia artificial en sistemas SCM.
                         </div>
                       </div>
                     </div>
@@ -284,10 +283,9 @@ export default function PreguntasFrecuentes() {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
-      </div>
-    </Fragment>
-  );
+      </Fragment>
+    );
 }
