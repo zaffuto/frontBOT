@@ -56,11 +56,11 @@ export default function Home() {
                 text2="DEMO para licencias Shopify o Shopify Advanced"
                 text3="Requiere ChatGPT API, Mermaidchart.com, Make.com y Cal.com"
                 text4="Automatización media, Colaboración Humana 90%"
-                text5="Integraciones con licencia de ChatGPT con GMAIL"
-                text6="Soporte técnico no dedicado - 0 horas mensuales"
+                text5="Integraciones fijas con licencia de ChatGPT y Cal.com con GMAIL"
+                text6="Soporte técnico de pago a valor de cantidad de horas"
                 modal={false}
                 link="/subscribe"
-                linkText="Suscribirse"
+                linkText="SUSCRIBIRSE"
               />
               <PlanCard
                 title="SMARTER PLUS"
@@ -72,7 +72,7 @@ export default function Home() {
                 text6="Soporte técnico dedicado - 40 horas mensuales"
                 modal={true}
                 link="/subscribe/pro"
-                linkText="Comprar Suscripción"
+                linkText="COMPRAR SUSCRIPCION"
               />
             </div>
           </div>
