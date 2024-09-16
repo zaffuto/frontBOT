@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Header from "../../../components/Header";
 import { useRouter } from "next/router";
 import { BounceLoader } from "react-spinners";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import SubscriptionNav from "../../../components/SubscriptionNav";
 import SubscriptionFooter from "../../../components/SubscriptionFooter";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });

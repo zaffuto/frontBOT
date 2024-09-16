@@ -1,5 +1,5 @@
 // precios.js
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { Fragment, useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";

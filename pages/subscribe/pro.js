@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import ChileanRutify from "chilean-rutify";
 import { Fragment, useEffect, useState } from "react";
 import { db } from "../../services/firebaseService";

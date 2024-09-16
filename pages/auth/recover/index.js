@@ -3,7 +3,7 @@ import Header from "../../../components/Header";
 import SubscritionNav from "../../../components/SubscriptionNav";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "../../../services/firebaseService";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { recoverEmail } from "../../../services/sendEmail";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 

@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { Fragment, useEffect, useState } from "react";
 import { db } from "../services/firebaseService";
 import Header from "../components/Header";

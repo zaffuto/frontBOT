@@ -3,7 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { db } from "../../../../services/firebaseService";
 import bcrypt from "bcryptjs-react";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { RxEyeClosed, RxEyeOpen } from "react-icons/rx";
 import Header from "../../../../components/Header";
 import SubscriptionNav from "../../../../components/SubscriptionNav";

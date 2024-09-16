@@ -2,7 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import moment from "moment";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { db } from "../../../services/firebaseService";
 import Header from "../../../components/Header";
 import SubscriptionNav from "../../../components/SubscriptionNav";

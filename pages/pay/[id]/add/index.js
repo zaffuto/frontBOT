@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 import { db } from "../../../../services/firebaseService";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 

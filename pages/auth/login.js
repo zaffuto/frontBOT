@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import SubscritionNav from "../../components/SubscriptionNav";
 import { db } from "../../services/firebaseService";
 import { compareSync } from "bcryptjs-react";
-import { Montserrat } from "@next/font/google";
+import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
 function Login(props) {
