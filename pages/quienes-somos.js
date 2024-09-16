@@ -11,21 +11,21 @@ export default function QuienesSomos() {
     {
       name: "Pedro José Zaffuto",
       role: "Especialista en IA y SCM",
-      image: "https://placehold.co/525x687",
+      image: "public/images/segundo.jpg",
       description:
         "Pedro es un experto en la adopción de Inteligencia Artificial en sistemas SCM, con más de 10 años de experiencia en el sector.",
     },
     {
       name: "María López",
       role: "Gerente de Operaciones",
-      image: "https://placehold.co/525x687",
+      image: "public/images/primero.jpg", 
       description:
         "María lidera nuestro equipo de operaciones, asegurando que todos los proyectos se ejecuten con la máxima eficiencia.",
     },
     {
       name: "Juan Pérez",
       role: "Desarrollador Senior",
-      image: "https://placehold.co/525x687",
+      image: "",
       description:
         "Juan es responsable del desarrollo de nuestras soluciones tecnológicas innovadoras.",
     },
