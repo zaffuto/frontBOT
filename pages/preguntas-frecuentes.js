@@ -1,16 +1,19 @@
+// preguntas-frecuentes.js
 import { Montserrat } from "@next/font/google";
 import { Fragment } from "react";
-import Faq from "../components/Faq";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
-export default function Home() {
+export default function PreguntasFrecuentes() {
   return (
     <Fragment>
-      <Header title="Preguntas Frecuentes"></Header>
+      <Header title="Preguntas Frecuentes" />
       <div className={`${montserrat.className} d-flex flex-column h-100`}>
         <Nav />
         <div className="section-single">
@@ -18,129 +21,272 @@ export default function Home() {
             <div className="row align-content-start align-items-center">
               <div className="col-12 col-sm-12 col-md-10 mx-auto">
                 <h1 className="mb-5 text-center">
-                  <span className="color">¿Cómo</span> Funciona?
+                  <span className="color">Preguntas</span> Frecuentes
                 </h1>
               </div>
             </div>
             <div className="row">
               <div className="col-md-12">
                 <div className="partner-container d-flex justify-content-center">
-                  <div className="accordion" id="accordionExample">
-                    <Faq
-                      title="¿Cómo reservo las horas de ski?"
-                      answer="Cada titular debe realizar su reserva a través de nuestro sistema
-            seleccionando el día y centro de ski de preferencia."
-                    />
-                    <Faq
-                      title="¿Cómo pago las horas de ski?"
-                      answer="Al minuto de realizar la reserva, se les solicitará
-                      un abono en caso de no tener integrado el sistema de
-                      pago con una tarjeta de crédito. Luego de esquiar,
-                      se cobrará el tiempo real esquiado, devolviendo el
-                      saldo a la tarjeta de crédito o cobrando el monto
-                      según lo definido por cada titular como forma de
-                      pago. Este monto final pagado podrá realizarse
-                      virtual o presencialmente en el centro de ski
-                      correspondiente."
-                    />
-
-                    <Faq
-                      title="¿Puedo usar mis horas compradas en distintos
-                      horarios del día?"
-                      answer="Sí, puedes coordinarlo directamente con el ejecutivo
-                      Smarter Bot que estará presente en cada centro de
-                      ski."
-                    />
-
-                    <Faq
-                      title="¿Voy a tener una tarjeta de Smarter Bot con
-                      beneficios y promociones?"
-                      answer="Todos nuestros miembros tendrán beneficios según el
-                      programa de membresía que elija. Podrá hacer uso de
-                      estos beneficios con una identificación virtual
-                      enviada por correo electrónico o con su carnet de
-                      identidad, previa validación con el sistema. Los
-                      beneficios se comunicarán oportunamente a través de
-                      nuestra web y redes sociales."
-                    />
-
-                    <Faq
-                      title="Si quiero esquiar más horas en un mismo día, ¿Lo
-                      puedo hacer?"
-                      answer="Sí. La cantidad de horas totales que esquíes depende
-                      de ti. Lo importante es registrar la hora de inicio
-                      y la hora de término de tu dia de ski."
-                    />
-
-                    <Faq
-                      title="Había mucho taco en el camino y no alcancé a
-                      llegar a la hora, ¿Qué hago?"
-                      answer="No te preocupes. Justamente ese es uno de los
-                      beneficios de este sistema. Pagas lo que usas. Tus
-                      horas puedes utilzarlas hasta 45 minutos antes del
-                      cierre del centro, que es a las 17:00 horas."
-                    />
-
-                    <Faq
-                      title="Si me quedo alojando en la montaña, ¿Puedo comprar
-                      horas para el día siguiente?"
-                      answer="Sí, realizando la reserva a través del sistema,
-                      siempre respetando las políticas propias de cada
-                      centro de ski."
-                    />
-
-                    <Faq
-                      title="¿Tengo límite de horas compradas al día?"
-                      answer="No hay límite de compra de horas."
-                    />
-
-                    <Faq
-                      title="¿Puedo comprar horas el mismo día?"
-                      answer="Solo si hay stock disponible y previa coordinación
-                      con las políticas propias de cada centro de ski"
-                    />
-
-                    <Faq
-                      title="¿Puedo usar un mismo ticket para distintas
-                      personas?"
-                      answer="Depende de la política de cada centro de ski. En la
-                      gran mayoría de los casos, el ticket es personal e
-                      intransferible."
-                    />
-
-                    <Faq
-                      title="¿Cómo puedo calcular si me conviene esquiar por
-                      horas?"
-                      answer="En la calculadora de precios que depende de cada
-                      centro de ski. Ésta la tendremos disponible
-                      oportunamente."
-                    />
-
-                    <Faq
-                      title="Si no uso las horas que reservé, ¿Las puedo
-                      cambiar para otro momento?"
-                      answer="Puedes postergar una parte del saldo cargado, pero
-                      no es un reembolso total ya que los cupos son
-                      limitados. En caso de no presentarte el dia
-                      reservado, parte del abono queda pendiente para la
-                      siguiente reserva que realices. Reservas validas
-                      sólo para el 2023."
-                    />
-
-                    <Faq
-                      title="Si pagué pero me arrepentí y no voy a ir a
-                      esquiar, ¿Puedo pedir la devolución de mi dinero?"
-                      answer="Hasta 48 horas antes puedes eliminar tu reserva sin
-                      costo. Después de eso, tendrá un costo que se
-                      comunicará oportunamente."
-                    />
+                  <div className="accordion" id="faqAccordion">
+                    {/* Pregunta 1 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingOne">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne"
+                        >
+                          ¿Qué es SmarterBot?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          SmarterBot es una empresa especializada en el desarrollo e implementación de chatbots agentes personalizados utilizando inteligencia artificial. Ayudamos a las empresas a mejorar su eficiencia y comunicación interna y externa mediante soluciones tecnológicas avanzadas.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 2 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingTwo">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          ¿Cómo puede un chatbot beneficiar a mi empresa?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Un chatbot personalizado puede automatizar tareas repetitivas, mejorar la atención al cliente 24/7, optimizar procesos internos y proporcionar información rápida y precisa. Esto libera tiempo para que tu equipo se enfoque en tareas estratégicas y mejora la satisfacción del cliente.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 3 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingThree">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          ¿Cuál es el proceso de implementación?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Nuestro proceso incluye un diagnóstico personalizado, desarrollo a medida, implementación en terreno con al menos 40 horas en tu empresa y capacitación al personal. Nos aseguramos de entender a fondo tus necesidades y adaptamos nuestras soluciones para integrarse perfectamente con tus sistemas.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 4 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingFour">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          ¿Qué tipo de soporte ofrecen después de la implementación?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Ofrecemos soporte continuo y mantenimiento para asegurar que el chatbot funcione de manera óptima. Nuestro equipo está disponible para resolver cualquier duda o inconveniente, y proporcionamos actualizaciones y mejoras según sea necesario.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 5 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingFive">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          ¿Cómo garantizan la seguridad y confidencialidad de mi información?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFive"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Implementamos protocolos de seguridad de alto nivel para proteger tus datos y garantizar la confidencialidad de la información. Cumplimos con todas las regulaciones en materia de protección de datos y trabajamos con transparencia para brindar tranquilidad a nuestros clientes.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 6 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingSix">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          ¿Es necesario realizar reuniones presenciales?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSix"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingSix"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Sí, creemos en el valor del contacto directo. Realizamos un mínimo de 40 horas en terreno y reuniones presenciales para entender a fondo tu negocio y asegurar una implementación exitosa del chatbot en tu empresa.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 7 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingSeven">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSeven"
+                          aria-expanded="false"
+                          aria-controls="collapseSeven"
+                        >
+                          ¿Qué sucede si necesito personalizaciones específicas?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSeven"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingSeven"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Nos especializamos en desarrollar soluciones a medida. Trabajaremos contigo para entender tus requerimientos específicos y adaptar el chatbot para satisfacer tus necesidades particulares.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 8 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingEight">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseEight"
+                          aria-expanded="false"
+                          aria-controls="collapseEight"
+                        >
+                          ¿Ofrecen garantías sobre sus servicios?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseEight"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingEight"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Sí, ofrecemos un seguro de "libre riesgo" y una garantía de 12 meses sobre nuestros servicios. Nos comprometemos a entregar soluciones de calidad y respaldamos nuestro trabajo para asegurar tu satisfacción.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 9 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingNine">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseNine"
+                          aria-expanded="false"
+                          aria-controls="collapseNine"
+                        >
+                          ¿Cómo puedo obtener una cotización?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseNine"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingNine"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Puedes contactarnos a través de nuestro formulario en la página de contacto, enviarnos un correo electrónico a <a href="mailto:contacto@smarterbot.cl">contacto@smarterbot.cl</a> o llamarnos al +56 9 8765 4321. Estaremos encantados de analizar tus necesidades y proporcionarte una cotización personalizada.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Pregunta 10 */}
+                    <div className="accordion-item">
+                      <h2 className="accordion-header" id="headingTen">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTen"
+                          aria-expanded="false"
+                          aria-controls="collapseTen"
+                        >
+                          ¿Qué experiencia tienen en mi industria?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTen"
+                        className="accordion-collapse collapse"
+                        aria-labelledby="headingTen"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div className="accordion-body">
+                          Hemos trabajado con empresas de diversos sectores, incluyendo logística, retail, servicios financieros y más. Nuestro enfoque se adapta a las necesidades específicas de cada industria, y contamos con el expertise de Pedro José Zaffuto en adopción de inteligencia artificial en sistemas SCM.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Puedes agregar más preguntas y respuestas siguiendo el mismo formato */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <Footer />
         </div>
-        <Footer></Footer>
       </div>
     </Fragment>
   );
