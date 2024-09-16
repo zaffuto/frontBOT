@@ -20,10 +20,11 @@ export default function Home() {
                 <h1 className="display-1">SMARTER <span className="color"> CHATBOT</span>
                 </h1>
                 <p className="large mt-3">
-                Automatización de Tareas con LLM de IA.
-                  <b>Sistematiza tu empresa con Make.com</b>La Revolución Tecnológica en Acción 🚀
+                Automatización de tareas con Inteligencia Artificial
+                  <b>Adopción de Inteligencia Artificial en sistemas SCM (Supply Chain Management) 🚀</b>
+                
                 </p>
-                ¡Prueba gratuita de 30 días con Shopify, Chatbot de WhatsApp y Make!
+                ¡Solo para tiendas con licencias Shopify o Shopify Advanced!
                 <a
                   className="btn btn-primary btn-lg mt-4 mb-4"
                   href="/subscribe"
@@ -50,16 +51,19 @@ export default function Home() {
             </h1>
             <div className="row justify-content-center">
               <PlanCard
-                title="Subscribe"
+                title="DEMO SMARTER"
                 text1="Shopify Smarter"
-                text2="Para tiendas con licencias Shopify o Shopify Advanced"
-                text3="Incluye ChatGPT, MERMAID, Make, META API"
+                text2="DEMO para licencias Shopify o Shopify Advanced"
+                text3="Requiere ChatGPT API, Mermaidchart.com, Make.com y Cal.com"
+                text4="Automatización media, Colaboración Humana 90%"
+                text5="Integraciones con licencia de ChatGPT con GMAIL"
+                text6="Soporte técnico no dedicado - 0 horas mensuales"
                 modal={false}
                 link="/subscribe"
                 linkText="Suscribirse"
               />
               <PlanCard
-                title="Subscribe Pro"
+                title="SMARTER PLUS"
                 text1="Shopify PLUS"
                 text2="Orquestación para Gemini en Google Workspace"
                 text3="Opcionales: BSALE, DEFONTANA, Enviame.io, REVERSO"
