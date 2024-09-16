@@ -16,8 +16,8 @@ export default function Prices() {
   useEffect(() => {
     // Aquí puedes cargar los precios desde una base de datos o API si lo deseas
     // Por ahora, estableceré valores de ejemplo
-    setPrice(100000); // Precio del Plan Básico
-    setOfferPrice(150000); // Precio del Plan Pro
+    setPrice(100000); // Precio del Plan SMARTER
+    setOfferPrice(150000); // Precio del Plan SMARTER PLUS
     setDiscountText("¡Ahorra un 10% en tu primer año!");
   }, []);
 
@@ -49,7 +49,7 @@ export default function Prices() {
                     <div className="col-md-6 mb-4">
                       <div className="card h-100">
                         <div className="card-body">
-                          <h3 className="card-title">Plan Básico</h3>
+                          <h3 className="card-title">Plan SMARTER</h3>
                           <p className="card-text">
                             Ideal para pequeñas empresas que buscan iniciarse en la automatización con chatbots personalizados.
                           </p>
@@ -62,7 +62,7 @@ export default function Prices() {
                             ${price.toLocaleString("es-CL")} CLP / año
                           </h4>
                           <a href="/contacto" className="btn btn-primary mt-3">
-                            Contratar Plan Básico
+                            Contratar Plan SMARTER
                           </a>
                         </div>
                       </div>
@@ -70,7 +70,7 @@ export default function Prices() {
                     <div className="col-md-6 mb-4">
                       <div className="card h-100">
                         <div className="card-body">
-                          <h3 className="card-title">Plan Pro</h3>
+                          <h3 className="card-title">Plan SMARTER PLUS</h3>
                           <p className="card-text">
                             Para empresas que buscan una solución completa con personalización avanzada y soporte dedicado.
                           </p>
@@ -85,7 +85,7 @@ export default function Prices() {
                           </h4>
                           <p className="text-success">{discountText}</p>
                           <a href="/contacto" className="btn btn-primary mt-3">
-                            Contratar Plan Pro
+                            Contratar Plan SMARTER PLUS
                           </a>
                         </div>
                       </div>

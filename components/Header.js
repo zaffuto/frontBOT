@@ -18,7 +18,9 @@ function Header(props) {
         <meta property="og:title" content={`SmarterChatBOT - ${props.title}`} />
         <meta
           property="og:description"
-          content="Suscríbete y obtén una montaña de beneficios"
+          content="SMARTERBOT.cl Adopción de Inteligencia Artificial en sistemas SCM (Supply Chain Management) 🚀
+
+¡Solo para tiendas con licencias Shopify o Shopify Advanced!"
         />
         <meta
           property="og:image"

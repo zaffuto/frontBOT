@@ -17,8 +17,7 @@ function DashNav(props) {
       {props.userType == "user" ? (
         <li className="nav-item text-left dash-nav-item">
           <a className="nav-link" href={`/dashboard/${props.userType}/account`}>
-            <FaHouseUser size={30} className="mx-2"></FaHouseUser> Mi Mountain
-            Pass <span className="sr-only"></span>
+            <FaHouseUser size={30} className="mx-2"></FaHouseUser> SmarterBOT <span className="sr-only"></span>
           </a>
         </li>
       ) : (

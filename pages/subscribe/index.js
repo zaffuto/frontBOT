@@ -333,7 +333,7 @@ export default function Home() {
                             width="100"
                           />
                         </p>
-                        <h3 className="mb-4">Tu cuenta Basic ya fue creada</h3>
+                        <h3 className="mb-4">Tu cuenta SMARTER ya fue creada</h3>
                         <div className="col-md-12">
                           <p>
                             Te enviamos un correo con la confirmación de la

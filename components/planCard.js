@@ -103,7 +103,7 @@ function PlanCard(props) {
                         <td>$ 48.000</td>
                       </tr>
                       <tr>
-                        <th scope="row">Personilzado con APIs</th>
+                        <th scope="row">Personalizado con APIs</th>
                         <td>Consultar</td>
                       </tr>
                     </tbody>

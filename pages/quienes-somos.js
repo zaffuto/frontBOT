@@ -11,14 +11,14 @@ export default function QuienesSomos() {
     {
       name: "Pedro José Zaffuto",
       role: "Especialista en IA y SCM",
-      image: "public/images/segundo.jpg",
+      image: "../public/images/segundo.jpg",
       description:
         "Pedro es un experto en la adopción de Inteligencia Artificial en sistemas SCM, con más de 10 años de experiencia en el sector.",
     },
     {
       name: "María López",
       role: "Gerente de Operaciones",
-      image: "public/images/primero.jpg", 
+      image: "../public/images/primero.jpg", 
       description:
         "María lidera nuestro equipo de operaciones, asegurando que todos los proyectos se ejecuten con la máxima eficiencia.",
     },

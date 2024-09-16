@@ -5,8 +5,8 @@ function SubscriptionFooter(props) {
         <div className="row text-center">
           <div className="col-sm-12">
             <p className="d-block">
-              <strong>Smarter Bot</strong> 2023 –{" "}
-              <a href="mailto:clientes@smartbot.cl">clientes@smartbot.cl</a>
+              <strong>SmarterBot</strong> 2024 - Chile –{" "}
+              <a href="mailto:hola@smarterbot.cl">hola@smarterbot.cl</a>
             </p>
           </div>
         </div>
