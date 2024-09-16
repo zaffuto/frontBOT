@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import PlanCard from "../components/planCard";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 
@@ -18,18 +18,19 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
-                <h1 className="display-1">SMARTER <span className="color"> CHATBOT</span>
-                </h1>
+                <h1 className="display-1">SMARTER <span className="color"> CHATBOT</span></h1>
                 <p className="large mt-3">
-                  <b>Adopción de Inteligencia Artificial en sistemas SCM (Supply Chain Management) 🚀</b>
-                
+                  <b>Tu empresa "no tiene ni un brillo" en la atención a clientes? ¡Eeera!</b>
                 </p>
-                ¡Solo para tiendas con licencias Shopify o Shopify Advanced!
-                <a
-                  className="btn btn-primary btn-lg mt-4 mb-4"
-                  href="/subscribe"
-                >
-                  Agendamos un MEET ?
+                <p className="large">
+                  Smarter es más que smart. Con nosotros, tu celular no solo va a ser más inteligente, ¡va a dejar a todos locos! <br />
+                  Automatiza, vende y soluciona todo <b>al toque</b> con <span className="color">SmarterBOT.cl</span>, sin complicarte la vida.
+                </p>
+                <p className="large">
+                  ¡Solo para tiendas con licencias Shopify o Shopify Advanced!
+                </p>
+                <a className="btn btn-primary btn-lg mt-4 mb-4" href="/subscribe">
+                  Agenda una DEMO
                 </a>
               </div>
               <div className="col-12 col-sm-12 col-lg-12 col-xl-5 mx-auto text-center img-home-container">
@@ -38,6 +39,12 @@ export default function Home() {
                   src="../images/Meet_Pedro_Zaffuto.jpeg"
                   width="460"
                   alt="Smarterbot"
+                />
+                <img
+                  className="align-middle img-fluid rounded img-home mt-3"
+                  src="../images/Smarterbot_Artificial_Intelligence.jpeg"
+                  width="460"
+                  alt="Smarterbot AI"
                 />
               </div>
             </div>

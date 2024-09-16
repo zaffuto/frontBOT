@@ -20,6 +20,7 @@
     "bluebird": "3.7.2",
     "bootstrap": "^5.3.3",
     "chilean-rutify": "2.1.0",
+    "crypto-js": "^4.2.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.11",
     "exceljs": "4.3.0",
