@@ -37,7 +37,7 @@ export default function PreguntasFrecuentes() {
                           aria-expanded="false"
                           aria-controls="collapseOne"
                         >
-                          ¿Qué es SmarterBot?
+                          ¿Qué es SmarterBot CHAT para Whatsapp?
                         </button>
                       </h2>
                       <div
