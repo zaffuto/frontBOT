@@ -1,6 +1,5 @@
 // preguntas-frecuentes.js
-import { Montserrat } from 'next/font/google';
-
+import { Montserrat } from '@next/font/google';
 import { Fragment } from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";

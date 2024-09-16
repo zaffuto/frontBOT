@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import PlanCard from "../components/planCard";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "variable" });
 

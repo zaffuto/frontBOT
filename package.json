@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@vercel/speed-insights": "^1.0.12",
     "bcrypt": "5.1.0",
     "bcryptjs-react": "2.4.6",
     "bluebird": "3.7.2",
