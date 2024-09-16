@@ -1,2 +1,1 @@
 # frontBOT
-Smarterbot.cl
