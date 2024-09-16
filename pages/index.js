@@ -17,13 +17,11 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-12 col-sm-12 col-lg-12 col-xl-7 z-index">
-                <h1 className="display-1">
-                  Smarterbot
-                  <span className="color"> CHATBOT</span>
+                <h1 className="display-1">SMARTER <span className="color"> CHATBOT</span>
                 </h1>
                 <p className="large mt-3">
-                  Automatiza tus procesos con nuestras soluciones avanzadas.
-                  <b> Optimiza tu empresa con Make</b> para automatizar tareas y personaliza chatbots entrenados con la información de tu empresa para mejorar la atención al cliente y aumentar las ventas.
+                Automatización de Tareas con LLM de IA.
+                  <b>Sistematiza tu empresa con Make.com</b>La Revolución Tecnológica en Acción 🚀
                 </p>
                 ¡Prueba gratuita de 30 días con Shopify, Chatbot de WhatsApp y Make!
                 <a
@@ -54,19 +52,19 @@ export default function Home() {
               <PlanCard
                 title="Subscribe"
                 text1="Shopify Smarter"
-                text2="Para licencias de Shopify Starter ($5/mes) o Shopify Basic ($39/mes)"
-                text3="Incluye ChatGPT, Claude, Make, META API"
+                text2="Para tiendas con licencias Shopify o Shopify Advanced"
+                text3="Incluye ChatGPT, MERMAID, Make, META API"
                 modal={false}
                 link="/subscribe"
                 linkText="Suscribirse"
               />
               <PlanCard
                 title="Subscribe Pro"
-                text1="Shopify Advanced"
+                text1="Shopify PLUS"
                 text2="Orquestación para Gemini en Google Workspace"
                 text3="Opcionales: BSALE, DEFONTANA, Enviame.io, REVERSO"
                 text4="Automatización avanzada, Colaboración Humana 50%"
-                text5="Integraciones múltiples con licencias de ChatGPT, Antropihic, Make y más"
+                text5="Integraciones múltiples con licencias de ChatGPT, Antrophic, Make y más"
                 text6="Soporte técnico dedicado - 40 horas mensuales"
                 modal={true}
                 link="/subscribe/pro"
